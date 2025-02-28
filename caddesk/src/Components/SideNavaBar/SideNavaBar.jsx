@@ -58,14 +58,14 @@ const SideNavaBar = () => {
                         <li>
                             <h6 className="submenu-hdr">Main Menu</h6>
                             <ul>
-                                <li className="submenu">
-                                    <a href="#" className="subdrop active">
+                                <li >
+                                    <a href="/" className="subdrop active">
                                    
 										<i className="ti ti-layout-2"></i><span>Dashboard</span>
                                         {/* <span className="menu-arrow"></span> */}
 									</a>
                                     {/* <ul>
-                                        <li><a href="index.html" className="active">Deals Dashboard</a></li>
+                                        <li><a href="/" className="active">Deals Dashboard</a></li>
                                         <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
                                         <li><a href="project-dashboard.html">Project Dashboard</a></li>
                                     </ul> */}

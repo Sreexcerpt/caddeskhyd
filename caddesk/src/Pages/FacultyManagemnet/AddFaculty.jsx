@@ -44,6 +44,7 @@ const AddFaculty = () => {
   };
 
   return (
+    <>
     <div className="faculty-container">
       <div className="form-box">
         <h2>Add Faculty</h2>
@@ -54,7 +55,7 @@ const AddFaculty = () => {
             <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
             <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} required />
 
-            {/* Department Dropdown for CADDESK */}
+         
             <select name="department" value={formData.department} onChange={handleChange} required>
               <option value="">Select Department</option>
               <option value="AutoCAD">AutoCAD</option>
@@ -96,13 +97,18 @@ const AddFaculty = () => {
             <input type="number" name="salary" placeholder="Salary" value={formData.salary} onChange={handleChange} required />
             <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} required />
 
-            {/* New Staff/Faculty ID field */}
+          
             <input type="text" name="staffOrFacultyId" placeholder="Staff/Faculty ID" value={formData.staffOrFacultyId} onChange={handleChange} required />
           </div>
           <button type="submit">Add Faculty</button>
         </form>
       </div>
     </div>
+    
+	  
+	
+    
+    </>
   );
 };
 
