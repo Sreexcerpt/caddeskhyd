@@ -77,7 +77,7 @@ const AttendanceTracker = () => {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           width: "80%",
           margin: "auto",
@@ -208,7 +208,7 @@ const AttendanceTracker = () => {
             </button>
           </form>
         )}
-      </div>
+      </div> */}
 
       {/* <!-- Page Wrapper --> */}
       <div class="page-wrapper">
@@ -356,7 +356,7 @@ const AttendanceTracker = () => {
         id="offcanvas_add"
       >
         <div class="offcanvas-header border-bottom">
-          <h5 class="fw-semibold">Add New Deals</h5>
+          <h5 class="fw-semibold">Add Attendance</h5>
           <button
             type="button"
             class="btn-close custom-btn-close border p-1 me-0 d-flex align-items-center justify-content-center rounded-circle"
@@ -367,258 +367,64 @@ const AttendanceTracker = () => {
           </button>
         </div>
         <div class="offcanvas-body">
-          <form action="deals.html">
+          <form onSubmit={handleSubmit} >
             <div class="row">
-              <div class="col-md-12">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Deal Name <span class="text-danger">*</span>
-                  </label>
-                  <input type="text" class="form-control" />
-                </div>
-              </div>
-              <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="mb-3">
                   <div class="d-flex align-items-center justify-content-between">
                     <label class="col-form-label">
-                      Pipeine <span class="text-danger">*</span>
+                      Select Employee <span class="text-danger">*</span>
                     </label>
-                    <a
-                      href=""
-                      class="label-add "
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvas_pipeline"
-                    >
-                      <i class="ti ti-square-rounded-plus"></i>
-                      Add New
-                    </a>
+                   
                   </div>
-                  <select class="select2">
-                    <option>Choose</option>
-                    <option>Sales</option>
-                    <option>Marketing</option>
-                    <option>Calls</option>
+                  <select class="select2"  value={formData.employeeId}
+              onChange={handleEmployeeSelect}
+              required >
+                    {employees.map((emp) => (<option key={emp.id} value={emp.id}>{emp.name}</option>
+                     ))}
                   </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Status <span class="text-danger">*</span>
-                  </label>
-                  <select class="select2">
-                    <option>Choose</option>
-                    <option>Open</option>
-                    <option>Lost</option>
-                    <option>Won</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Deal Value<span class="text-danger"> *</span>
-                  </label>
-                  <input class="form-control" type="text" />
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Currency <span class="text-danger">*</span>
-                  </label>
-                  <select class="select">
-                    <option>Choose</option>
-                    <option>Dollar</option>
-                    <option>Euro</option>
-                    <option>Pound</option>
-                    <option>Rupee</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Period <span class="text-danger">*</span>
-                  </label>
-                  <select class="select">
-                    <option>Choose</option>
-                    <option>Days</option>
-                    <option>Month</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Period Value <span class="text-danger">*</span>
-                  </label>
-                  <input class="form-control" type="text" />
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="mb-3">
                   <label class="col-form-label">
-                    Contact <span class="text-danger">*</span>
+                    Employee Name <span class="text-danger">*</span>
                   </label>
-                  <select class="multiple-img" multiple="multiple">
-                    <option
-                      data-image="assets/img/profiles/avatar-19.jpg"
-                      selected
-                    >
-                      Darlee Robertson
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-20.jpg">
-                      Sharon Roy
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-21.jpg">
-                      Vaughan Lewis
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-23.jpg">
-                      Jessica Louise
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-16.jpg">
-                      Carol Thomas
-                    </option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Project <span class="text-danger">*</span>
-                  </label>
-                  <select class="select" multiple="multiple">
-                    <option selected>Devops Design</option>
-                    <option selected>MargrateDesign</option>
-                    <option selected>UI for Chat</option>
-                    <option>Web Chat</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Due Date <span class="text-danger">*</span>
-                  </label>
-                  <div class="icon-form">
-                    <span class="form-icon">
-                      <i class="ti ti-calendar-check"></i>
-                    </span>
-                    <input
-                      type="text"
-                      class="form-control datetimepicker"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Expected Closing Date <span class="text-danger">*</span>
-                  </label>
-                  <div class="icon-form">
-                    <span class="form-icon">
-                      <i class="ti ti-calendar-check"></i>
-                    </span>
-                    <input
-                      type="text"
-                      class="form-control datetimepicker"
-                      placeholder=""
-                    />
-                  </div>
+                  <input  value={formData.employeeName}
+              placeholder="Employee Name"
+              readOnly/>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="mb-3">
                   <label class="col-form-label">
-                    Assignee <span class="text-danger">*</span>
-                  </label>
-                  <select class="multiple-img" multiple="multiple">
-                    <option data-image="assets/img/profiles/avatar-19.jpg">
-                      Darlee Robertson
-                    </option>
-                    <option
-                      data-image="assets/img/profiles/avatar-20.jpg"
-                      selected
-                    >
-                      Sharon Roy
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-21.jpg">
-                      Vaughan Lewis
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-23.jpg">
-                      Jessica Louise
-                    </option>
-                    <option data-image="assets/img/profiles/avatar-16.jpg">
-                      Carol Thomas
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Follow Up Date <span class="text-danger">*</span>
-                  </label>
-                  <div class="icon-form">
-                    <span class="form-icon">
-                      <i class="ti ti-calendar-check"></i>
-                    </span>
-                    <input
-                      type="text"
-                      class="form-control datetimepicker"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Source <span class="text-danger">*</span>
-                  </label>
-                  <select class="select">
-                    <option>Select</option>
-                    <option>Google</option>
-                    <option>Social Media</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Tags <span class="text-danger">*</span>
+                    In Time <span class="text-danger">*</span>
                   </label>
                   <input
-                    class="input-tags form-control"
-                    type="text"
-                    data-role="tagsinput"
-                    name="Label"
-                    value="Collab, Rated"
-                  />
+              type="time"
+              name="inTime"
+              value={formData.inTime}
+              onChange={handleChange}
+              required
+            />
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="mb-3">
                   <label class="col-form-label">
-                    Priority <span class="text-danger">*</span>
+                    Out Time <span class="text-danger">*</span>
                   </label>
-                  <select class="select">
-                    <option>Select</option>
-                    <option>High</option>
-                    <option>Low</option>
-                    <option>Medium</option>
-                  </select>
+                  <input
+              type="time"
+              name="outTime"
+              value={formData.outTime}
+              onChange={handleChange}
+              required
+            />
                 </div>
               </div>
-              <div class="col-lg-12">
-                <div class="mb-3">
-                  <label class="col-form-label">
-                    Description <span class="text-danger">*</span>
-                  </label>
-                  <div class="summernote"></div>
-                </div>
-              </div>
+             
+              
             </div>
             <div class="d-flex align-items-center justify-content-end">
               <button
@@ -629,7 +435,7 @@ const AttendanceTracker = () => {
                 Cancel
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#create_success"
