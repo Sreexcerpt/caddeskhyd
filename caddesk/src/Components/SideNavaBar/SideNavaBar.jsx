@@ -60,34 +60,33 @@ const SideNavaBar = () => {
                             <ul>
                                 <li className="submenu">
                                     <a href="javascript:void(0);" className="subdrop active">
-										<i className="ti ti-layout-2"></i><span>Dashboard</span><span className="menu-arrow"></span>
+                                   
+										<i className="ti ti-layout-2"></i><span>Dashboard</span>
+                                        {/* <span className="menu-arrow"></span> */}
 									</a>
-                                    <ul>
+                                    {/* <ul>
                                         <li><a href="index.html" className="active">Deals Dashboard</a></li>
                                         <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
                                         <li><a href="project-dashboard.html">Project Dashboard</a></li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-brand-airtable"></i><span>Application</span><span className="menu-arrow"></span></a>
+                                    <a href="javascript:void(0);"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
                                     <ul>
-                                        <li><a href="chat.html">Chat</a></li>
-                                        <li className="submenu submenu-two">
+                                        <li><a href="/AddFaculty">AddFaculty</a></li>
+                                        {/* <li className="submenu submenu-two">
                                             <a href="javascript:void(0);">Call<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="video-call.html">Video Call</a></li>
                                                 <li><a href="audio-call.html">Audio Call</a></li>
                                                 <li><a href="call-history.html">Call History</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="calendar.html">Calendar</a></li>
-                                        <li><a href="email.html">Email</a></li>
-                                        <li><a href="todo.html">To Do</a></li>
-                                        <li><a href="notes.html">Notes</a></li>
-                                        <li><a href="file-manager.html">File Manager</a></li>
-                                        <li><a href="social-feed.html">Social Feed</a></li>
-                                        <li><a href="kanban-view.html">Kanban</a></li>
-                                        <li><a href="invoice.html">Invoices</a></li>
+                                        </li> */}
+                                        <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
+                                        <li><a href="/FacultyList">FacultyList</a></li>
+                                        <li><a href="/LeaveRequests">LeaveRequests</a></li>
+                                        <li><a href="/LeaveRequestForm">LeaveRequestForm</a></li>
+                                        <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
                                     </ul>
                                 </li>
                                 <li className="submenu">

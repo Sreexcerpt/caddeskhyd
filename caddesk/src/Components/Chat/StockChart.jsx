@@ -17,6 +17,7 @@ const StockChart = () => {
       height: 350,
       zoom: { enabled: false },
     },
+    colors: ["#FF5733"], // Custom color
     dataLabels: { enabled: false },
     stroke: { curve: "straight" },
     title: { text: "Fundamental Analysis of Stocks", align: "left" },
