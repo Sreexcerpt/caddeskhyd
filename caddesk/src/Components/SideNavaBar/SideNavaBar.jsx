@@ -59,7 +59,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">Main Menu</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);" className="subdrop active">
+                                    <a href="#" className="subdrop active">
                                    
 										<i className="ti ti-layout-2"></i><span>Dashboard</span>
                                         {/* <span className="menu-arrow"></span> */}
@@ -71,11 +71,11 @@ const SideNavaBar = () => {
                                     </ul> */}
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
+                                    <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="/AddFaculty">AddFaculty</a></li>
                                         {/* <li className="submenu submenu-two">
-                                            <a href="javascript:void(0);">Call<span className="menu-arrow inside-submenu"></span></a>
+                                            <a href="#">Call<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="video-call.html">Video Call</a></li>
                                                 <li><a href="audio-call.html">Audio Call</a></li>
@@ -194,7 +194,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">Reports</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-file-invoice"></i><span>Reports</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -230,7 +230,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">Membership</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-file-invoice"></i><span>Membership</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -246,7 +246,7 @@ const SideNavaBar = () => {
                             <ul>
                                 <li><a href="pages.html"><i className="ti ti-page-break"></i><span>Pages</span></a></li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-map-pin-pin"></i><span>Location</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -270,7 +270,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">Settings</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-settings-cog"></i><span>General Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -281,7 +281,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-world-cog"></i><span>Website Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -294,7 +294,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-apps"></i><span>App Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -304,7 +304,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-device-laptop"></i><span>System Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -314,7 +314,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-moneybag"></i><span>Financial Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -325,7 +325,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-flag-cog"></i><span>Other Settings</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -339,7 +339,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">Pages</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-lock-square-rounded"></i><span>Authentication</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -353,7 +353,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-error-404"></i><span>Error Pages</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -370,7 +370,7 @@ const SideNavaBar = () => {
                             <h6 className="submenu-hdr">UI Interface</h6>
                             <ul>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-adjustments-check"></i><span>Base UI</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -409,7 +409,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-box-align-bottom"></i><span>Advanced UI</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -426,7 +426,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-chart-donut-2"></i>
+                                    <a href="#"><i className="ti ti-chart-donut-2"></i>
 										<span>Charts</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -439,7 +439,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-icons"></i>
+                                    <a href="#"><i className="ti ti-icons"></i>
 										<span>Icons</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -459,12 +459,12 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);">
+                                    <a href="#">
 										<i className="ti ti-forms"></i><span>Forms</span><span className="menu-arrow"></span>
 									</a>
                                     <ul>
                                         <li className="submenu submenu-two">
-                                            <a href="javascript:void(0);">Form Elements<span className="menu-arrow inside-submenu"></span></a>
+                                            <a href="#">Form Elements<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
                                                 <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
@@ -476,7 +476,7 @@ const SideNavaBar = () => {
                                             </ul>
                                         </li>
                                         <li className="submenu submenu-two">
-                                            <a href="javascript:void(0);">Layouts<span className="menu-arrow inside-submenu"></span></a>
+                                            <a href="#">Layouts<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="form-horizontal.html">Horizontal Form</a></li>
                                                 <li><a href="form-vertical.html">Vertical Form</a></li>
@@ -490,7 +490,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-table"></i><span>Tables</span><span
+                                    <a href="#"><i className="ti ti-table"></i><span>Tables</span><span
 											className="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="tables-basic.html">Basic Tables </a></li>
@@ -498,7 +498,7 @@ const SideNavaBar = () => {
                                     </ul>
                                 </li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-map"></i><span>Maps</span>
+                                    <a href="#"><i className="ti ti-map"></i><span>Maps</span>
 										<span className="menu-arrow"></span>
 									</a>
                                     <ul>
@@ -515,19 +515,19 @@ const SideNavaBar = () => {
                         <li>
                             <h6 className="submenu-hdr">Help</h6>
                             <ul>
-                                <li><a href="javascript:void(0);"><i className="ti ti-file-type-doc"></i><span>Documentation</span></a></li>
-                                <li><a href="javascript:void(0);"><i className="ti ti-arrow-capsule"></i><span>Changelog v2.2.2</span></a></li>
+                                <li><a href="#"><i className="ti ti-file-type-doc"></i><span>Documentation</span></a></li>
+                                <li><a href="#"><i className="ti ti-arrow-capsule"></i><span>Changelog v2.2.2</span></a></li>
                                 <li className="submenu">
-                                    <a href="javascript:void(0);"><i className="ti ti-brand-databricks"></i><span>Multi Level</span><span className="menu-arrow"></span></a>
+                                    <a href="#"><i className="ti ti-brand-databricks"></i><span>Multi Level</span><span className="menu-arrow"></span></a>
                                     <ul>
-                                        <li><a href="javascript:void(0);">Level 1.1</a></li>
-                                        <li className="submenu submenu-two"><a href="javascript:void(0);">Level 1.2<span className="menu-arrow inside-submenu"></span></a>
+                                        <li><a href="#">Level 1.1</a></li>
+                                        <li className="submenu submenu-two"><a href="#">Level 1.2<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
-                                                <li><a href="javascript:void(0);">Level 2.1</a></li>
-                                                <li className="submenu submenu-two submenu-three"><a href="javascript:void(0);">Level 2.2<span className="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                                <li><a href="#">Level 2.1</a></li>
+                                                <li className="submenu submenu-two submenu-three"><a href="#">Level 2.2<span className="menu-arrow inside-submenu inside-submenu-two"></span></a>
                                                     <ul>
-                                                        <li><a href="javascript:void(0);">Level 3.1</a></li>
-                                                        <li><a href="javascript:void(0);">Level 3.2</a></li>
+                                                        <li><a href="#">Level 3.1</a></li>
+                                                        <li><a href="#">Level 3.2</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
