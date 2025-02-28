@@ -160,9 +160,9 @@ const AddFaculty = () => {
                             </div>
                           </div>
                           <div class="row mb-3">
-                            <label class="col-lg-3 col-form-label">Postal Code</label>
+                            <label class="col-lg-3 col-form-label">Address</label>
                             <div class="col-lg-9">
-                              <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} required />
+                              <textarea name="address" placeholder="Address" value={formData.address} onChange={handleChange} required />
                             </div>
                           </div>
                           <div class="row mb-3">
