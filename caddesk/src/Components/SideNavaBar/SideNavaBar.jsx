@@ -91,16 +91,16 @@ const SideNavaBar = () => {
                                 </li>
                                 <li className="submenu">
                                     <a href="#">
-										<i className="ti ti-user-star"></i><span>Super Admin</span>
+										<i className="ti ti-user-star"></i><span>Student</span>
 										<span className="menu-arrow"></span>
 									</a>
                                     <ul>
-                                        <li><a href="dashboard.html">Dashboard</a></li>
-                                        <li><a href="company.html">Companies</a></li>
-                                        <li><a href="subscription.html">Subscriptions</a></li>
-                                        <li><a href="packages.html">Packages</a></li>
-                                        <li><a href="domain.html">Domain</a></li>
-                                        <li><a href="purchase-transaction.html">Purchase Transaction</a></li>
+                                        <li><a href="/Course">Course</a></li>
+                                        <li><a href="/Subject">Subject</a></li>
+                                        <li><a href="/Students">Students</a></li>
+                                        <li><a href="/StudentView">Student View</a></li>
+                                        <li><a href="/SAttendance">Student Attendance</a></li>
+                                        <li><a href="/StudentTimetable">Student Timetable</a></li>
                                     </ul>
                                 </li>
                             </ul>
