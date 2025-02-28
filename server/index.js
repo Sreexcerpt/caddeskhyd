@@ -250,6 +250,152 @@ app.put("/api/leave/:id", async (req, res) => {
 });
 
 
+
+
+const subjectSchema = new mongoose.Schema({
+  subjectCode: { type: String, required: true, unique: true },
+  subjectName: { type: String, required: true },
+});
+
+const Subject= mongoose.model("Subject", subjectSchema);
+
+
+// ✅ Add a Subject
+app.post("/api/add-subject", async (req, res) => {
+  try {
+    const { subjectCode, subjectName } = req.body;
+    const newSubject = new Subject({ subjectCode, subjectName });
+    await newSubject.save();
+    res.status(201).json({ message: "Subject added successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// ✅ Get All Subjects
+app.get("/api/get-subjects", async (req, res) => {
+  try {
+    const subjects = await Subject.find({});
+    res.json(subjects);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
+const courseSchema = new mongoose.Schema({
+  courseCode: { type: String, required: true, unique: true },
+  courseName: { type: String, required: true },
+  description: { type: String },
+  duration: { type: String }, // Example: "4 Years"
+  subjects: [{ type: String }] // Storing Subject IDs
+});
+
+const Course=  mongoose.model("Course", courseSchema);
+
+
+app.post("/api/add-course", async (req, res) => {
+  try {
+    const { courseCode, courseName, description, duration, subjects } = req.body;
+    const newCourse = new Course({ courseCode, courseName, description, duration, subjects });
+    await newCourse.save();
+    res.status(201).json({ message: "Course added successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+// Define Student Schema
+const studentSchema = new mongoose.Schema({
+  studentId: String,
+  firstName: String,
+  lastName: String,
+  middleName: String,
+  dob: String,
+  gender: String,
+  nationality: String,
+  aadharNumber: String,
+  bloodGroup: String,
+  emergencyContact: String,
+  address: String,
+  phoneNumber: String,
+  email: String,
+  guardianName: String,
+  guardianPhone: String,
+  guardianEmail: String,
+  previousSchool: String,
+  previousQualification: String,
+  courseEnrolled: String,
+  batchAssigned: String,
+  grades: String,
+  testScores: String,
+  extracurricularActivities: String,
+  disciplinaryRecords: String
+});
+
+const Student = mongoose.model("Student", studentSchema);
+
+// API Routes
+
+// Create a new student
+app.post("/register1", async (req, res) => {
+  try {
+    const newStudent = new Student(req.body);
+    await newStudent.save();
+    res.status(201).json({ message: "Student registered successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get all students
+app.get("/students", async (req, res) => {
+  try {
+    const students = await Student.find();
+    res.status(200).json(students);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get a student by ID
+app.get("/students/:id", async (req, res) => {
+  try {
+    const student = await Student.findById(req.params.id);
+    if (!student) return res.status(404).json({ message: "Student not found" });
+    res.status(200).json(student);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update student details
+app.put("/students/:id", async (req, res) => {
+  try {
+    const updatedStudent = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!updatedStudent) return res.status(404).json({ message: "Student not found" });
+    res.status(200).json({ message: "Student updated successfully", updatedStudent });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Delete a student
+app.delete("/students/:id", async (req, res) => {
+  try {
+    const deletedStudent = await Student.findByIdAndDelete(req.params.id);
+    if (!deletedStudent) return res.status(404).json({ message: "Student not found" });
+    res.status(200).json({ message: "Student deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
+
 // Start Server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
