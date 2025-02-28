@@ -1,0 +1,389 @@
+/* Staff Class Scheduler Styles */
+
+/* Schedule Table Styles */
+.wlm-schedule-container {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.wlm-schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.wlm-schedule-table th {
+  background: linear-gradient(to right, #34495e, #2c3e50);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+.wlm-time-header {
+  width: 120px;
+  text-align: left !important;
+}
+
+.wlm-time-slot {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+  padding: 1rem;
+  text-align: center;
+}
+
+.wlm-schedule-cell {
+  border: 1px solid #eaeaea;
+  padding: 0;
+  height: 100px;
+  vertical-align: top;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wlm-schedule-cell:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.wlm-empty-cell {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.wlm-schedule-cell:hover .wlm-empty-cell {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.wlm-scheduled-class {
+  height: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(to bottom right, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.05));
+  border-left: 3px solid #3498db;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.wlm-course-name {
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.wlm-staff-name {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.wlm-remove-class {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.wlm-scheduled-class:hover {
+  background: linear-gradient(to bottom right, rgba(52, 152, 219, 0.15), rgba(52, 152, 219, 0.1));
+  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.1);
+}
+
+.wlm-scheduled-class:hover .wlm-remove-class {
+  opacity: 1;
+}
+
+.wlm-remove-class:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Staff Availability Styles */
+.wlm-availability-legend {
+  margin-bottom: 2rem;
+  background: linear-gradient(to bottom, #f9f9f9, #f2f2f2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.wlm-availability-legend h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.wlm-availability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.wlm-availability-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wlm-time-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.wlm-availability-bar {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wlm-availability-fill {
+  height: 100%;
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.wlm-availability-count {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+/* Modal Styles */
+.wlm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.wlm-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wlm-modal-header {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wlm-modal-header h3 {
+  color: white;
+  margin: 0;
+  font-weight: 600;
+}
+
+.wlm-modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wlm-modal-close:hover {
+  transform: rotate(90deg);
+}
+
+.wlm-modal-body {
+  padding: 1.5rem;
+}
+
+.wlm-selected-slot {
+  background-color: #f9f9f9;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-top: 0.5rem;
+}
+
+.wlm-modal-footer {
+  padding: 1.2rem 1.5rem;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.wlm-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wlm-btn-cancel {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  border: 1px solid #e0e0e0;
+}
+
+.wlm-btn-cancel:hover {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.wlm-btn-schedule {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.wlm-btn-schedule:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+.wlm-btn-schedule:disabled {
+  background: linear-gradient(to right, #bdc3c7, #95a5a6);
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Error and Warning Messages */
+.wlm-error-message {
+  background-color: #fdeded;
+  border-left: 4px solid #e74c3c;
+  color: #c0392b;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.wlm-warning-message {
+  background-color: #fcf8e3;
+  border-left: 4px solid #f39c12;
+  color: #d35400;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Schedule Controls */
+.wlm-schedule-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #f9f9f9, #f2f2f2);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.wlm-filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.wlm-filter-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.wlm-filter-group select {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.wlm-filter-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+  .wlm-availability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wlm-schedule-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .wlm-filter-group {
+    width: 100%;
+  }
+  
+  .wlm-modal {
+    width: 95%;
+  }
+  
+  .wlm-availability-grid {
+    grid-template-columns: 1fr;
+  }
+}
