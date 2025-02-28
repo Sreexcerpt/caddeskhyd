@@ -62,20 +62,26 @@ const SideNavaBar = () => {
                                     <a href="/" className="subdrop active">
                                    
 										<i className="ti ti-layout-2"></i><span>Dashboard</span>
-                                     </a>
+                                        {/* <span className="menu-arrow"></span> */}
+									</a>
+                                    {/* <ul>
+                                        <li><a href="/" className="active">Deals Dashboard</a></li>
+                                        <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
+                                        <li><a href="project-dashboard.html">Project Dashboard</a></li>
+                                    </ul> */}
                                 </li>
                                 <li className="submenu">
                                     <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="/AddFaculty">AddFaculty</a></li>
-                                        <li className="submenu submenu-two">
+                                        {/* <li className="submenu submenu-two">
                                             <a href="#">Call<span className="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="video-call.html">Video Call</a></li>
                                                 <li><a href="audio-call.html">Audio Call</a></li>
                                                 <li><a href="call-history.html">Call History</a></li>
                                             </ul>
-                                        </li>
+                                        </li> */}
                                         <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
                                         <li><a href="/FacultyList">FacultyList</a></li>
                                         <li><a href="/LeaveRequests">LeaveRequests</a></li>
