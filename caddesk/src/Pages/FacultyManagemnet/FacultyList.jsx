@@ -133,13 +133,14 @@ const FacultyList = () => {
   if (error) return <div className="error-message">{error}</div>;
 
   return (
-    <div className="faculty-management-container">
+    <>
+    {/* <div className="faculty-management-container">
       <div className="faculty-header">
         <h2 style={{textAlign:'center'}}>Faculty/Staff Management</h2>
       <button  style={{width:'100px',marginLeft:'300px',color:'white'}}>  <Link to='/AddFaculty' style={{color:'white'}}>AddFaculty</Link></button>
       </div>
       
-      {/* Faculty Table */}
+    
       <div className="faculty-table-container">
         <table className="faculty-table">
           <thead>
@@ -182,7 +183,7 @@ const FacultyList = () => {
         </table>
       </div>
 
-      {/* Edit Modal - Using advanced CSS for proper layering and positioning */}
+    
       {isModalOpen && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal-container" onClick={(e) => e.stopPropagation()}>
@@ -322,7 +323,206 @@ const FacultyList = () => {
           </div>
         </div>
       )}
-    </div>
+    </div> */}
+
+
+    <div class="page-wrapper">
+			<div class="content">
+				<div class="page-header">
+					<div class="page-header menu">
+						<div class="page-title">
+							<h4>Faculty & Staff Management</h4>
+							<h6>Manage Faculty & Staff</h6>
+						</div>
+					</div>
+				</div>
+
+				{/* <!-- /product list --> */}
+				<div class="card">
+					<div class="card-body">
+						{/* <!-- /Filter --> */}
+						<div class="table-responsive  custom-table">
+							<table class="table  datatable">
+								<thead class="thead-light">
+									<tr>
+										<th class="no-sort">
+											<label class="checkboxs">
+												<input type="checkbox" id="select-all"/>
+												<span class="checkmarks"></span>
+											</label>
+										</th>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Department</th>
+										<th>Role</th>
+										<th>Qualification</th>
+										<th class="no-sort">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+                {faculties.map((faculty) => (<tr key={faculty._id}>
+										<td>
+											<label class="checkboxs">
+												<input type="checkbox"/>
+												<span class="checkmarks"></span>
+											</label>
+										</td>
+										<td>
+											<div class="userimgname">
+												
+												<a href="javascript:void(0);">{faculty.name}</a>
+											</div>
+										</td>
+										<td>{faculty.email}</td>
+										<td class="phone-call-icon"><i data-feather="phone"
+												class="income-calls me-1"></i><i data-feather="arrow-down-left"
+												class="income-success me-1"></i>{faculty.department}</td>
+										<td>{faculty.role}</td>
+										<td>{faculty.qualification}</td>
+										<td class="action-table-data">
+											<div class="edit-delete-action">
+												<a class="me-3 p-2" href="javascript:void(0);" data-bs-toggle="modal"
+													data-bs-target="#user-profile-new">
+													<i class="ti ti-edit text-blue"></i>
+												</a>
+												<a class="confirm-text p-2" href="javascript:void(0);" onClick={() => handleDelete(faculty._id)}>
+													<i class="ti ti-trash text-danger"></i>
+												</a>
+											</div>
+										</td>
+									</tr>))}
+								
+								</tbody>
+							</table>
+						</div>
+						<div class="row align-items-center">
+							<div class="col-md-6">
+								<div class="datatable-length"></div>
+							</div>
+							<div class="col-md-6">
+								<div class="datatable-paginate"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/* <!-- /product list --> */}
+			</div>
+		</div>
+
+	{/* <!-- /Main Wrapper --> */}
+
+	{/* <!-- details popup --> */}
+	<div class="modal fade" id="user-profile-new">
+		<div class="modal-dialog history-modal-profile">
+			<div class="modal-content">
+				<div class="page-wrapper details-blk">
+					<div class="content">
+					<div class="card-body">
+								<form  onSubmit={handleUpdate}>
+									<div class="row">
+										<div class="col-md-6 col-lg-12">
+											<h5 class="card-title">Edit Faculty/Staff</h5>
+											<div class="mb-3">
+												<label class="form-label">Department:</label>
+												<input type="text" class="form-control"  name="department"
+                      value={formData.department}
+                      onChange={handleChange}
+                      required/>
+											</div>
+											
+
+                      <div class="mb-3">
+												<label class="form-label">Qualification:</label>
+												<input type="date"  name="qualification"
+                      value={formData.qualification}
+                      onChange={handleChange}
+                      required/>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Experience (years)</label>
+												<input type="date" name="experience"
+                      value={formData.experience}
+                      onChange={handleChange}
+                      required/>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Date of Birth</label>
+												<input type="date" 
+                       name="dob"
+                      value={formData.dob}
+                      onChange={handleChange}
+                      required/>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Join Date</label>
+												<input type="date" name="joinDate"
+                      value={formData.joinDate}
+                      onChange={handleChange}
+                      required/>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Gender:</label>
+												<select class="select" name="gender"
+                      value={formData.gender}
+                      onChange={handleChange}
+                      required>
+											 <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+												</select>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Employment Type:</label>
+												<select class="select" name="employmentType"
+                      value={formData.employmentType}
+                      onChange={handleChange}
+                      required>
+											 <option value="full-time">Full-time</option>
+                      <option value="part-time">Part-time</option>
+                      <option value="contract">Contract</option>
+												</select>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">Status :</label>
+												<select class="select" name="status"
+                      value={formData.status}
+                      onChange={handleChange}
+                      required>
+											 <option value="active">Active</option>
+                       <option value="inactive">Inactive</option>
+												</select>
+											</div>
+
+											<div class="mb-3">
+												<label class="form-label">Address:</label>
+												<textarea rows="5" cols="5" class="form-control"
+													placeholder="Enter message" name="address"
+                          value={formData.address}
+                          onChange={handleChange}
+                          required></textarea>
+											</div>
+										</div>
+									
+									</div>
+									<div class="text-end">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</form>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/* <!-- /details popup --> */}
+
+    </>
   );
 };
 

@@ -33,7 +33,8 @@ const LeaveRequestForm = () => {
   };
 
   return (
-    <div style={{marginLeft:'300px'}}>
+    <>
+    {/* <div style={{marginLeft:'300px'}}>
       <h2>Employee Leave Request</h2>
       <form onSubmit={handleSubmit}>
         <label> EmployeeId:</label>
@@ -59,7 +60,75 @@ const LeaveRequestForm = () => {
         
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </div> */}
+
+
+    <div class="page-wrapper cardhead">
+    <div class="content container-fluid">
+    {/* <!-- Page Header --> */}
+				<div class="page-header">
+					<div class="row">
+						<div class="col">
+							<h3 class="page-title">Employee Leave Request</h3>
+						</div>
+					</div>
+				</div>
+				{/* <!-- /Page Header --> */}
+    <div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-title">Two Column Vertical Form</h5>
+							</div>
+							<div class="card-body">
+								<form  onSubmit={handleSubmit}>
+									<div class="row">
+										<div class="col-md-6 col-lg-12">
+											<h5 class="card-title">Employee details</h5>
+											<div class="mb-3">
+												<label class="form-label">EmployeeId:</label>
+												<input type="text" class="form-control" name="employeeId" value={formData.employeeId} onChange={handleChange} required/>
+											</div>
+											
+											<div class="mb-3">
+												<label class="form-label">Leave Type:</label>
+												<select class="select" name="leaveType" value={formData.leaveType} onChange={handleChange} required>
+													<option>Select Leave</option>
+                          <option value="Sick Leave">Sick Leave</option>
+          <option value="Casual Leave">Casual Leave</option>
+          <option value="Annual Leave">Annual Leave</option>
+												</select>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">From Date:</label>
+												<input type="date" name="fromDate" value={formData.fromDate} onChange={handleChange} required/>
+											</div>
+
+                      <div class="mb-3">
+												<label class="form-label">To Date:</label>
+												<input type="date" name="toDate" value={formData.toDate} onChange={handleChange} required/>
+											</div>
+
+											<div class="mb-3">
+												<label class="form-label">Reason:</label>
+												<textarea rows="5" cols="5" class="form-control"
+													placeholder="Enter message"  name="reason" value={formData.reason} w onChange={handleChange} required></textarea>
+											</div>
+										</div>
+									
+									</div>
+									<div class="text-end">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+      </div>
+      </div>
+    </>
   );
 };
 
