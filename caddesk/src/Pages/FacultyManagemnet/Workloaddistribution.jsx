@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, User, Clock, BookOpen, X, Users, ChevronLeft, ChevronRight, Grid, LogIn, UserPlus, List, FileText, Calendar as CalendarIcon, Briefcase, Settings, Shield, Book, File, Clipboard } from 'lucide-react';
-
 const WorkloadDistribution = () => {
   // Sample initial staff data
   const [staffList, setStaffList] = useState([

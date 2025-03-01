@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { RefreshCw, CheckCircle, XCircle, Clock } from "lucide-react";
 
+import { IoEyeSharp } from "react-icons/io5";
+
 const LeaveRequests = () => {
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -72,7 +74,8 @@ const LeaveRequests = () => {
   };
 
   return (
-    <div className="w-full bg-gray-50 min-h-screen" style={{marginLeft:'300px'}}>
+    <>
+    {/* <div className="w-full bg-gray-50 min-h-screen" style={{marginLeft:'300px'}}>
       <div className="max-w-6xl mx-auto py-6 px-4">
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-gray-800">Leave Requests</h1>
@@ -207,7 +210,151 @@ const LeaveRequests = () => {
           </div>
         )}
       </div>
-    </div>
+    </div> */}
+    
+
+    <div class="page-wrapper cardhead">
+			<div class="content container-fluid">
+
+				{/* <!-- Page Header --> */}
+				<div class="page-header">
+					<div class="row">
+						<div class="col">
+							<h3 class="page-title">Leave Requests</h3>
+              <p>Manage employee leave applications</p>
+						</div>
+					</div>
+				</div>
+        {/* <!-- /Page Header --> */}
+        
+        <div class="row">
+        <div class="col-xl-12">
+						<div class="card">
+							<div class="card-header justify-content-between">
+								<div class="card-title">
+                Leave Requests Tables
+								</div>
+
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+                {isLoading ?  (
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+          </div>
+        ) : (
+
+          <table class="table text-nowrap table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Leave Type</th>
+              <th scope="col">Date</th>
+              <th scope="col">Reason</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          {leaveRequests.length === 0 ? (
+                  <tr>
+                    <td colSpan="6" className="text-center py-4 text-gray-500">No leave requests found</td>
+                  </tr>
+                ):
+          
+                (
+                  leaveRequests.map((leave) => (
+                     
+                    <tr key={leave._id} onClick={() => handleRowClick(leave)}>
+                    <th scope="row">
+                      <div class="form-check">
+                        <label class="form-check-label" for="checkebox-sm">
+                        {leave.employeeId}
+                        </label>
+                      </div>
+                    </th>
+                    <td>{leave.leaveType}</td>
+                    <td>{new Date(leave.fromDate).toLocaleDateString()} 
+                    {leave.fromDate !== leave.toDate && ` - ${new Date(leave.toDate).toLocaleDateString()}`}</td>
+                    <td>{leave.reason}</td>
+                    <td>{leave.status === "Approved" ? (<span class="badge bg-soft-success">{leave.status}</span>) :(<span class="badge bg-danger">{leave.status}</span>)}</td>
+                    <td>
+                      
+                      <div class="hstack gap-2 fs-15">
+                      <td class="action-table-data">
+											<div class="edit-delete-action">
+												<a class="me-3 p-2" href="javascript:void(0);" data-bs-toggle="modal"
+													data-bs-target="#user-profile-new">
+													<i class="ti ti-bounce-right text-info"></i>
+												</a>
+											</div>
+                      </td>
+                      </div>
+                    </td>
+                  </tr>
+
+                  ))
+                )
+          }
+           
+            
+          </tbody>
+        </table>
+
+        )}
+
+									
+								</div>
+							</div>
+
+						</div>
+					</div>
+          </div>
+        </div>
+        </div>
+
+        {/* <!-- details popup --> */}
+        <div class="modal fade" id="user-profile-new">
+		<div class="modal-dialog history-modal-profile">
+			<div class="modal-content">
+				<div class="page-wrapper details-blk">
+					<div class="content">
+						<div class="text-center right-sidebar-profile mb-3">
+							<figure class="avatar">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOrDt1Z35KY2BvIMquoClHJ2R-2GX84GjQoQ&s" alt="image"/>
+							</figure>
+							
+						</div>
+						<div class="modal-profile-detail">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="modal-userlist">
+										<ul>
+											<li>Employee ID:<span></span></li>
+											<li>Leave Type:<span>Sick Leave</span></li>
+                      <li>From Date:<span>2/4/2025</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="modal-userlist d-flex justify-content-center">
+										<ul>
+											<li>To Date:<span> 2/28/2025</span></li>
+											<li>Duration:<span>25 day(s)</span></li>
+											<li>Reason for Leave:<span>sick</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/* <!-- /details popup --> */}
+
+    </>
   );
 };
 
