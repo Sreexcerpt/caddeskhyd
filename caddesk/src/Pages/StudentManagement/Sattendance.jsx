@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
 import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from "chart.js";
-  import { Bar } from "react-chartjs-2";
-  
-  // Register Chart.js components
-  ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Sattendance = () => {
   const [attendance, setAttendance] = useState([]);
@@ -91,146 +91,177 @@ const Sattendance = () => {
   };
 
   return (
-    <div style={{ maxWidth: "900px", margin: "20px auto",marginLeft:"300px" }}>
-      <h2>Attendance Tracker</h2>
+    <>
+      {/* <div style={{ maxWidth: "900px", margin: "20px auto", marginTop: "300px" }}>
+        <h2>Attendance Tracker</h2>
 
-      {/* Attendance Form */}
-      <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "20px" }}>
-        <input type="text" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} required />
-        <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-        <input type="time" name="time" value={formData.time} onChange={handleChange} required />
-        <input type="text" name="subject" placeholder="Course/Subject" value={formData.subject} onChange={handleChange} required />
-        <select name="status" value={formData.status} onChange={handleChange}>
-          <option value="Present">Present</option>
-          <option value="Absent">Absent</option>
-          <option value="Late">Late</option>
-        </select>
-        <button type="submit" style={{ gridColumn: "span 3", background: "#4CAF50", color: "white", padding: "10px" }}>Mark Attendance</button>
-      </form>
+         Attendance Form 
+        <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "20px" }}>
+          <input type="text" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} required />
+          <input type="date" name="date" value={formData.date} onChange={handleChange} required />
+          <input type="time" name="time" value={formData.time} onChange={handleChange} required />
+          <input type="text" name="subject" placeholder="Course/Subject" value={formData.subject} onChange={handleChange} required />
+          <select name="status" value={formData.status} onChange={handleChange}>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Late">Late</option>
+          </select>
+          <button type="submit" style={{ gridColumn: "span 3", background: "#4CAF50", color: "white", padding: "10px" }}>Mark Attendance</button>
+        </form>
 
-      {/* Attendance Table */}
-      <table border="1" width="100%" cellPadding="10">
-        <thead>
-          <tr>
-            <th>Student ID</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Subject</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {attendance.map((record) => (
-            <tr key={record._id}>
-              <td>{record.studentId}</td>
-              <td>{record.date}</td>
-              <td>{record.time}</td>
-              <td>{record.subject}</td>
-              <td>{record.status}</td>
-              <td style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-                <button style={{ border: "none", background: "transparent", cursor: "pointer" }}>
-                  <MdEdit size={20} color="blue" />
-                </button>
-                <button onClick={() => handleDelete(record._id)} style={{ border: "none", background: "transparent", cursor: "pointer" }}>
-                  <MdDelete size={20} color="red" />
-                </button>
-              </td>
+        Attendance Table
+        <table border="1" width="100%" cellPadding="10">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Subject</th>
+              <th>Status</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {attendance.map((record) => (
+              <tr key={record._id}>
+                <td>{record.studentId}</td>
+                <td>{record.date}</td>
+                <td>{record.time}</td>
+                <td>{record.subject}</td>
+                <td>{record.status}</td>
+                <td style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+                  <button style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                    <MdEdit size={20} color="blue" />
+                  </button>
+                  <button onClick={() => handleDelete(record._id)} style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                    <MdDelete size={20} color="red" />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      {/* Attendance Chart */}
-      <h3>Attendance Summary</h3>
-      <Bar data={chartData} />
-    </div>
+        Attendance Chart
+        <h3>Attendance Summary</h3>
+        <Bar data={chartData} />
+      </div> */}
+      <div class="page-wrapper cardhead">
+        <div class="content container-fluid">
+          <div class="page-header">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header justify-content-between">
+                    <div class="card-title">
+                      Attendance Tracker
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <form onSubmit={handleSubmit}>
+                          <div class="row">
+                            <div class="col-md-4 col-12 mb-6">
+                              <label class="col-form-label col-md-10">Student ID</label>
+                              <div class="col-md-10">
+                                <input type="text" class="form-control" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} required />
+                              </div>
+                            </div>
+                           
+                              <div class="col-md-4 col-12 mb-6">
+                                <label class="col-form-label col-md-2">Date</label>
+                                <div class="col-md-10">
+                                  <input class="form-control" type="date" name="date" value={formData.date} onChange={handleChange} required />
+                                </div>
+                              </div>
+
+                              <div class="col-md-4 col-12 mb-6">
+                                <label class="col-form-label col-md-2">Time</label>
+                                <div class="col-md-10">
+                                  <input type="time" name="time" class="form-control" value={formData.time} onChange={handleChange} required />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-5 col-12 mb-6">
+                                <label class="col-form-label col-md-5">Course/Subject</label>
+                                <div class="col-md-10">
+                                  <input type="text" class="form-control" name="subject" placeholder="Course/Subject" value={formData.subject} onChange={handleChange} required />
+                                </div>
+                              </div>
+                              <div class="col-md-5 col-12 mb-6">
+                                <label class="col-form-label col-md-2">status</label>
+                                <div class="col-md-10">
+                                  <select name="status" className="placeholder js-states form-control" value={formData.status} onChange={handleChange}>
+                                    <option value="Present">--select--</option>
+                                    <option value="Present">Present</option>
+                                    <option value="Absent">Absent</option>
+                                    <option value="Late">Late</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-12 mb-6">
+                            <button class="btn btn-success" type="submit">Submit</button></div>
+                          </form>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap">
+                      <thead>
+                        <tr>
+
+                          <th scope="col">Student ID</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Time</th>
+                          <th scope="col">Subject</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Actions</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {attendance.map((record) => (
+                          <tr key={record._id}>
+                            <td>{record.studentId}</td>
+                            <td>{record.date}</td>
+                            <td>{record.time}</td>
+                            <td>{record.subject}</td>
+                            <td>{record.status}</td>
+                            <td style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+                              <button style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                                <MdEdit size={20} color="blue" />
+                              </button>
+                              <button onClick={() => handleDelete(record._id)} style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                                <MdDelete size={20} color="red" />
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                </div>
+                <h3>Attendance Summary</h3>
+                <Bar data={chartData} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </>
   );
 };
 
 export default Sattendance;
-
-
-// import React, { useState } from "react";
-
-// const WeekClasses = () => {
-//   // Sample class data
-//   const classesData = [
-//     { day: "Monday", module: "Mathematics", start: "08:00", end: "10:00", lecturer: "John Doe", room: "Room 101" },
-//     { day: "Tuesday", module: "Physics", start: "09:00", end: "11:00", lecturer: "Jane Smith", room: "Room 102" },
-//     { day: "Wednesday", module: "Biology", start: "10:00", end: "12:00", lecturer: "Sarah Johnson", room: "Room 103" },
-//     { day: "Thursday", module: "Chemistry", start: "11:00", end: "13:00", lecturer: "Michael Williams", room: "Room 104" },
-//     { day: "Friday", module: "History", start: "12:00", end: "14:00", lecturer: "David Brown", room: "Room 105" },
-//   ];
-
-//   // Generate time slots (7:00 AM - 7:00 PM)
-//   const timeSlots = [];
-//   for (let i = 7; i <= 19; i++) {
-//     timeSlots.push(`${i}:00 - ${i + 1}:00`);
-//   }
-
-//   // Days of the week
-//   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-//   return (
-//     <div className="container mt-4">
-//       <h4>Weekly Timetable</h4>
-//       <div className="card bg-light shadow">
-//         <div className="card-header">
-//           <span><i className="bi bi-table me-2"></i></span> Weekly Classes
-//         </div>
-//         <div className="card-body">
-//           <div className="table-responsive">
-//             <div className="pb-3 d-flex justify-content-between">
-//               <button className="btn btn-outline-info"><i className="bi bi-download me-2"></i>Export PDF</button>
-//             </div>
-//             <table className="table table-bordered text-center table-striped">
-//               <thead>
-//                 <tr className="bg-secondary text-white">
-//                   <th>Time</th>
-//                   {days.map((day) => (
-//                     <th key={day}>{day}</th>
-//                   ))}
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 {timeSlots.map((timeSlot, index) => (
-//                   <tr key={index}>
-//                     <td className="align-middle">{timeSlot}</td>
-//                     {days.map((day, dayIndex) => {
-//                       const classForSlot = classesData.find((classItem) => {
-//                         return (
-//                           classItem.day === day &&
-//                           classItem.start === timeSlot.split(" - ")[0]
-//                         );
-//                       });
-
-//                       return (
-//                         <td key={dayIndex}>
-//                           {classForSlot ? (
-//                             <div className="class-info">
-//                               <span className="bg-info text-white px-2 py-1 rounded">{classForSlot.module}</span>
-//                               <div className="font-size14">{classForSlot.start} - {classForSlot.end}</div>
-//                               <div className="font-size13 text-muted">{classForSlot.lecturer}</div>
-//                               <div className="font-size13 text-success">{classForSlot.room}</div>
-//                             </div>
-//                           ) : null}
-//                         </td>
-//                       );
-//                     })}
-//                   </tr>
-//                 ))}
-//               </tbody>
-//             </table>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default WeekClasses;
-
 
 
 
