@@ -7,15 +7,11 @@ const Header = () => {
         {/* <!-- Logo --> */}
         <div className="header-left active">
           <a href="index.html" className="logo logo-normal">
-            <img src="./src/assets/assets/img/logo.svg" alt="Logo" />
-            <img
-              src="./src/assets/assets/img/white-logo.svg"
-              className="white-logo"
-              alt="Logo"
-            />
+          <img src="./src/assets/assets/img/cad.png" className="img-fluid" alt="Profile" />
+          <img src="./src/assets/assets/img/cad.png" className="img-fluid" alt="Profile" />
           </a>
           <a href="index.html" className="logo-small">
-            <img src="assets/img/logo-small.svg" alt="Logo" />
+          <img src="./src/assets/assets/img/cad.png" className="img-fluid" alt="Profile" />
           </a>
           <a id="toggle_btn" href="javascript:void(0);">
             <i className="ti ti-arrow-bar-to-left"></i>

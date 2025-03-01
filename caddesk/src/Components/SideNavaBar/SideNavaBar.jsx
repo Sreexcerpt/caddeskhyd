@@ -46,7 +46,7 @@ const SideNavaBar = () => {
                         <ul>
                             <li className="clinicdropdown">
                                 <a href="profile.html">
-                                    <img src="./src/assets/assets/img/profiles/avatar-14.jpg" className="img-fluid" alt="Profile" />
+                                    <img src="./src/assets/assets/img/cad.png" className="img-fluid" alt="Profile" />
                                     <div className="user-names">
                                         <h5>Adrian Davies</h5>
                                         <h6>Tech Lead</h6>
