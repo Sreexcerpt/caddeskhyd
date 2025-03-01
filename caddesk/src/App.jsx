@@ -17,6 +17,10 @@ import Course from './Pages/StudentManagement/Course'
 import Subject from './Pages/StudentManagement/Subject'
 import StudentForm from './Pages/StudentManagement/StudentForm'
 import StudentView from './Pages/StudentManagement/StudentView'
+import RegisterReport from './Pages/Reports/RegisterReport'
+import AttendanceReport from './Pages/Reports/AttendanceReport'
+import PaymentReport from './Pages/Reports/PaymentReport'
+import WalkinsReport from './Pages/Reports/WalkinsReport'
 import Sattendance from './Pages/StudentManagement/SAttendance'
 import StudentTimetable from './Pages/StudentManagement/StudentTimetable'
 const App = () => {
@@ -41,6 +45,10 @@ const App = () => {
          <Route path='/StudentView' element={<StudentView/>}/>
          <Route path='/SAttendance' element={<Sattendance/>}/>
          <Route path='/StudentTimetable' element={<StudentTimetable/>}/>
+         <Route path='/RegisterReport' element={<RegisterReport/>}/>
+         <Route path='/AttendanceReport' element={<AttendanceReport/>}/>
+         <Route path='/FeePaymentReport' element={<PaymentReport/>}/>
+         <Route path='/WalkinsReport' element={<WalkinsReport/>}/>
        </Routes>
        </Router>
     </div>
