@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaGlobe, FaPhone, FaPlus, FaTimes, FaUser, FaC
 import { 
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, 
   Paper, Button, TextField, Select, MenuItem, Box, IconButton,
-  Grid, Typography, useMediaQuery, useTheme, Avatar, Chip, Fade, Zoom, Grow,
+  Grid2, Typography, useMediaQuery, useTheme, Avatar, Chip, Fade, Zoom, Grow,
   Card, CardContent, LinearProgress, Badge, Drawer, Divider
 } from "@mui/material";
 
@@ -337,8 +337,8 @@ function LeadManagement() {
         
         {/* Stats Cards */}
         <Grow in={animateItems} timeout={300}>
-          <Grid container spacing={3} sx={{ mb: 4 }}>
-            <Grid item xs={12} sm={6} md={3}>
+          <Grid2 container spacing={3} sx={{ mb: 4 }}>
+            <Grid2 item xs={12} sm={6} md={3}>
               <Card sx={{ 
                 borderRadius: 4, 
                 boxShadow: colors.dropShadow,
@@ -367,9 +367,9 @@ function LeadManagement() {
                   />
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid2>
             
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid2 item xs={12} sm={6} md={3}>
               <Card sx={{ 
                 borderRadius: 4, 
                 boxShadow: colors.dropShadow,
@@ -398,9 +398,9 @@ function LeadManagement() {
                   />
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid2>
             
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid2 item xs={12} sm={6} md={3}>
               <Card sx={{ 
                 borderRadius: 4, 
                 boxShadow: colors.dropShadow,
@@ -429,9 +429,9 @@ function LeadManagement() {
                   />
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid2>
             
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid2 item xs={12} sm={6} md={3}>
               <Card sx={{ 
                 borderRadius: 4, 
                 boxShadow: colors.dropShadow,
@@ -460,8 +460,8 @@ function LeadManagement() {
                   />
                 </CardContent>
               </Card>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
         </Grow>
         
         {/* Source Header */}
@@ -664,8 +664,8 @@ function LeadManagement() {
                 </IconButton>
               </Box>
               
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
+              <Grid2 container spacing={2}>
+                <Grid2 item xs={12}>
                   <TextField
                     label="Full Name"
                     name="name"
@@ -680,8 +680,8 @@ function LeadManagement() {
                       }
                     }}
                   />
-                </Grid>
-                <Grid item xs={12}>
+                </Grid2>
+                <Grid2 item xs={12}>
                   <TextField
                     label="Phone Number"
                     name="phone"
@@ -696,8 +696,8 @@ function LeadManagement() {
                       }
                     }}
                   />
-                </Grid>
-                <Grid item xs={12} sm={6}>
+                </Grid2>
+                <Grid2 item xs={12} sm={6}>
                   <TextField
                     label="Date"
                     name="date"
@@ -713,8 +713,8 @@ function LeadManagement() {
                       }
                     }}
                   />
-                </Grid>
-                <Grid item xs={12} sm={6}>
+                </Grid2>
+                <Grid2 item xs={12} sm={6}>
                   <Select
                     name="status"
                     fullWidth
@@ -731,8 +731,8 @@ function LeadManagement() {
                     <MenuItem value="Converted">Converted</MenuItem>
                     <MenuItem value="Dropped">Dropped</MenuItem>
                   </Select>
-                </Grid>
-                <Grid item xs={12}>
+                </Grid2>
+                <Grid2 item xs={12}>
                   <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
                     <Button
                       variant="contained"
@@ -765,8 +765,8 @@ function LeadManagement() {
                       Cancel
                     </Button>
                   </Box>
-                </Grid>
-              </Grid>
+                </Grid2>
+              </Grid2>
             </Card>
           </Zoom>
         )}
