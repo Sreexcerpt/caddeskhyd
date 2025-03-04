@@ -82,7 +82,7 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Sales Report</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Deals By Stage</h4>
                                     <div className="d-flex align-items-center flex-wrap row-gap-2">
                                         <div className="dropdown me-2">
                                             <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">

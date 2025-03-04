@@ -17,8 +17,16 @@ import Course from './Pages/StudentManagement/Course'
 import Subject from './Pages/StudentManagement/Subject'
 import StudentForm from './Pages/StudentManagement/StudentForm'
 import StudentView from './Pages/StudentManagement/StudentView'
+import RegisterReport from './Pages/Reports/RegisterReport'
+import AttendanceReport from './Pages/Reports/AttendanceReport'
+import PaymentReport from './Pages/Reports/PaymentReport'
+import WalkinsReport from './Pages/Reports/WalkinsReport'
 import Sattendance from './Pages/StudentManagement/SAttendance'
 import StudentTimetable from './Pages/StudentManagement/StudentTimetable'
+import AddingLead from './Pages/FacultyManagemnet/AddingLead'
+import LeadAssignment from './Pages/FacultyManagemnet/LeadAssignment'
+import LeadFollowup from './Pages/FacultyManagemnet/LeadFollowup'
+import Counsellorreport from './Pages/FacultyManagemnet/Counsellorreport'
 const App = () => {
   return (
     <div>
@@ -41,6 +49,14 @@ const App = () => {
          <Route path='/StudentView' element={<StudentView/>}/>
          <Route path='/SAttendance' element={<Sattendance/>}/>
          <Route path='/StudentTimetable' element={<StudentTimetable/>}/>
+         <Route path='/RegisterReport' element={<RegisterReport/>}/>
+         <Route path='/AttendanceReport' element={<AttendanceReport/>}/>
+         <Route path='/FeePaymentReport' element={<PaymentReport/>}/>
+         <Route path='/WalkinsReport' element={<WalkinsReport/>}/>
+         <Route path='/AddingLead' element={<AddingLead/>}/>
+         <Route path='/LeadAssignment' element={<LeadAssignment/>}/>
+         <Route path='/LeadFollowup' element={<LeadFollowup/>}/>
+         <Route path='/Counsellorreport' element={<Counsellorreport/>}/>
        </Routes>
        </Router>
     </div>

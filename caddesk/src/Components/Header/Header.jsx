@@ -7,7 +7,7 @@ const Header = () => {
         {/* <!-- Logo --> */}
         <div className="header-left active">
           <a href="index.html" className="logo logo-normal">
-            <img src="./src/assets/assets/img/logo.svg" alt="Logo" />
+            <img src="./src/assets/assets/img/cad.png" alt="Logo" />
             <img
               src="./src/assets/assets/img/white-logo.svg"
               className="white-logo"
