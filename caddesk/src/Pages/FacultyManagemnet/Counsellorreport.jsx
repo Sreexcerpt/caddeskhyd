@@ -1,6 +1,6 @@
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from "recharts";
-import { Card, CardContent, Typography, Grid } from "@mui/material";
+import { Card, CardContent, Typography, Grid2 } from "@mui/material";
 
 const inquiryData = [
   { source: "Website", inquiries: 120 },
@@ -19,9 +19,9 @@ const counselorData = [
 const ReportsAndInsights = () => {
   return (
     <div style={{marginLeft:'300px'}}>
-    <Grid container spacing={3}>
+    <Grid2 container spacing={3}>
       {/* Source-wise Inquiry Analysis */}
-      <Grid item xs={12} md={6}>
+      <Grid2 item xs={12} md={6}>
         <Card>
           <CardContent>
             <Typography variant="h6" gutterBottom>
@@ -38,10 +38,10 @@ const ReportsAndInsights = () => {
             </ResponsiveContainer>
           </CardContent>
         </Card>
-      </Grid>
+      </Grid2>
       
       {/* Counselor Performance Reports */}
-      <Grid item xs={12} md={6}>
+      <Grid2 item xs={12} md={6}>
         <Card>
           <CardContent>
             <Typography variant="h6" gutterBottom>
@@ -59,8 +59,8 @@ const ReportsAndInsights = () => {
             </ResponsiveContainer>
           </CardContent>
         </Card>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
     </div>
   );
 };

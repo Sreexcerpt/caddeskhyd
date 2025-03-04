@@ -106,38 +106,12 @@ const SideNavaBar = () => {
                                 </ul>
                             </li>
                             <li>
-                                <h6 className="submenu-hdr">Layout</h6>
+                                <h6 className="submenu-hdr">Lead</h6>
                                 <ul>
-                                    <li>
-                                        <a href="layout-mini.html">
-                                            <i className="ti ti-layout-navbar"></i><span>Mini</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout-horizontal-single.html">
-                                            <i className="ti ti-layout-navbar-inactive"></i><span>Horizontal Single</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout-without-header.html">
-                                            <i className="ti ti-layout-sidebar"></i><span>Without Header</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout-rtl.html">
-                                            <i className="ti ti-text-direction-rtl"></i><span>RTL</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout-detached.html">
-                                            <i className="ti ti-details"></i><span>Detached</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout-dark.html">
-                                            <i className="ti ti-details"></i><span>Dark</span>
-                                        </a>
-                                    </li>
+                                    <li><a href="/AddingLead">AddingLead</a></li>
+                                    <li><a href="/LeadAssignment">LeadAssignment</a></li>
+                                    <li><a href="/LeadFollowup">LeadFollowup</a></li>
+                                    <li><a href="/Counsellorreport">Counsellorreport</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -202,7 +176,7 @@ const SideNavaBar = () => {
                                             <li><a href="/AttendanceReport">Attendance Report</a></li>
                                             <li><a href="/FeePaymentReport">FeePayment Report</a></li>
                                             <li><a href="/WalkinsReport">Walkins Report</a></li>
-                                            
+
                                         </ul>
                                     </li>
                                 </ul>

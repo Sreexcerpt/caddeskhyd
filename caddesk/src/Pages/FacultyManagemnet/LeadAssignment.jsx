@@ -2,7 +2,7 @@
 
 
 import { useState } from "react";
-import { Box, Button, Select, MenuItem, Typography, Grid, Card, CardContent } from "@mui/material";
+import { Box, Button, Select, MenuItem, Typography, Grid2, Card, CardContent } from "@mui/material";
 
 // Updated Indian names for counselors
 const counselors = [
@@ -43,9 +43,9 @@ function LeadAssignment() {
         🎯 Lead Assignment & Follow-ups
       </Typography>
 
-      <Grid container spacing={3}>
+      <Grid2 container spacing={3}>
         {counselors.map((counselor) => (
-          <Grid item xs={12} sm={6} md={4} key={counselor.id}>
+          <Grid2 item xs={12} sm={6} md={4} key={counselor.id}>
             <Card elevation={4} sx={{ borderRadius: 3 }}>
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" color="secondary">
@@ -74,9 +74,9 @@ function LeadAssignment() {
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Grid2>
         ))}
-      </Grid>
+      </Grid2>
 
       {/* Unassigned Leads */}
       <Typography variant="h5" mt={4} textAlign="center" fontWeight="bold" color="primary">

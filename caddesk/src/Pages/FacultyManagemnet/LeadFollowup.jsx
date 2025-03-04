@@ -3,7 +3,7 @@ import {
   Box,
   Typography,
   Paper,
-  Grid,
+  Grid2,
   Chip,
   Button,
   TextField,
@@ -250,9 +250,9 @@ const LeadFollowup = () => {
           </Box>
           
           {/* Main content */}
-          <Grid container spacing={3}>
+          <Grid2 container spacing={3}>
             {/* Lead list */}
-            <Grid item xs={12} md={4}>
+            <Grid2 item xs={12} md={4}>
               <Paper elevation={2} sx={{ p: 2, height: '70vh', overflow: 'auto' }}>
                 <Typography variant="h6" gutterBottom>
                   Leads Requiring Follow-up
@@ -326,10 +326,10 @@ const LeadFollowup = () => {
                   })}
                 </List>
               </Paper>
-            </Grid>
+            </Grid2>
             
             {/* Lead details */}
-            <Grid item xs={12} md={8}>
+            <Grid2 item xs={12} md={8}>
               <Paper elevation={2} sx={{ p: 3, height: '70vh', overflow: 'auto' }}>
                 {selectedLead ? (
                   <Box>
@@ -355,8 +355,8 @@ const LeadFollowup = () => {
                       </FormControl>
                     </Box>
                     
-                    <Grid container spacing={3} mb={3}>
-                      <Grid item xs={12} md={6}>
+                    <Grid2 container spacing={3} mb={3}>
+                      <Grid2 item xs={12} md={6}>
                         <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                           Contact Information
                         </Typography>
@@ -369,8 +369,8 @@ const LeadFollowup = () => {
                         <Typography variant="body1">
                           <strong>Preferred Contact:</strong> {selectedLead.preferred_contact}
                         </Typography>
-                      </Grid>
-                      <Grid item xs={12} md={6}>
+                      </Grid2>
+                      <Grid2 item xs={12} md={6}>
                         <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                           Application Details
                         </Typography>
@@ -383,14 +383,14 @@ const LeadFollowup = () => {
                         <Typography variant="body1">
                           <strong>Status:</strong> {selectedLead.status}
                         </Typography>
-                      </Grid>
-                    </Grid>
+                      </Grid2>
+                    </Grid2>
                     
                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                       Follow-up Schedule
                     </Typography>
-                    <Grid container spacing={3} mb={3}>
-                      <Grid item xs={12} md={6}>
+                    <Grid2 container spacing={3} mb={3}>
+                      <Grid2 item xs={12} md={6}>
                         <TextField
                           label="Last Contact"
                           type="date"
@@ -403,8 +403,8 @@ const LeadFollowup = () => {
                             shrink: true,
                           }}
                         />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
+                      </Grid2>
+                      <Grid2 item xs={12} md={6}>
                         <TextField
                           label="Next Follow-up"
                           type="date"
@@ -415,8 +415,8 @@ const LeadFollowup = () => {
                             shrink: true,
                           }}
                         />
-                      </Grid>
-                    </Grid>
+                      </Grid2>
+                    </Grid2>
                     
                     <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                       Notes
@@ -475,8 +475,8 @@ const LeadFollowup = () => {
                   </Box>
                 )}
               </Paper>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
           
           {/* Activity Log Section */}
           <Paper elevation={2} sx={{ p: 3, mt: 3 }}>
