@@ -15,7 +15,7 @@ const DashBoard = () => {
                         <div className="page-header">
                             <div className="row align-items-center ">
                                 <div className="col-md-4">
-                                    <h3 className="page-title">Deals Dashboard</h3>
+                                    <h3 className="page-title">Dashboard</h3>
                                 </div>
                                 <div className="col-md-8 float-end ms-auto">
                                     <div className="d-flex title-head">
@@ -40,7 +40,8 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Recently Created Deals</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>student 
+                                    Registration</h4>
                                     <div className="dropdown">
                                         <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
 											<i className="ti ti-calendar-check me-2"></i>Last 30 days
@@ -62,9 +63,9 @@ const DashBoard = () => {
                                     <table className="table dataTable" id="deals-project">
                                         <thead className="thead-light">
                                             <tr>
-                                                <th>Deal Name</th>
+                                                <th>Name</th>
                                                 <th>Stage</th>
-                                                <th>Deal Value</th>
+                                                <th>Amount</th>
                                                 <th>Probability</th>
                                                 <th>Status</th>
                                             </tr>
@@ -81,7 +82,7 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Deals By Stage</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Sales Report</h4>
                                     <div className="d-flex align-items-center flex-wrap row-gap-2">
                                         <div className="dropdown me-2">
                                             <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
@@ -137,30 +138,9 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Leads By Stage</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Faculty By Stage</h4>
                                     <div className="d-flex align-items-center flex-wrap row-gap-2">
-                                        <div className="dropdown me-2">
-                                            <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
-												Marketing Pipeline
-											</a>
-                                            <div className="dropdown-menu dropdown-menu-end">
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Marketing Pipeline
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Sales Pipeline
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Email
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Chats
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Operational
-												</a>
-                                            </div>
-                                        </div>
+                                        
                                         <div className="dropdown">
                                             <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
 												Last 3 months
@@ -191,30 +171,9 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Won Deals Stage</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Faculty on Class</h4>
                                     <div className="d-flex align-items-center flex-wrap row-gap-2">
-                                        <div className="dropdown me-2">
-                                            <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
-												Marketing Pipeline
-											</a>
-                                            <div className="dropdown-menu dropdown-menu-end">
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Marketing Pipeline
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Sales Pipeline
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Email
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Chats
-												</a>
-                                                <a href="javascript:void(0);" className="dropdown-item">
-													Operational
-												</a>
-                                            </div>
-                                        </div>
+                                        
                                         <div className="dropdown">
                                             <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
 												Last 3 months
@@ -236,7 +195,7 @@ const DashBoard = () => {
                             </div>
                             <div className="card-body">
                                 <div id="won-chart">
-                                    <GoalBarChartGreen/>
+                                <GoalBarChart/>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +206,7 @@ const DashBoard = () => {
                         <div className="card w-100">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>Deals by Year</h4>
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Growth Of Year</h4>
                                     <div className="d-flex align-items-center flex-wrap row-gap-2">
                                         <div className="dropdown me-2">
                                             <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">

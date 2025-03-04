@@ -15,9 +15,9 @@ const GoalBarChartGreen = () => {
         colors: ["#28a745"], // Green color
         xaxis: {
             categories: [
-                "South Korea",
-                "Canada",
-                "United Kingdom",
+                "Vijay",
+                "karthik",
+                "kavana",
             ],
         },
     };

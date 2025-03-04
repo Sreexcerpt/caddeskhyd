@@ -48,8 +48,8 @@ const SideNavaBar = () => {
                             <a href="profile.html">
 								<img src="./src/assets/assets/img/profiles/avatar-14.jpg" className="img-fluid" alt="Profile"/>
 								<div className="user-names">
-									<h5>Adrian Davies</h5>
-									<h6>Tech Lead</h6>
+									<h5>Vijay Kumar</h5>
+									<h6>Education Counselor</h6>
 								</div>
 							</a>
                         </li>
@@ -71,7 +71,7 @@ const SideNavaBar = () => {
                                     </ul> */}
                                 </li>
                                 <li className="submenu">
-                                    <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
+                                    <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagement</span><span className="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="/AddFaculty">AddFaculty</a></li>
                                         {/* <li className="submenu submenu-two">

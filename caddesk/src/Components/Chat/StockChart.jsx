@@ -20,8 +20,8 @@ const StockChart = () => {
     colors: ["#FF5733"], // Custom color
     dataLabels: { enabled: false },
     stroke: { curve: "straight" },
-    title: { text: "Fundamental Analysis of Stocks", align: "left" },
-    subtitle: { text: "Price Movements", align: "left" },
+    title: { text: "Increase Your Sells", align: "left" },
+    subtitle: { text: "You have achieved", align: "left" },
     labels: [
       "2024-01-01",
       "2024-01-02",
@@ -41,7 +41,7 @@ const StockChart = () => {
 
   return (
     <div>
-      <h2>Stock Price Chart</h2>
+      <h2>Financial year Chart</h2>
       <Chart options={chartOptions} series={chartData.series} type="area" height={350} />
     </div>
   );
