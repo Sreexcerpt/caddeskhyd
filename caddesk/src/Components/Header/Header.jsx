@@ -44,7 +44,7 @@ const Header = () => {
                     <input type="text" placeholder="Search" />
                     <div className="search-addon">
                       <button type="submit">
-                        <i className="ti ti-command"></i>
+                       
                       </button>
                     </div>
                   </div>
