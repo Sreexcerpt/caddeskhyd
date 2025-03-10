@@ -40,7 +40,7 @@ const DashBoard = () => {
                         <div className="card flex-fill">
                             <div className="card-header border-0 pb-0">
                                 <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                                    <h4><i className="ti ti-grip-vertical me-1"></i>student 
+                                    <h4><i className="ti ti-grip-vertical me-1"></i>Student 
                                     Registration</h4>
                                     <div className="dropdown">
                                         <a className="dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);">
