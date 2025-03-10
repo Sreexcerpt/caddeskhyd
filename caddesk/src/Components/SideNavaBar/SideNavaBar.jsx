@@ -107,7 +107,7 @@ const SideNavaBar = () => {
                             </li>
                             <li>
                                 <h6 className="submenu-hdr">Lead</h6>
-                                <ul>
+                                <ul> 
                                     <li><a href="/AddingLead">AddingLead</a></li>
                                     <li><a href="/LeadAssignment">LeadAssignment</a></li>
                                     <li><a href="/LeadFollowup">LeadFollowup</a></li>
