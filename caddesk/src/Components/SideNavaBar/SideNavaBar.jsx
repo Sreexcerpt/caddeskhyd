@@ -17,71 +17,62 @@ const SideNavaBar = () => {
                 </div>
                 <div className="sidebar-header p-3 pb-0 pt-2">
 
-                <div className="d-flex align-items-center justify-content-between menu-item mb-3">
-                    <div className="me-3">
-                        <a href="calendar.html" className="btn btn-icon border btn-menubar">
-							<i className="ti ti-layout-grid-remove"></i>
-						</a>
-                    </div>
-                    <div className="me-3">
-                        <a href="chat.html" className="btn btn-icon border btn-menubar position-relative">
-							<i className="ti ti-brand-hipchat"></i>
-						</a>
-                    </div>
-                    <div className="me-3 notification-item">
-                        <a href="activities.html" className="btn btn-icon border btn-menubar position-relative me-1">
-							<i className="ti ti-bell"></i>
-							<span className="notification-status-dot"></span>
-						</a>
-                    </div>
-                    <div className="me-0">
-                        <a href="email.html" className="btn btn-icon border btn-menubar">
-							<i className="ti ti-message"></i>
-						</a>
+                    <div className="d-flex align-items-center justify-content-between menu-item mb-3">
+                        <div className="me-3">
+                            <a href="calendar.html" className="btn btn-icon border btn-menubar">
+                                <i className="ti ti-layout-grid-remove"></i>
+                            </a>
+                        </div>
+                        <div className="me-3">
+                            <a href="chat.html" className="btn btn-icon border btn-menubar position-relative">
+                                <i className="ti ti-brand-hipchat"></i>
+                            </a>
+                        </div>
+                        <div className="me-3 notification-item">
+                            <a href="activities.html" className="btn btn-icon border btn-menubar position-relative me-1">
+                                <i className="ti ti-bell"></i>
+                                <span className="notification-status-dot"></span>
+                            </a>
+                        </div>
+                        <div className="me-0">
+                            <a href="email.html" className="btn btn-icon border btn-menubar">
+                                <i className="ti ti-message"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="sidebar-inner slimscroll">
-                <div id="sidebar-menu" className="sidebar-menu">
-                    <ul>
-                        <li className="clinicdropdown">
-                            <a href="profile.html">
-								<img src="./src/assets/assets/img/profiles/avatar-14.jpg" className="img-fluid" alt="Profile"/>
-								<div className="user-names">
-									<h5>Adrian Davies</h5>
-									<h6>Tech Lead</h6>
-								</div>
-							</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h6 className="submenu-hdr">Main Menu</h6>
-                            <ul>
-                                <li >
-                                    <a href="/" className="subdrop active">
-                                   
-										<i className="ti ti-layout-2"></i><span>Dashboard</span>
-                                        {/* <span className="menu-arrow"></span> */}
-									</a>
-                                    {/* <ul>
-                                        <li><a href="/" className="active">Deals Dashboard</a></li>
-                                        <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
-                                        <li><a href="project-dashboard.html">Project Dashboard</a></li>
-                                    </ul> */}
-                                </li>
-                                <li className="submenu">
-                                    <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
-                                    <ul>
-                                        <li><a href="/AddFaculty">AddFaculty</a></li>
-                                        {/* <li className="submenu submenu-two">
-                                            <a href="#">Call<span className="menu-arrow inside-submenu"></span></a>
-                                            <ul>
-                                                <li><a href="video-call.html">Video Call</a></li>
-                                                <li><a href="audio-call.html">Audio Call</a></li>
-                                                <li><a href="call-history.html">Call History</a></li>
-                                            </ul>
-                                        </li> */}
+                <div className="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" className="sidebar-menu">
+                        <ul>
+                            <li className="clinicdropdown">
+                                <a href="profile.html">
+                                    <img src="./src/assets/assets/img/profiles/avatar-14.jpg" className="img-fluid" alt="Profile" />
+                                    <div className="user-names">
+                                        <h5>Adrian Davies</h5>
+                                        <h6>Tech Lead</h6>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li className="submenu">
+                                        <a href="/" className="subdrop active">
+
+                                            <i className="ti ti-layout-2"></i><span>Dashboard</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li><a href="/" className="active">Deals Dashboard</a></li>
+                                            <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
+                                            <li><a href="project-dashboard.html">Project Dashboard</a></li>
+                                        </ul>
+                                    </li>
+                                    <li className="submenu">
+                                        <a href="#"><i className="ti ti-brand-airtable"></i><span>FacultyManagemnet</span><span className="menu-arrow"></span></a>
+                                        <ul>
+                                            <li><a href="/AddFaculty">AddFaculty</a></li>
                                             <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
                                             <li><a href="/FacultyList">FacultyList</a></li>
                                             <li><a href="/LeaveRequests">LeaveRequests</a></li>
@@ -103,11 +94,20 @@ const SideNavaBar = () => {
                                             <li><a href="/StudentTimetable">Student Timetable</a></li>
                                         </ul>
                                     </li>
+                                    <li className="submenu">
+                                        <a href="#"><i className="ti ti-brand-airtable"></i><span>Lead Managemnet</span><span className="menu-arrow"></span></a>
+                                        <ul>
+                                            <li><a href="/AddingLead">AddingLead</a></li>
+                                            <li><a href="/LeadAssignment">LeadAssignment</a></li>
+                                            <li><a href="/LeadFollowup">LeadFollowup</a></li>
+                                            <li><a href="/Counsellorreport">Counsellorreport</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h6 className="submenu-hdr">Lead</h6>
-                                <ul> 
+                                <ul>
                                     <li><a href="/AddingLead">AddingLead</a></li>
                                     <li><a href="/LeadAssignment">LeadAssignment</a></li>
                                     <li><a href="/LeadFollowup">LeadFollowup</a></li>

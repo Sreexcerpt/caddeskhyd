@@ -7,7 +7,11 @@
     /* background-color: #f4f4f4; */
     margin-left: 100px;
   }
-  
+  .loginbg{
+    background: url(./src/assets/assets/img/comimages/c2.png);
+    width: 100%;
+    height: 300px;
+  }
   /* Form box design */
   .form-box {
     background: white;

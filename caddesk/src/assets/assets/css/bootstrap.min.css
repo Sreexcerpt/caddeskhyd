@@ -746,9 +746,14 @@ progress {
 
 .img-fluid {
     max-width: 100%;
+
     height: auto
 }
 
+.img-fluid .loginimg{
+    width: 80%;
+    height: 80vh;
+}
 .img-thumbnail {
     padding: .25rem;
     background-color: var(--bs-body-bg);
