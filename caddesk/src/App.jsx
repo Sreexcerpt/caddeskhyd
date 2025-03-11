@@ -24,6 +24,9 @@ import AddingLead from "./Pages/FacultyManagemnet/AddingLead";
 import LeadAssignment from "./Pages/FacultyManagemnet/LeadAssignment";
 import LeadFollowup from "./Pages/FacultyManagemnet/LeadFollowup";
 import Counsellorreport from "./Pages/FacultyManagemnet/Counsellorreport";
+import ApplicationProcessing from "./Pages/AdmissionManagement/ApplicationProcessing";
+import EnrollmentAllocation from "./Pages/AdmissionManagement/EnrollmentAllocation";
+import FeeInvoiceGeneration from "./Pages/AdmissionManagement/FeeInvoiceGeneration";
 import AttendanceTracking from "./Pages/StudentManagement/attendancetracking";
 import StudentAttendance from "./Pages/StudentManagement/studentattendance";
 const Layout = () => {
@@ -59,6 +62,9 @@ const Layout = () => {
         <Route path="/LeadAssignment" element={<LeadAssignment />} />
         <Route path="/LeadFollowup" element={<LeadFollowup />} />
         <Route path="/Counsellorreport" element={<Counsellorreport />} />
+        <Route path="/ApplicationProcessing" element={<ApplicationProcessing />} />
+        <Route path="/EnrollmentAllocation" element={<EnrollmentAllocation/>}/>
+        <Route path="/FeeInvoiceGeneration" element={<FeeInvoiceGeneration/>}/>
       </Routes>
     </>
   );
