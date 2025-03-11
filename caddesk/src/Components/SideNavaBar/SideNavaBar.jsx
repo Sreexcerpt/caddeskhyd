@@ -85,9 +85,9 @@ const SideNavaBar = () => {
                                     <li className="submenu">
                                         <a href="#"><i class="ti ti-steam"></i><span>Admission & Enrollment </span><span className="menu-arrow"></span></a>
                                         <ul>
-                                            <li><a href="#">Application Processing</a></li>
-                                            <li><a href="#">Enrollment & Allocation</a></li>
-                                            <li><a href="#">Fee & Invoice Generation</a></li>
+                                            <li><a href="/ApplicationProcessing">Application Processing</a></li>
+                                            <li><a href="/EnrollmentAllocation">Enrollment & Allocation</a></li>
+                                            <li><a href="/FeeInvoiceGeneration">Fee & Invoice Generation</a></li>
                                         </ul>
                                     </li>
                                     {/*  Admission & Enrollment Management tabs end  */}
