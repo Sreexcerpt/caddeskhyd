@@ -24,7 +24,8 @@ import AddingLead from "./Pages/FacultyManagemnet/AddingLead";
 import LeadAssignment from "./Pages/FacultyManagemnet/LeadAssignment";
 import LeadFollowup from "./Pages/FacultyManagemnet/LeadFollowup";
 import Counsellorreport from "./Pages/FacultyManagemnet/Counsellorreport";
-
+import AttendanceTracking from "./Pages/StudentManagement/attendancetracking";
+import StudentAttendance from "./Pages/StudentManagement/studentattendance";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -50,6 +51,8 @@ const Layout = () => {
         <Route path="/StudentTimetable" element={<StudentTimetable />} />
         <Route path="/RegisterReport" element={<RegisterReport />} />
         <Route path="/AttendanceReport" element={<AttendanceReport />} />
+        <Route path="/Attendancetracking" element={<AttendanceTracking/>} />
+        <Route path="/studentatten" element={<StudentAttendance />} />
         <Route path="/FeePaymentReport" element={<PaymentReport />} />
         <Route path="/WalkinsReport" element={<WalkinsReport />} />
         <Route path="/AddingLead" element={<AddingLead />} />
