@@ -4,7 +4,7 @@ import Header from "./Components/Header/Header";
 import SideNavaBar from "./Components/SideNavaBar/SideNavaBar";
 import DashBoard from "./Pages/DashBoard/DashBoard";
 import Register from "./Pages/Register/Register";
-import AddFaculty from "./Pages/FacultyManagemnet/AddFaculty";
+import FacultyForm from "./Pages/FacultyManagemnet/AddFaculty";
 import FacultyList from "./Pages/FacultyManagemnet/FacultyList";
 import LeaveRequestForm from "./Pages/FacultyManagemnet/LeaveRequestpage";
 import LeaveRequests from "./Pages/FacultyManagemnet/LeaveManagment";
@@ -29,6 +29,8 @@ import EnrollmentAllocation from "./Pages/AdmissionManagement/EnrollmentAllocati
 import FeeInvoiceGeneration from "./Pages/AdmissionManagement/FeeInvoiceGeneration";
 import AttendanceTracking from "./Pages/StudentManagement/attendancetracking";
 import StudentAttendance from "./Pages/StudentManagement/studentattendance";
+import BatchAssignment from "./Pages/FacultyManagemnet/BatchAssignment";
+// import FacultyForm from "./testing";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -39,9 +41,11 @@ const Layout = () => {
       {!isLoginPage && <SideNavaBar />}
       <Routes>
         <Route path="/" element={<DashBoard />} />
+        <Route path="/testing" element={<FacultyForm />} />
         <Route path="/Login" element={<Register />} />
-        <Route path="/AddFaculty" element={<AddFaculty />} />
+        <Route path="/AddFaculty" element={<FacultyForm />} />
         <Route path="/FacultyList" element={<FacultyList />} />
+        <Route path="/BatchAssignment" element={<BatchAssignment />} />
         <Route path="/LeaveRequestForm" element={<LeaveRequestForm />} />
         <Route path="/LeaveRequests" element={<LeaveRequests />} />
         <Route path="/WorkloadDistribution" element={<WorkloadDistribution />} />

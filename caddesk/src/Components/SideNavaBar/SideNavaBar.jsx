@@ -9,7 +9,7 @@ const SideNavaBar = () => {
 
                     <div className="sidebar-nav mb-3">
                         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified bg-transparent" role="tablist">
-                            <li className="nav-item"><a className="nav-link active border-0" href="#">Menu</a></li>
+                            <li className="nav-item"><a className="nav-link active border-0" href="">Menu</a></li>
                             <li className="nav-item"><a className="nav-link border-0" href="chat.html">Chats</a></li>
                             <li className="nav-item"><a className="nav-link border-0" href="email.html">Inbox</a></li>
                         </ul>
@@ -63,15 +63,15 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                        <li><a href="#">Leads Dashboard</a></li>
+                                        <li><a href="">Leads Dashboard</a></li>
                                             <li><a href="/" >Student Dashboard</a></li>
                                             
-                                            <li><a href="#">Staff Dashboard</a></li>
+                                            <li><a href="">Staff Dashboard</a></li>
                                         </ul>
                                     </li>
                                     {/* Lead management tabs start*/}
                                     <li className="submenu">
-                                        <a href="#"><i class="ti ti-chart-arcs"></i><span>Lead & Inquiry</span><span className="menu-arrow"></span></a>
+                                        <a href=""><i class="ti ti-chart-arcs"></i><span>Lead & Inquiry</span><span className="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="/AddingLead">Lead Capture & Tracking</a></li>
                                             <li><a href="/LeadAssignment">LeadAssignment</a></li>
@@ -83,7 +83,7 @@ const SideNavaBar = () => {
 
                                     {/*  Admission & Enrollment Management tabs start  */}
                                     <li className="submenu">
-                                        <a href="#"><i class="ti ti-steam"></i><span>Admission & Enrollment </span><span className="menu-arrow"></span></a>
+                                        <a href=""><i class="ti ti-steam"></i><span>Admission & Enrollment </span><span className="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="/ApplicationProcessing">Application Processing</a></li>
                                             <li><a href="/EnrollmentAllocation">Enrollment & Allocation</a></li>
@@ -94,7 +94,7 @@ const SideNavaBar = () => {
 
                                     {/*  Student Information Management tabs start  */}
                                     <li className="submenu">
-                                        <a href="#">
+                                        <a href="">
                                             <i className="ti ti-user-star"></i><span>Student Information</span>
                                             <span className="menu-arrow"></span>
                                         </a>
@@ -102,8 +102,8 @@ const SideNavaBar = () => {
                                             <li><a href="/Students">Student Database</a></li>
                                             <li><a href="/StudentView">Student View</a></li>
                                             <li><a href="/SAttendance">Attendance Tracking</a></li>
-                                            <li><a href="#">Course & Subject Mapping</a></li>
-                                            <li><a href="#">Certificate</a></li>
+                                            <li><a href="">Course & Subject Mapping</a></li>
+                                            <li><a href="">Certificate</a></li>
                                             <li>extra tabs</li>
                                             <li><a href="/Course">Course</a></li>
                                             <li><a href="/Subject">Subject</a></li>
@@ -115,42 +115,43 @@ const SideNavaBar = () => {
 
                                     {/*  Fee Management & Accounting tabs start  */}
                                     <li className="submenu">
-                                        <a href="#">
+                                        <a href="">
                                             <i class="ti ti-report-money"></i><span>Fee & Accounting</span>
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="#">Fee Structure Management</a></li>
-                                            <li><a href="#">Online Payments & Invoicing</a></li>
-                                            <li><a href="#">Financial Reporting</a></li>
+                                            <li><a href="">Fee Structure Management</a></li>
+                                            <li><a href="">Online Payments & Invoicing</a></li>
+                                            <li><a href="">Financial Reporting</a></li>
                                         </ul>
                                     </li>
                                     {/*  Fee Management & Accounting tabs end  */}
 
                                     {/*  Communication & Notifications tabs start  */}
                                     <li className="submenu">
-                                        <a href="#">
+                                        <a href="">
                                             <i className="ti ti-user-star"></i><span>Communication</span>
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="#">Automated Notifications</a></li>
-                                            <li><a href="#">Communication Channels</a></li>
-                                            <li><a href="#">Event & Announcement Management</a></li>
+                                            <li><a href="">Automated Notifications</a></li>
+                                            <li><a href="">Communication Channels</a></li>
+                                            <li><a href="">Event & Announcement Management</a></li>
                                         </ul>
                                     </li>
                                     {/*  Communication & Notifications tabs end  */}
                                     {/*  Faculty & Staff Management tabs start  */}
 
                                     <li className="submenu">
-                                        <a href="#"><i class="ti ti-users"></i><span>Faculty & Staff </span><span className="menu-arrow"></span></a>
+                                        <a href=""><i class="ti ti-users"></i><span>Faculty & Staff </span><span className="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="/FacultyList">Staff Profiles</a></li>
-                                            <li><a href="#">Access Control</a></li>
-                                            <li><a href="#">Attendance & Leave Tracking</a></li>
-                                            <li><a href="#">Payroll & Salary Management</a></li>
+                                            <li><a href="">Access Control</a></li>
+                                            <li><a href="">Attendance & Leave Tracking</a></li>
+                                            <li><a href="">Payroll & Salary Management</a></li>
                                             <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
                                             <li>extra tabs</li>
+                                            <li><a href="/BatchAssignment">BatchAssignment</a></li>
                                             <li><a href="/AddFaculty">AddFaculty</a></li>
                                             <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
                                             <li><a href="/LeaveRequests">LeaveRequests</a></li>
@@ -162,21 +163,23 @@ const SideNavaBar = () => {
                                     {/*  Course, Class & Batch Management tabs start  */}
 
                                     <li className="submenu">
-                                        <a href="/" >
+                                        <a href="" >
                                             <i class="ti ti-artboard"></i><span>Course, Class & Batch</span>
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="#">Subjects, Course, Batch Creation</a></li>
-                                            <li><a href="#">Timetable Management</a></li>
-                                            <li><a href="#">Virtual Classroom Integration</a></li>
+                                            <li><a href="">Subjects Creation</a></li>
+                                            <li><a href="">Course Creation</a></li>
+                                            <li><a href="/BatchAssignment">Batch Creation</a></li>
+                                            <li><a href="">Timetable Management</a></li>
+                                            <li><a href="">Virtual Classroom Integration</a></li>
                                         </ul>
                                     </li>
                                     {/*  Course, Class & Batch Management tabs end  */}
                                     
                                
                                     <li className="submenu">
-                                        <a href="#">
+                                        <a href="">
                                             <i className="ti ti-file-invoice"></i><span>Reports and Analytics</span><span className="menu-arrow"></span>
                                         </a>
                                         <ul>
