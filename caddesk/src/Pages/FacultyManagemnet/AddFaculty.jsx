@@ -415,21 +415,21 @@ const FacultyForm = () => {
                               <option value="Inactive">Inactive</option>
                             </select>
                           </div>
-                  
-                            {/* Show subjects dropdown only if role is Faculty */}
-                            {facultyData.role === "Faculty" && (
-                              <div class="col-xl-4">
-                                <label>Select Subjects</label>
-                                <select className="select2" multiple="multiple" value={selectedSubjects.map((sub) => sub.subjectCode)} onChange={handleSubjectChange}>
-                                  {subjects.map((subject) => (
-                                    <option key={subject._id} value={subject.subjectCode}>
-                                      {subject.subjectCode} - {subject.subjectName}
-                                    </option>
-                                  ))}
-                                </select>
-                              </div>
-                            )}
-                         
+
+                          {/* Show subjects dropdown only if role is Faculty */}
+                          {facultyData.role === "Faculty" && (
+                            <div class="col-xl-4">
+                              <label>Select Subjects</label>
+                              <select className="select2" multiple="multiple" value={selectedSubjects.map((sub) => sub.subjectCode)} onChange={handleSubjectChange}>
+                                {subjects.map((subject) => (
+                                  <option key={subject._id} value={subject.subjectCode}>
+                                    {subject.subjectCode} - {subject.subjectName}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          )}
+
                         </div>
                         <div class="row">
                           <div class="col-xl-4">
@@ -445,20 +445,55 @@ const FacultyForm = () => {
                           </div>
                         </div>
                       </form>
-                      <hr />
-                      <h3>Faculty List</h3>
-                      <ul>
-                        {faculties.map((faculty) => (
-                          <li key={faculty._id}>
-                            {faculty.firstName} {faculty.lastName} - {faculty.role} - {faculty.department}
-                            <br />
-                            <button onClick={() => handleEdit(faculty)}>Edit</button>
-                            <button onClick={() => handleDelete(faculty._id)}>Delete</button>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-center mb-0">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Department</th>
+                            <th>Qualification</th>
+                            <th>Experience</th>
+                            <th>Join Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {faculties.map((faculty) => (
+                            <tr key={faculty._id}>
+                              <td>{faculty.firstName} {faculty.lastName}</td>
+
+                              <td>{faculty.email}</td>
+                              <td>{faculty.phone}</td>
+                              <td>{faculty.role}</td>
+                              <td>{faculty.department}</td>
+                              <td>{faculty.qualification}</td>
+                              <td>{faculty.experience}</td>
+                              <td>{faculty.joinDate}</td>
+                              <td>
+                                {/* <button onClick={() => handleEdit(faculty)}>Edit</button>
+                                <button onClick={() => handleDelete(faculty._id)}>Delete</button> */}
+                                <div class="hstack gap-2 fs-15">
+                                  <a onClick={() => handleEdit(faculty)}
+                                    class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
+                                      class="feather-edit"></i></a>
+                                  <a onClick={() => handleDelete(faculty._id)}
+                                    class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
+                                      class="feather-trash"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

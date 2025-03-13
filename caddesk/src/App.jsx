@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import SideNavaBar from "./Components/SideNavaBar/SideNavaBar";
+import "../src/assets/assets/plugins/select2/css/select2.min.css";
 import DashBoard from "./Pages/DashBoard/DashBoard";
 import Register from "./Pages/Register/Register";
 import FacultyForm from "./Pages/FacultyManagemnet/AddFaculty";
@@ -30,6 +31,14 @@ import FeeInvoiceGeneration from "./Pages/AdmissionManagement/FeeInvoiceGenerati
 import AttendanceTracking from "./Pages/StudentManagement/attendancetracking";
 import StudentAttendance from "./Pages/StudentManagement/studentattendance";
 import BatchAssignment from "./Pages/FacultyManagemnet/BatchAssignment";
+import BatchForm from "./Pages/CourseManagement/Batch";
+import CourseForm from "./Pages/CourseManagement/Course";
+import SubjectForm from "./Pages/CourseManagement/Subject";
+import StudentDashboard from "./Pages/StudentProfile/StudentDashboard/StudentDashboard";
+import StudentCourse from "./Pages/StudentProfile/StudentCourse/StudentCourse";
+// import StudentProfile from "./Pages/StudentProfile/StudentProfile/StudentProfile";
+import StudentMyAttendance from "./Pages/StudentProfile/StudentMyAttendence/StudentMyAttendance";
+import StudentPayments from "./Pages/StudentProfile/StudentPayments/StudentPayments";
 // import FacultyForm from "./testing";
 const Layout = () => {
   const location = useLocation();
@@ -44,8 +53,16 @@ const Layout = () => {
         <Route path="/testing" element={<FacultyForm />} />
         <Route path="/Login" element={<Register />} />
         <Route path="/AddFaculty" element={<FacultyForm />} />
+        <Route path="/BatchForm" element={<BatchForm />} />
+        <Route path="/CourseForm" element={<CourseForm />} />
+        <Route path="/SubjectForm" element={<SubjectForm />} />
         <Route path="/FacultyList" element={<FacultyList />} />
+        <Route path="/StudentMyAttendance" element={<StudentMyAttendance />} />
+        {/* <Route path="/StudentProfile" element={<StudentProfile />} /> */}
+        <Route path="/StudentCourse" element={<StudentCourse />} />
+        <Route path="/StudentPayments" element={<StudentPayments />} />
         <Route path="/BatchAssignment" element={<BatchAssignment />} />
+        <Route path="/StudentDashboard" element={<StudentDashboard />} />
         <Route path="/LeaveRequestForm" element={<LeaveRequestForm />} />
         <Route path="/LeaveRequests" element={<LeaveRequests />} />
         <Route path="/WorkloadDistribution" element={<WorkloadDistribution />} />

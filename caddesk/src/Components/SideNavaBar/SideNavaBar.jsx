@@ -63,9 +63,9 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                        <li><a href="">Leads Dashboard</a></li>
+                                            <li><a href="">Leads Dashboard</a></li>
                                             <li><a href="/" >Student Dashboard</a></li>
-                                            
+
                                             <li><a href="">Staff Dashboard</a></li>
                                         </ul>
                                     </li>
@@ -168,16 +168,16 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="">Subjects Creation</a></li>
-                                            <li><a href="">Course Creation</a></li>
-                                            <li><a href="/BatchAssignment">Batch Creation</a></li>
+                                            <li><a href="/SubjectForm">Subjects Creation</a></li>
+                                            <li><a href="/CourseForm">Course Creation</a></li>
+                                            <li><a href="/BatchForm">Batch Creation</a></li>
                                             <li><a href="">Timetable Management</a></li>
                                             <li><a href="">Virtual Classroom Integration</a></li>
                                         </ul>
                                     </li>
                                     {/*  Course, Class & Batch Management tabs end  */}
-                                    
-                               
+
+
                                     <li className="submenu">
                                         <a href="">
                                             <i className="ti ti-file-invoice"></i><span>Reports and Analytics</span><span className="menu-arrow"></span>
@@ -190,6 +190,31 @@ const SideNavaBar = () => {
 
                                         </ul>
                                     </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6 class="submenu-hdr">Student Profile</h6>
+                                <ul>
+                                    <li>
+                                        <a href="/StudentDashboard">
+                                            <i className="ti ti-user"></i><span>Student Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentCourse">
+                                            <i className="ti ti-book"></i><span>Course</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentPayments">
+                                            <i className="ti ti-wallet"></i><span>Payments</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentMyAttendance">
+                                            <i className="ti ti-calendar"></i><span>My Attendance</span>
+                                        </a>
+                                        </li>
                                 </ul>
                             </li>
                         </ul>

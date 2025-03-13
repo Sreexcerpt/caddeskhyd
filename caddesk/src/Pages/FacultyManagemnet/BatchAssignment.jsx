@@ -5,7 +5,6 @@ const BatchAssignment = () => {
     const [subjects, setSubjects] = useState([]);
     const [facultyList, setFacultyList] = useState([]);
     const [schedule, setSchedule] = useState([]);
-
     const [selectedBatch, setSelectedBatch] = useState("");
     const [selectedSubject, setSelectedSubject] = useState("");
     const [selectedDay, setSelectedDay] = useState("");
@@ -98,7 +97,7 @@ const BatchAssignment = () => {
                                 </div>
                                 <div class="card-body">
                                     <div>
-                                        
+
                                         <div class="row">
                                             <div class="col-xl-4">
                                                 <label>Batch:</label>
@@ -109,15 +108,7 @@ const BatchAssignment = () => {
                                                     ))}
                                                 </select>
                                             </div>
-                                            <div class="card-body">
-								<select class="js-example-placeholder-multiple select2 js-states" multiple="multiple">
-									<option value="fr-1">Appple</option>
-									<option value="fr-2">Mango</option>
-									<option value="fr-3">Orange</option>
-									<option value="fr-4">Guava</option>
-									<option value="fr-5">Pineapple</option>
-								</select>
-							</div>
+
                                             <div class="col-xl-4">
                                                 <label>Day:</label>
                                                 <select value={selectedDay} onChange={(e) => setSelectedDay(e.target.value)}>
