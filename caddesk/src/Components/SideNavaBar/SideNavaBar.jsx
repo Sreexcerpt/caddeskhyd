@@ -134,9 +134,9 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="#">Automated Notifications</a></li>
-                                            <li><a href="#">Communication Channels</a></li>
-                                            <li><a href="#">Event & Announcement Management</a></li>
+                                            <li><a href="/AutomatedNotifications">Automated Notifications</a></li>
+                                            <li><a href="/CommunicationChannels">Communication Channels</a></li>
+                                            <li><a href="/EventAnnouncementManagement">Event & Announcement Management</a></li>
                                         </ul>
                                     </li>
                                     {/*  Communication & Notifications tabs end  */}

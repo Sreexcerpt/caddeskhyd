@@ -93,7 +93,7 @@ const FeeInvoiceGeneration = () => {
                             <td>UPI</td>
                             <td>
 													<div class="hstack gap-2 fs-15">
-                                                    <a href="javascript:void(0);"
+                                                    <a href="/Invoice"
 															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
 																class="feather-download"></i></a>
 														<a href="javascript:void(0);"

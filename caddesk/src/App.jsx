@@ -29,6 +29,11 @@ import EnrollmentAllocation from "./Pages/AdmissionManagement/EnrollmentAllocati
 import FeeInvoiceGeneration from "./Pages/AdmissionManagement/FeeInvoiceGeneration";
 import AttendanceTracking from "./Pages/StudentManagement/attendancetracking";
 import StudentAttendance from "./Pages/StudentManagement/studentattendance";
+import Invoice from "./Pages/AdmissionManagement/Invoice";
+import AutomatedNotifications from "./Pages/CommunicationNotifications/AutomatedNotifications";
+import CommunicationChannels from "./Pages/CommunicationNotifications/CommunicationChannels";
+import EventAnnouncementManagement from "./Pages/CommunicationNotifications/EventAnnouncementManagement";
+
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -65,6 +70,10 @@ const Layout = () => {
         <Route path="/ApplicationProcessing" element={<ApplicationProcessing />} />
         <Route path="/EnrollmentAllocation" element={<EnrollmentAllocation/>}/>
         <Route path="/FeeInvoiceGeneration" element={<FeeInvoiceGeneration/>}/>
+        <Route path="/Invoice" element={<Invoice/>}/>
+        <Route path="/AutomatedNotifications" element={<AutomatedNotifications/>}/>
+        <Route path="/CommunicationChannels" element={<CommunicationChannels/>}/>
+        <Route path="/EventAnnouncementManagement" element={<EventAnnouncementManagement/>}/>
       </Routes>
     </>
   );
