@@ -99,15 +99,17 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="/Students">Student Database</a></li>
-                                            <li><a href="/StudentView">Student View</a></li>
+                                            <li><a href="/StudentView">Student Database</a></li>
+                                            <li><a href="/Students">Student Registraion</a></li>
                                             <li><a href="/SAttendance">Attendance Tracking</a></li>
+                                            <li><a href="/studentatten">Student Attendance</a></li>
+                                            {/* <li><a href="/Attendancetracking">Attendance Tracking1</a></li> */}
                                             <li><a href="">Course & Subject Mapping</a></li>
-                                            <li><a href="">Certificate</a></li>
-                                            <li>extra tabs</li>
+                                            <li><a href="/StudentCertificate">Certificate</a></li>
+                                            {/* <li>extra tabs</li>
                                             <li><a href="/Course">Course</a></li>
                                             <li><a href="/Subject">Subject</a></li>
-                                            <li><a href="/StudentTimetable">Student Timetable</a></li>
+                                            <li><a href="/StudentTimetable">Student Timetable</a></li> */}
                                         </ul>
                                     </li>
 
@@ -145,7 +147,8 @@ const SideNavaBar = () => {
                                     <li className="submenu">
                                         <a href=""><i class="ti ti-users"></i><span>Faculty & Staff </span><span className="menu-arrow"></span></a>
                                         <ul>
-                                            <li><a href="/FacultyList">Staff Profiles</a></li>
+                                            {/* <li><a href="/FacultyList">Staff Profiles</a></li> */}
+                                            <li><a href="/AddFaculty">Staff Profiles</a></li>
                                             <li><a href="">Access Control</a></li>
                                             <li><a href="">Attendance & Leave Tracking</a></li>
                                             <li><a href="">Payroll & Salary Management</a></li>
@@ -171,7 +174,7 @@ const SideNavaBar = () => {
                                             <li><a href="/SubjectForm">Subjects Creation</a></li>
                                             <li><a href="/CourseForm">Course Creation</a></li>
                                             <li><a href="/BatchForm">Batch Creation</a></li>
-                                            <li><a href="">Timetable Management</a></li>
+                                            <li><a href="/BatchAssignment">Timetable Management</a></li>
                                             <li><a href="">Virtual Classroom Integration</a></li>
                                         </ul>
                                     </li>
