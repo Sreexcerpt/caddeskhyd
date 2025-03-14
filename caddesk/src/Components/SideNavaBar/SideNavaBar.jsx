@@ -120,8 +120,8 @@ const SideNavaBar = () => {
                                             <span className="menu-arrow"></span>
                                         </a>
                                         <ul>
-                                            <li><a href="">Fee Structure Management</a></li>
-                                            <li><a href="">Online Payments & Invoicing</a></li>
+                                            <li><a href="/FeeStructureManagement">Fee Structure Management</a></li>
+                                            <li><a href="/PaymentsAndInvoicing">Payments & Invoicing</a></li>
                                             <li><a href="">Financial Reporting</a></li>
                                         </ul>
                                     </li>
@@ -135,7 +135,7 @@ const SideNavaBar = () => {
                                         </a>
                                         <ul>
                                             <li><a href="/AutomatedNotifications">Automated Notifications</a></li>
-                                            <li><a href="/CommunicationChannels">Communication Channels</a></li>
+                                            {/* <li><a href="/CommunicationChannels">Communication Channels</a></li> */}
                                             <li><a href="/EventAnnouncementManagement">Event & Announcement Management</a></li>
                                         </ul>
                                     </li>
@@ -214,7 +214,12 @@ const SideNavaBar = () => {
                                         <a href="/StudentMyAttendance">
                                             <i className="ti ti-calendar"></i><span>My Attendance</span>
                                         </a>
-                                        </li>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentFeedback">
+                                            <i className="ti ti-comment-alt"></i><span>Feedback</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

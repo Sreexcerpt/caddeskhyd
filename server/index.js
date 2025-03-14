@@ -427,10 +427,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://excerpttech:excerpttech2021@cluster0.5vdeszu.mongodb.net/CADDESKCRM', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://excerpttech:excerpttech2021@cluster0.5vdeszu.mongodb.net/CADDESKCRM');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -889,7 +886,179 @@ app.post("/api/assign-faculty", async (req, res) => {
       res.status(500).json({ message: "Server error", error });
     }
   });
-  
+  const timetableSchema = new mongoose.Schema({
+    batchId: { type: String, required: true },
+    courseId: { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
+    schedule: [{
+        date: { type: String, required: true }, // Store YYYY-MM-DD format
+        day: { type: String, required: true },
+        timeSlot: { type: String, default: null}
+    }],
+    subject: { subjectCode: String, subjectName: String },
+    faculty: { staffOrFacultyId: String, firstName: String, lastName: String }
+});
+
+const Timetable = mongoose.model("Timetable", timetableSchema);
+
+
+/**
+ * API: Fetch all batches
+ */
+
+app.get("/getCourses", async (req, res) => {
+  try {
+      const courses = await Course.find();
+      res.json(courses);
+  } catch (err) {
+      res.status(500).json({ message: err.message });
+  }
+});
+// ✅ API: Fetch batches
+app.get("/getBatches", async (req, res) => {
+  const batches = await Batch.find();
+  res.json(batches);
+});
+
+
+
+// ✅ API: Fetch subjects for a batch
+app.get("/getSubjectsByBatch/:batchId", async (req, res) => {
+  const batch = await Batch.findOne({ batchId: req.params.batchId });
+  if (!batch) return res.status(404).json({ message: "Batch not found" });
+
+  const course = await Course.findOne({ courseCode: batch.course });
+  res.json(course ? course.subjects : []);
+});
+
+// ✅ API: Fetch faculties based on subject
+app.get("/getFaculties/:subjectCode", async (req, res) => {
+  const faculties = await Faculty.find({ "subjects.subjectCode": req.params.subjectCode });
+  res.json(faculties);
+});
+app.get("/getBatches/:courseName", async (req, res) => {
+  try {
+      const batches = await Batch.find({ course: req.params.courseName }); // Find by course name (string)
+      res.json(batches);
+  } catch (err) {
+      res.status(500).json({ message: err.message });
+  }
+});
+
+
+// ✅ API: Add Timetable Entry
+// app.post("/addTimetable", async (req, res) => {
+//     try {
+//         const { batchId, courseId, day, timeSlot, subject, faculty } = req.body;
+
+//         // Check if faculty is already assigned at the same time
+//         const existingEntry = await Timetable.findOne({ day, timeSlot, "faculty.staffOrFacultyId": faculty.staffOrFacultyId });
+
+//         if (existingEntry) {
+//             return res.status(400).json({ message: "Faculty is already assigned to another batch at this time!" });
+//         }
+
+//         const newTimetable = new Timetable({ batchId,courseId,  day, timeSlot, subject, faculty });
+//         await newTimetable.save();
+//         res.status(201).json({ message: "Timetable entry added successfully" });
+//     } catch (error) {
+//         res.status(500).json({ message: error.message });
+//     }
+// });
+
+app.post("/addTimetable", async (req, res) => {
+  try {
+      let { batchId, schedule, subject, faculty } = req.body;
+
+      // **Remove empty schedules** (if timeSlot is empty, ignore it)
+      schedule = schedule.filter(entry => entry.timeSlot);
+
+      // If all schedules are empty, reject request
+      if (schedule.length === 0) {
+          return res.status(400).json({ message: "At least one schedule entry must have a time slot!" });
+      }
+
+      // **Check if faculty is already assigned at the same time on the same date**
+      for (let entry of schedule) {
+          const existingEntry = await Timetable.findOne({
+              "schedule": {
+                  $elemMatch: { // ✅ Only match within the same date
+                      date: entry.date,
+                      timeSlot: entry.timeSlot
+                  }
+              },
+              "faculty.staffOrFacultyId": faculty.staffOrFacultyId
+          });
+
+          if (existingEntry) {
+              return res.status(400).json({ message: `Faculty is already assigned on ${entry.date} at ${entry.timeSlot}!` });
+          }
+      }
+
+      // ✅ Save the new timetable entry
+      const newTimetable = new Timetable({ batchId, schedule, subject, faculty });
+      await newTimetable.save();
+      res.status(201).json({ message: "Timetable entry added successfully!" });
+
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+});
+
+
+// // Get booked schedules for a batch
+
+
+app.get("/getFacultyAssignments/:subjectCode", async (req, res) => {
+  try {
+      const assignments = await Timetable.find({ "subject.subjectCode": req.params.subjectCode });
+
+      let assignedFaculties = [];
+
+      assignments.forEach(entry => {
+          assignedFaculties.push({
+              facultyId: entry.faculty.staffOrFacultyId,
+              facultyName: `${entry.faculty.firstName} ${entry.faculty.lastName}`, // Include Faculty Name
+              schedule: entry.schedule
+          });
+      });
+
+      res.json(assignedFaculties);
+  } catch (err) {
+      res.status(500).json({ error: err.message });
+  }
+});
+
+app.get("/getAssignedSchedules/:batchId", async (req, res) => {
+  try {
+      const schedules = await Timetable.find({ batchId: req.params.batchId });
+
+      let bookedSlots = [];
+
+      schedules.forEach(entry => {
+          entry.schedule.forEach(slot => {
+              bookedSlots.push({
+                  date: slot.date,
+                  timeSlot: slot.timeSlot,
+                  subjectName: entry.subject.subjectName,  // Include Subject Name
+                  facultyName: `${entry.faculty.firstName} ${entry.faculty.lastName}` // Include Faculty Name
+              });
+          });
+      });
+
+      res.json(bookedSlots);
+  } catch (err) {
+      res.status(500).json({ error: err.message });
+  }
+});
+
+// ✅ API: Fetch timetable for a batch
+app.get("/getTimetable/:batchId", async (req, res) => {
+    const timetable = await Timetable.find({ batchId: req.params.batchId });
+    res.json(timetable);
+});
+
+
+
 // Start server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
