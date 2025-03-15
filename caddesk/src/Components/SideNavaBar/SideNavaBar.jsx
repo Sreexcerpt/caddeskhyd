@@ -209,6 +209,11 @@ const SideNavaBar = () => {
                                         </a>
                                     </li>
                                     <li>
+                                        <a href='/Courseview'>
+                                        <i className="ti ti-book"></i><span>Course view</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="/StudentPayments">
                                             <i className="ti ti-wallet"></i><span>Payments</span>
                                         </a>

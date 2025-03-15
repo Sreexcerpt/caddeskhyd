@@ -48,6 +48,7 @@ import EventAnnouncementManagement from "./Pages/CommunicationNotifications/Even
 import StudentFeedback from "./Pages/StudentProfile/StudentFeedback/StudentFeedback";
 import FeeStructureManagement from "./Pages/Fee&Accounting/FeeStructureManagement/FeeStructureManagement";
 import StudentCertificate from "./Pages/StudentManagement/StudentCertificate";
+import StudentCourseDetails from "./Pages/StudentProfile/StudentCourseDetail/StudentCourseDetails";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -68,6 +69,7 @@ const Layout = () => {
         <Route path="/PaymentsAndInvoicing" element={<PaymentsAndInvoicing />} />
         <Route path="/StudentMyAttendance" element={<StudentMyAttendance />} />
         <Route path="/FeeStructureManagement" element={<FeeStructureManagement />} />
+        <Route path="/Courseview" element={<StudentCourseDetails/>}/>
         {/* <Route path="/StudentProfile" element={<StudentProfile />} /> */}
         <Route path="/StudentCertificate" element={<StudentCertificate />} />
         <Route path="/StudentCourse" element={<StudentCourse />} />
