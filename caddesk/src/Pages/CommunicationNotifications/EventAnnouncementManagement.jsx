@@ -8,7 +8,7 @@ const EventAnnouncementManagement = () => {
                 <div class="page-header">
                     <div class="row align-items-center w-100">
                         <div class="col-lg-10 col-sm-12">
-                            <h3 class="page-title">Calendar</h3>
+                            <h3 >Calendar</h3>
                         </div>
                         <div class="col-lg-2 col-sm-12 d-flex justify-content-end p-0">
                             <a href="javascript:void(0);" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_event">Create Event</a>

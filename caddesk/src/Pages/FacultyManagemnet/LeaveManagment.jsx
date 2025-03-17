@@ -220,7 +220,7 @@ const LeaveRequests = () => {
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Leave Requests</h3>
+							<h3 >Leave Requests</h3>
               <p>Manage employee leave applications</p>
 						</div>
 					</div>

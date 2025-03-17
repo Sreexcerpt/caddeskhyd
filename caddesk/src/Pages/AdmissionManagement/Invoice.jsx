@@ -13,7 +13,7 @@ const Invoice = () => {
 						<div class="page-header">
 							<div class="row align-items-center">
 								<div class="col-4">
-									<h4 class="page-title">Invoice Details</h4>
+									<h4 >Invoice Details</h4>
 								</div>
 								<div class="col-2 text-end">
 									<div>

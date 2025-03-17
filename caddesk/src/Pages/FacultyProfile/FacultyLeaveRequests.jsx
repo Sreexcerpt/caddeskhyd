@@ -9,7 +9,7 @@ const FacultyLeaveRequests = () => {
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Employee Leave Request</h3>
+							<h3 >Employee Leave Request</h3>
 						</div>
 					</div>
 				</div>

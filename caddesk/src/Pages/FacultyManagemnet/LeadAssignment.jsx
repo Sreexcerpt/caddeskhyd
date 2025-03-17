@@ -138,7 +138,7 @@ const LeadAssignment = () => {
 						<div class="page-header">
 							<div class="row align-items-center">
 								<div class="col-4">
-									<h4 class="page-title">Lead Assignment & Follow-ups<span class="count-title">420</span></h4>
+									<h4 >Lead Assignment & Follow-ups<span class="count-title">420</span></h4>
 								</div>
 								<div class="col-8 text-end">
 									<div class="head-icons">

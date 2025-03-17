@@ -87,7 +87,7 @@ const StudentList = () => {
           <div class="page-header">
             <div class="row">
               <div class="col">
-                <h3 class="page-title">Student List</h3>
+                <h3 >Student List</h3>
               </div>
             </div>
           </div>

@@ -245,7 +245,7 @@
 // 				<div class="page-header">
 // 					<div class="row">
 // 						<div class="col-sm-12">
-// 							<h3 class="page-title">Form Wizard</h3>
+// 							<h3 >Form Wizard</h3>
 // 						</div>
 // 					</div>
 // 				</div>
@@ -498,7 +498,7 @@ const StudentRegistrationForm = () => {
 	   <div class="page-wrapper">
 			<div class="content">
 				<div class="page-header">
-					<div class="page-title">
+					<div >
 						<h4>Nav & Tabs</h4>
 					</div>
 				</div>

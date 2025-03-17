@@ -40,7 +40,7 @@ function StudentDashboard() {
                             </div>
                         </div>
                     </div>
-                 
+
 
                     <div class="row">
 
@@ -51,16 +51,14 @@ function StudentDashboard() {
                                         <span class="avatar avatar-md rounded bg-dark mb-3">
                                             <i class="ti ti-building fs-16"></i>
                                         </span>
-                                        <span class="badge bg-success fw-normal mb-3">
-                                            +19.01%
-                                        </span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <h2 class="mb-1">5468</h2>
-                                            <p class="fs-13">Total Companies</p>
+
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h2 class="mb-1">5468</h2>
+                                                <p class="fs-13">Total Courses</p>
+                                            </div>
                                         </div>
-                                        <div class="company-bar1">5,10,7,5,10,7,5</div>
                                     </div>
                                 </div>
                             </div>
@@ -73,16 +71,14 @@ function StudentDashboard() {
                                         <span class="avatar avatar-md rounded bg-dark mb-3">
                                             <i class="ti ti-carousel-vertical fs-16"></i>
                                         </span>
-                                        <span class="badge bg-danger fw-normal mb-3">
-                                            -12%
-                                        </span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <h2 class="mb-1">4598</h2>
-                                            <p class="fs-13">Active Companies</p>
+
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h2 class="mb-1">4598</h2>
+                                                <p class="fs-13">Active Courses</p>
+                                            </div>
                                         </div>
-                                        <div class="company-bar2">5,3,7,6,3,10,5</div>
                                     </div>
                                 </div>
                             </div>
@@ -95,21 +91,19 @@ function StudentDashboard() {
                                         <span class="avatar avatar-md rounded bg-dark mb-3">
                                             <i class="ti ti-chalkboard-off fs-16"></i>
                                         </span>
-                                        <span class="badge bg-success fw-normal mb-3">
-                                            +6%
-                                        </span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <h2 class="mb-1">3698</h2>
-                                            <p class="fs-13">Total Subscribers</p>
+
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h2 class="mb-1">3698</h2>
+                                                <p class="fs-13">Courses Completed</p>
+                                            </div>
                                         </div>
-                                        <div class="company-bar3">8,10,10,8,8,10,8</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        {/* 
                         <div class="col-xl-3 col-sm-6 d-flex">
                             <div class="card flex-fill">
                                 <div class="card-body">
@@ -130,7 +124,7 @@ function StudentDashboard() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
 
                     </div>
