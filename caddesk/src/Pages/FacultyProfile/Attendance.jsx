@@ -55,210 +55,4862 @@ const Attendance = () => {
                         <tr>
                           <td>Raju</td>
                           <td>
-                          <input type="checkbox"/>
+                         
+<label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label>
+
                           </td>
                           <td>
-                          <input type="checkbox"/>
+                          <label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label>
                           </td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                         <tr>
                           <td>Kavana</td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                         <tr>
                           <td>Vikram</td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                         <tr>
                           <td>Vinod</td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                         <tr>
                           <td>Tharun</td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                         <tr>
                           <td>Kiran</td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
-                          <td><input type="checkbox"/></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
+                          <td><label class="cyber-checkbox">
+  <input type="checkbox" />
+  <span class="cyber-checkbox__mark">
+    <div class="cyber-checkbox__box">
+      <svg class="cyber-checkbox__check" viewBox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </div>
+    <div class="cyber-checkbox__effects">
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+      <div class="cyber-checkbox__spark"></div>
+    </div>
+    <div class="cyber-checkbox__particles">
+      <div class="particle-1"></div>
+      <div class="particle-2"></div>
+      <div class="particle-3"></div>
+      <div class="particle-4"></div>
+      <div class="particle-5"></div>
+      <div class="particle-6"></div>
+      <div class="particle-7"></div>
+      <div class="particle-8"></div>
+    </div>
+  </span>
+</label></td>
                         </tr>
                       </tbody>
                     </table>

@@ -28,7 +28,7 @@ const Invoice = () => {
 						<div>
 							<div class="row">
 								<div class="col-sm-10 mx-auto">
-									 <a href="invoice.html" class="back-icon d-flex align-items-center fs-12 fw-medium mb-3 d-inline-flex">
+									 <a href="/" class="back-icon d-flex align-items-center fs-12 fw-medium mb-3 d-inline-flex">
 										<span class=" d-flex justify-content-center align-items-center rounded-circle me-2">
 											<i class="ti ti-arrow-left"></i>
 										</span>
@@ -43,12 +43,12 @@ const Invoice = () => {
 															<div class="mb-2">
 																<img src="assets/img/logo.svg" class="img-fluid" alt="logo"/>
 															</div>
-															<p>3099 Kennedy Court Framingham, MA 01702</p>
+															<p>1/2/219 Vijayawada Lenin Center 54688</p>
 														</div>
 													</div>
 													<div class="col-md-6">
 														<div class="text-end mb-3">
-															<h5 class="text-gray mb-1">Invoice No <span class="text-primary">#INV0001</span></h5>
+															<h5 class="text-gray mb-1">Invoice No <span class="text-primary">#INV00013455</span></h5>
 															<p class="mb-1 fw-medium">Created Date : <span class="text-dark">Sep 24, 2023</span> </p>
 															<p class="fw-medium">Due Date : <span class="text-dark">Sep 30, 2023</span> </p>
 														</div>
@@ -61,10 +61,10 @@ const Invoice = () => {
 														<div class="mb-3">
 															<p class="text-dark mb-2 fw-semibold">From</p>
 															<div>
-																<h4 class="mb-1">Thomas Lawler</h4>
-																<p class="mb-1">2077 Chicago Avenue Orosi, CA 93647</p>
-																<p class="mb-1">Email : <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ecb88d9e8d808dded8d8d9ac89948d819c8089c28f8381">[email&#160;protected]</a></span></p>
-																<p>Phone : <span class="text-dark">+1 987 654 3210</span></p>
+																<h4 class="mb-1">Karthik</h4>
+																<p class="mb-1">1/5/239 Hyderbad Durgam Cheruvu 54688</p>
+																<p class="mb-1">Email : <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ecb88d9e8d808dded8d8d9ac89948d819c8089c28f8381">Karthik@gmail.com</a></span></p>
+																<p>Phone : <span class="text-dark">+91 987654433</span></p>
 															</div>
 														</div>
 													</div>
@@ -72,10 +72,10 @@ const Invoice = () => {
 														<div class="mb-3">
 															<p class="text-dark mb-2 fw-semibold">To</p>
 															<div>
-																<h4 class="mb-1">Sara Inc,.</h4>
-																<p class="mb-1">3103 Trainer Avenue Peoria, IL 61602</p>
-																<p class="mb-1">Email : <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e5b6849784ba8c8b86d6d1a5809d8488958980cb868a88">[email&#160;protected]</a></span></p>
-																<p>Phone : <span class="text-dark">+1 987 471 6589</span></p>
+																<h4 class="mb-1">Vinya,.</h4>
+																<p class="mb-1">Kurnol District Orvakal Rock Garden 567596</p>
+																<p class="mb-1">Email : <span class="text-dark"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e5b6849784ba8c8b86d6d1a5809d8488958980cb868a88">vinyakumar</a></span></p>
+																<p>Phone : <span class="text-dark">+91 9987678509</span></p>
 															</div>
 														</div>
 													</div>
@@ -84,20 +84,20 @@ const Invoice = () => {
 															<p class="text-title mb-2 fw-medium">Payment Status </p>
 															<span class="badge badge-danger align-items-center mb-3"><i class="ti ti-point-filled "></i>Due in 10 Days</span>
 															<div>
-																<img src="assets/img/icons/qr.svg" class="img-fluid" alt="QR"/>
+																<img src="assets/assets/img/profiles/qr.png" class="img-fluid" alt="QR"/>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 											<div>
-												<p class="fw-medium">Invoice For : <span class="text-dark fw-medium">Design & development of Website</span></p>
+												<p class="fw-medium">Invoice For : <span class="text-dark fw-medium">Payment For Course Fee</span></p>
 												<div class="table-responsive mb-3">
 													<table class="table">
 														<thead class="thead-light">
 															<tr>
-																<th>Job Description</th>
-																<th class="text-end">Qty</th>
+																<th>Course</th>
+															
 																<th class="text-end">Cost</th>
 																<th class="text-end">Discount</th>
 																<th class="text-end">Total</th>
@@ -105,33 +105,13 @@ const Invoice = () => {
 														</thead>
 														<tbody>
 															<tr>
-																<td><h6>UX Strategy</h6></td>
-																<td class="text-gray-9 fw-medium text-end">1</td>
-																<td class="text-gray-9 fw-medium text-end">$500</td>
-																<td class="text-gray-9 fw-medium text-end">$100</td>
-																<td class="text-gray-9 fw-medium text-end">$500</td>
+																<td><h6>Soild Works</h6></td>
+																
+																<td class="text-gray-9 fw-medium text-end">5000.00</td>
+																<td class="text-gray-9 fw-medium text-end">1000.00</td>
+																<td class="text-gray-9 fw-medium text-end">4000.00</td>
 															</tr>
-															<tr>
-																<td><h6>Design System</h6></td>
-																<td class="text-gray-9 fw-medium text-end">1</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-																<td class="text-gray-9 fw-medium text-end">$100</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-															</tr>
-															<tr>
-																<td><h6>Brand Guidellines</h6></td>
-																<td class="text-gray-9 fw-medium text-end">1</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-																<td class="text-gray-9 fw-medium text-end">$100</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-															</tr>
-															<tr>
-																<td><h6>Social Media Template</h6></td>
-																<td class="text-gray-9 fw-medium text-end">1</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-																<td class="text-gray-9 fw-medium text-end">$100</td>
-																<td class="text-gray-9 fw-medium text-end">$5000</td>
-															</tr>
+															
 														</tbody>
 													</table>
 												</div>
@@ -154,22 +134,22 @@ const Invoice = () => {
 														<div class="mb-3">
 															<div class="d-flex justify-content-between align-items-center border-bottom mb-2 pe-3">
 																<p class="mb-0">Sub Total</p>
-																<p class="text-dark fw-medium mb-2">$5500</p>
+																<p class="text-dark fw-medium mb-2">4000.00</p>
 															</div>
 															<div class="d-flex justify-content-between align-items-center border-bottom mb-2 pe-3">
 																<p class="mb-0">Discount(0%)</p>
-																<p class="text-dark fw-medium mb-2">$400</p>
+																<p class="text-dark fw-medium mb-2">1000.00</p>
 															</div>
 															<div class="d-flex justify-content-between align-items-center mb-2 pe-3">
-																<p class="mb-0">VAT(5%)</p>
-																<p class="text-dark fw-medium mb-2">$54</p>
+																<p class="mb-0">GST(5%)</p>
+																<p class="text-dark fw-medium mb-2">54.00</p>
 															</div>
 															<div class="d-flex justify-content-between align-items-center mb-2 pe-3">
 																<h5>Total Amount</h5>
-																<h5>$5775</h5>
+																<h5>4054.00</h5>
 															</div>
 															<p class="fs-12">
-																Amount in Words : Dollar Five thousand Seven Seventy Five
+																Amount in Words : Rupess Four thousand fithity Four
 															</p>
 														</div>
 													</div>
@@ -183,7 +163,7 @@ const Invoice = () => {
 																<img src="assets/img/icons/sign.svg" class="img-fluid" alt="sign"/>
 															</div>
 															<div class="text-end mb-3">
-																<h6 class="fs-14 fw-medium pe-3">Ted M. Davis</h6>
+																<h6 class="fs-14 fw-medium pe-3">Vijay Kuamr</h6>
 																<p>Assistant Manager</p>
 															</div>
 														</div>
