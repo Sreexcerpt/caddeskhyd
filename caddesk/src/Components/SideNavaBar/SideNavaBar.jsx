@@ -91,14 +91,14 @@ const SideNavaBar = () => {
                                         </a>
                                         <ul>
                                             <li>
-                                                <a href="">Leads Dashboard</a>
+                                                <a href="/">Leads Dashboard</a>
                                             </li>
                                             <li>
-                                                <a href="/">Student Dashboard</a>
+                                                <a href="/studentsDashboard">Student Dashboard</a>
                                             </li>
 
                                             <li>
-                                                <a href="">Staff Dashboard</a>
+                                                <a href="/staffdashboard">Staff Dashboard</a>
                                             </li>
                                         </ul>
                                     </li>

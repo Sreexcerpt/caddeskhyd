@@ -1,5 +1,6 @@
 import React from "react";
 import "../src/assets/assets/plugins/select2/css/select2.min.css";
+import "../src/assets/assets/scss/base/_base.scss";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import SideNavaBar from "./Components/SideNavaBar/SideNavaBar";
@@ -58,6 +59,8 @@ import FacultyLeaveRequests from "./Pages/FacultyProfile/FacultyLeaveRequests";
 import FacultyCommunication from "./Pages/FacultyProfile/FacultyCommunication";
 import Payroll from "./Pages/FacultyManagemnet/PayRole";
 import Payview from "./Pages/FacultyManagemnet/Payview";
+import Staffdash from "./Pages/DashBoard/Staffdash";
+import Studentdash from "./Pages/DashBoard/Studentdash";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -68,6 +71,8 @@ const Layout = () => {
       {!isLoginPage && <SideNavaBar />}
       <Routes>
         <Route path="/" element={<DashBoard />} />
+        <Route path="/staffdashboard" element={<Staffdash/>}/>
+        <Route path="/studentsDashboard" element={<Studentdash/>}/>
         <Route path="/testing" element={<FacultyForm />} />
         <Route path="/Login" element={<Register />} />
         <Route path="/AddFaculty" element={<FacultyForm />} />

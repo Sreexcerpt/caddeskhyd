@@ -261,7 +261,7 @@
 
 // import { Card, CardContent, CardHeader, Typography, Grid2 } from "@mui/material";
 // import { PieChart } from "recharts";
-// import { Table, TableHead, TableBody, TableRow, TableCell } from "@mui/material";
+// import { Table, TableHead, TableBody, TableRow, td } from "@mui/material";
 // import { useState } from "react";
 
 // const LeadsDashboard = () => {
@@ -332,19 +332,19 @@
 //             <Table>
 //               <TableHead>
 //                 <TableRow sx={{ backgroundColor: "#EEEEEE" }}>
-//                   <TableCell><b>Name</b></TableCell>
-//                   <TableCell><b>Status</b></TableCell>
-//                   <TableCell><b>Source</b></TableCell>
-//                   <TableCell><b>Assigned To</b></TableCell>
+//                   <td><b>Name</b></td>
+//                   <td><b>Status</b></td>
+//                   <td><b>Source</b></td>
+//                   <td><b>Assigned To</b></td>
 //                 </TableRow>
 //               </TableHead>
 //               <TableBody>
 //                 {leads.map((lead) => (
 //                   <TableRow key={lead.id}>
-//                     <TableCell>{lead.name}</TableCell>
-//                     <TableCell>{lead.status}</TableCell>
-//                     <TableCell>{lead.source}</TableCell>
-//                     <TableCell>{lead.assignedTo}</TableCell>
+//                     <td>{lead.name}</td>
+//                     <td>{lead.status}</td>
+//                     <td>{lead.source}</td>
+//                     <td>{lead.assignedTo}</td>
 //                   </TableRow>
 //                 ))}
 //               </TableBody>
@@ -359,11 +359,8 @@
 // export default LeadsDashboard;
 
 
-import { Card, CardContent, CardHeader, Typography, Grid2 } from "@mui/material";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
-import { Table, TableHead, TableBody, TableRow, TableCell } from "@mui/material";
-import { useState } from "react";
 
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 const LeadsDashboard = () => {
     const leadData = [
         { name: "New", value: 40 },
@@ -395,7 +392,7 @@ const LeadsDashboard = () => {
                         <div className="page-header">
                             <div className="row align-items-center ">
                                 <div className="col-md-4">
-                                    <h3 >Dashboard</h3>
+                                    <h3 >Lead Dashboard</h3>
                                 </div>
                                 <div className="col-md-8 float-end ms-auto">
                                     <div className="d-flex title-head">
@@ -432,7 +429,7 @@ const LeadsDashboard = () => {
                     ))}
                 </div>
                 <div className="row">
-                    <div className="col-xl-4">
+                    <div className="col-xl-6">
                         <div className="card">
                             <div className="card-header">
                                 <h3>Lead Status Breakdown</h3>
@@ -453,11 +450,13 @@ const LeadsDashboard = () => {
                         </div>
                     </div>
 
-                    <Grid2 item xs={12} md={6}>
-                        <Card sx={{ height: "280px" }}>
-                            <CardHeader title="Lead Category Comparison" />
-                            <CardContent>
-                                <ResponsiveContainer width="100%" height={200}>
+                    <div className="col-xl-6">
+                        <div className="card">
+                            <div className="card-header">
+                                <h3>Lead Category Comparison</h3>
+                            </div>
+                            <div className="card-body">
+                                <ResponsiveContainer width="100%" height={300}>
                                     <BarChart data={barData}>
                                         <XAxis dataKey="category" />
                                         <YAxis />
@@ -466,39 +465,39 @@ const LeadsDashboard = () => {
                                         <Bar dataKey="count" fill="#1976D2" />
                                     </BarChart>
                                 </ResponsiveContainer>
-                            </CardContent>
-                        </Card>
-                    </Grid2>
-
-                    {/* Lead Table */}
-                    <Grid2 item xs={12}>
-                        <Card>
-                            <CardHeader title="Recent Leads" />
-                            <CardContent>
-                                <Table>
-                                    <TableHead>
-                                        <TableRow sx={{ backgroundColor: "#EEEEEE" }}>
-                                            <TableCell><b>Name</b></TableCell>
-                                            <TableCell><b>Status</b></TableCell>
-                                            <TableCell><b>Source</b></TableCell>
-                                            <TableCell><b>Assigned To</b></TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {leads.map((lead) => (
-                                            <TableRow key={lead.id}>
-                                                <TableCell>{lead.name}</TableCell>
-                                                <TableCell>{lead.status}</TableCell>
-                                                <TableCell>{lead.source}</TableCell>
-                                                <TableCell>{lead.assignedTo}</TableCell>
-                                            </TableRow>
-                                        ))}
-                                    </TableBody>
-                                </Table>
-                            </CardContent>
-                        </Card>
-                    </Grid2>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Lead Table */}
+                <div className="row">
+                    <div className="card">
+                        <div className="card-header">
+                            <h3>Recent Leads</h3>
+                        </div>
+                        <div className="card-body">
+                            <table className="table table-striped">
+                                <thead>
+                                    <tr sx={{ backgroundColor: "#EEEEEE" }}>
+                                        <th><b>Name</b></th>
+                                        <th><b>Status</b></th>
+                                        <th><b>Source</b></th>
+                                        <th><b>Assigned To</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {leads.map((lead) => (
+                                        <tr key={lead.id}>
+                                            <td>{lead.name}</td>
+                                            <td>{lead.status}</td>
+                                            <td>{lead.source}</td>
+                                            <td>{lead.assignedTo}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

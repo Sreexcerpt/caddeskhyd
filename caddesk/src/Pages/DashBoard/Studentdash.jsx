@@ -1,7 +1,4 @@
-import { Card, CardContent, CardHeader, Typography, Grid } from "@mui/material";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, LineChart, Line, AreaChart, Area } from "recharts";
-import { Table, TableHead, TableBody, TableRow, TableCell } from "@mui/material";
-
 const Studentdash = () => {
   const studentPerformanceData = [
     { name: "Excellent", value: 30 },
@@ -34,97 +31,139 @@ const Studentdash = () => {
   ];
 
   return (
-    <Grid container spacing={2} padding={1}style={{marginTop:'90px',marginLeft:'240px'}}>
-      {/* Metrics */}
-      {[
-        { title: "Total Students", value: 200, color: "#4CAF50" },
-        { title: "Attendance Rate", value: "90%", color: "#2196F3" },
-        { title: "Top Performers", value: 30, color: "#FFC107" },
-        { title: "Needing Assistance", value: 10, color: "#F44336" },
-      ].map((metric, index) => (
-        <Grid item xs={12} sm={6} md={3} key={index} sx={{ display: "flex", justifyContent: "center" }}>
-          <Card sx={{ backgroundColor: metric.color, color: "#fff", height: "100px",width:'80%',display: "flex", flexDirection: "column", justifyContent: "left", textAlign: "left"}}>
-            <CardHeader title={metric.title} sx={{ paddingBottom: 0, fontSize: "14px" }} />
-            <CardContent>
-              <Typography variant="h6">{metric.value}</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
+    <>
+      <div className="page-wrapper">
+        <div className="content">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="page-header">
+                <div className="row align-items-center ">
+                  <div className="col-md-4">
+                    <h3 >Student Dashboard</h3>
+                  </div>
+                  <div className="col-md-8 float-end ms-auto">
+                    <div className="d-flex title-head">
+                      <div className="daterange-picker d-flex align-items-center justify-content-center">
 
-      {/* Charts */}
-      <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-        <Card sx={{ height: "260px", width: "95%" }}>
-          <CardHeader title="Student Performance Breakdown" />
-          <CardContent>
-            <ResponsiveContainer width="100%" height={180}>
-              <PieChart>
-                <Pie data={studentPerformanceData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} label>
-                  {studentPerformanceData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </Grid>
+                        <div className="head-icons mb-0">
+                          <a href="/studentsDashboard" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh"><i className="ti ti-refresh-dot"></i></a>
+                          <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header"><i className="ti ti-chevrons-up"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
 
-      <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-        <Card sx={{ height: "260px", width: "95%" }}>
-          <CardHeader title="Attendance Overview" />
-          <CardContent>
-            <ResponsiveContainer width="100%" height={180}>
-              <BarChart data={attendanceData}>
-                <XAxis dataKey="category" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="count" fill="#2196F3" />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </Grid>
+            {/* Metrics */}
+            {[
+              { title: "Total Students", value: 200, color: "#4CAF50" },
+              { title: "Attendance Rate", value: "90%", color: "#2196F3" },
+              { title: "Top Performers", value: 30, color: "#FFC107" },
+              { title: "Needing Assistance", value: 10, color: "#F44336" },
+            ].map((metric, index) => (
+              <div className="col-xl-3">
+                <div className="card" style={{ backgroundColor: metric.color, color: "#fff" }}>
+                  <div className="card-header">
+                    <h3 style={{ color: "#fff" }}>{metric.title}</h3>
+                  </div>
+                  <div className="card-body">
+                    <h3 style={{ color: "#fff" }}>{metric.value}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="row">
+            {/* Charts */}
+            <div className="col-xl-5">
+              <div className="card">
+                <div className="card-header">
+                  <h3>Student Performance Breakdown</h3>
+                </div>
+                <div className="card-body">
+                  <ResponsiveContainer width="100%" height={280}>
+                    <PieChart>
+                      <Pie data={studentPerformanceData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} label>
+                        {studentPerformanceData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                      <Legend />
+                    </PieChart>
+                  </ResponsiveContainer></div>
+              </div>
+            </div>
 
-      {/* Line Chart for Marks Trends */}
-      <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-        <Card sx={{ height: "260px", width: "95%" }}>
-          <CardHeader title="Marks Trends Over Months" />
-          <CardContent>
-            <ResponsiveContainer width="100%" height={180}>
-              <LineChart data={marksTrendData}>
-                <XAxis dataKey="month" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="marks" stroke="#FF5722" />
-              </LineChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </Grid>
+            <div className="col-xl-7">
+              <div className="card">
+                <div className="card-header">
+                  <h3>Attendance Overview</h3>
+                </div>
+                <div className="card-body">
+                  <ResponsiveContainer width="100%" height={280}>
+                    <BarChart data={attendanceData}>
+                      <XAxis dataKey="category" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="count" fill="#2196F3" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="row">
+            {/* Line Chart for Marks Trends */}
+            <div className="col-xl-6">
+              <div className="card">
+                <div className="card-header">
+                  <h3>Marks Trends Over Months</h3>
+                </div>
+                <div className="card-body">
+                  <ResponsiveContainer width="100%" height={280}>
+                    <LineChart data={marksTrendData}>
+                      <XAxis dataKey="month" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Line type="monotone" dataKey="marks" stroke="#FF5722" />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
 
-      {/* Area Chart for Subject Performance */}
-      <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-        <Card sx={{ height: "260px", width: "95%" }}>
-          <CardHeader title="Subject Performance Analysis" />
-          <CardContent>
-            <ResponsiveContainer width="100%" height={180}>
-              <AreaChart data={subjectPerformanceData}>
-                <XAxis dataKey="subject" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Area type="monotone" dataKey="score" stroke="#673AB7" fill="#B39DDB" />
-              </AreaChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
+            {/* Area Chart for Subject Performance */}
+            <div className="col-xl-6">
+              <div className="card">
+                <div className="card-header">
+                  <h3>Subject Performance Analysis</h3>
+                </div>
+                <div className="card-body">
+
+                  <ResponsiveContainer width="100%" height={280}>
+                    <AreaChart data={subjectPerformanceData}>
+                      <XAxis dataKey="subject" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Area type="monotone" dataKey="score" stroke="#673AB7" fill="#B39DDB" />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
