@@ -31,7 +31,7 @@ const AttendanceTracking = () => {
         <div class="page-wrapper">
             <div class="content">
                 <div class="page-header">
-                    <div class="page-title">
+                    <div >
                         <h4>Attendance Tracking</h4>
                     </div>
                 </div>

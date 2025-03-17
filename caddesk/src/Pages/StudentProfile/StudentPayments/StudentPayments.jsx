@@ -10,7 +10,7 @@ const StudentPayments = () => {
                             <div class="page-header">
                                 <div class="row align-items-center">
                                     <div class="col-sm-4">
-                                        <h4 class="page-title">Online Payments</h4>
+                                        <h4 >Online Payments</h4>
                                     </div>
                                     <div class="col-sm-8 text-sm-end">
                                         <div class="head-icons">

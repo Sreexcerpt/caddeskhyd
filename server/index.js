@@ -1081,6 +1081,55 @@ app.post("/get-video-link", async (req, res) => {
   }
 });
 
+
+const SalarySchema = new mongoose.Schema({
+    facultyId: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty", required: true },
+    date: { type: String, required: true },
+    basicPay: { type: Number, required: true },
+    salary: { type: Number, required: true },
+    travelAllowance: { type: Number, default: 0 },
+    medicalAllowance: { type: Number, default: 0 },
+    washingAllowance: { type: Number, default: 0 },
+    da: { type: Number, default: 0 }, // % of salary
+    hr: { type: Number, default: 0 }, // % of salary
+  });
+  
+const Salary = mongoose.model("Salary", SalarySchema);
+app.post("/api/save-salary", async (req, res) => {
+    try {
+      const { facultyId, date } = req.body;
+  
+      // Extract Year & Month from date
+      const [year, month] = date.split("-");
+  
+      // Check if salary already exists for the same faculty in the same month
+      const existingSalary = await Salary.findOne({
+        facultyId,
+        date: { $regex: `^${year}-${month}` }, // Match the same year-month
+      });
+  
+      if (existingSalary) {
+        return res.status(400).json({ error: "Salary already recorded for this month" });
+      }
+  
+      const salary = new Salary(req.body);
+      await salary.save();
+      res.status(201).json({ message: "Salary saved successfully", salary });
+    } catch (error) {
+      res.status(500).json({ error: "Error saving salary" });
+    }
+  });
+  
+app.get("/api/salary-records", async (req, res) => {
+    try {
+        const salaries = await Salary.find().populate("facultyId", "firstName lastName department staffOrFacultyId");
+        res.json(salaries);
+    } catch (error) {
+        console.error("Error fetching salary records:", error);
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
 // Start server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

@@ -330,7 +330,7 @@ const FacultyList = () => {
 			<div class="content">
 				<div class="page-header">
 					<div class="page-header menu">
-						<div class="page-title">
+						<div >
 							<h4>Faculty & Staff Management</h4>
 							<h6>Manage Faculty & Staff</h6>
 						</div>

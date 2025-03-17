@@ -179,7 +179,7 @@ const BatchAssignment = () => {
                                 </div>
                                 <div class="card-body">
                                     <div className="batch-assignment-container">
-                                        <h2 className="page-title">Assign Timetable</h2>
+                                        <h2 >Assign Timetable</h2>
                                         <form onSubmit={handleSubmit}>
                                             <div className="form-header">
                                                 <div className="form-group">

@@ -11,7 +11,7 @@ const AutomatedNotifications = () => {
               <div class="page-header">
                 <div class="row align-items-center">
                   <div class="col-8">
-                    <h4 class="page-title">
+                    <h4 >
                       AutomatedNotifications<span class="count-title">123</span>
                     </h4>
                   </div>

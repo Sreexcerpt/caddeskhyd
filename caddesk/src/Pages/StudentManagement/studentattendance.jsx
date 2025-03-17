@@ -67,7 +67,7 @@ const StudentAttendance = () => {
         <div className="page-wrapper">
             <div className="content">
                 <div className="page-header">
-                    <div className="page-title">
+                    <div >
                         <h4>Student Attendance</h4>
                     </div>
                 </div>
