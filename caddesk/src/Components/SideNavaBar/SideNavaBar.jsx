@@ -149,9 +149,9 @@ const SideNavaBar = () => {
                                         <ul>
                                             {/* <li><a href="/FacultyList">Staff Profiles</a></li> */}
                                             <li><a href="/AddFaculty">Staff Profiles</a></li>
-                                            <li><a href="">Access Control</a></li>
+                                            <li><a href="/AccessControl">Access Control</a></li>
                                             <li><a href="">Attendance & Leave Tracking</a></li>
-                                            <li><a href="">Payroll & Salary Management</a></li>
+                                            <li><a href="/Payrole">Payroll & Salary Management</a></li>
                                             <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
                                             <li>extra tabs</li>
                                             <li><a href="/BatchAssignment">BatchAssignment</a></li>

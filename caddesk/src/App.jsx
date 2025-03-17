@@ -49,6 +49,8 @@ import StudentFeedback from "./Pages/StudentProfile/StudentFeedback/StudentFeedb
 import FeeStructureManagement from "./Pages/Fee&Accounting/FeeStructureManagement/FeeStructureManagement";
 import StudentCertificate from "./Pages/StudentManagement/StudentCertificate";
 import StudentCourseDetails from "./Pages/StudentProfile/StudentCourseDetail/StudentCourseDetails";
+import PayRole from "./Pages/FacultyManagemnet/PayRole";
+import AccessControl from "./Pages/FacultyManagemnet/AccessControl";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -65,11 +67,13 @@ const Layout = () => {
         <Route path="/BatchForm" element={<BatchForm />} />
         <Route path="/CourseForm" element={<CourseForm />} />
         <Route path="/SubjectForm" element={<SubjectForm />} />
+        <Route path="/Payrole" element={<PayRole/>}/>
         <Route path="/FacultyList" element={<FacultyList />} />
         <Route path="/PaymentsAndInvoicing" element={<PaymentsAndInvoicing />} />
         <Route path="/StudentMyAttendance" element={<StudentMyAttendance />} />
         <Route path="/FeeStructureManagement" element={<FeeStructureManagement />} />
         <Route path="/Courseview" element={<StudentCourseDetails/>}/>
+        <Route path="/AccessControl" element={<AccessControl />} />
         {/* <Route path="/StudentProfile" element={<StudentProfile />} /> */}
         <Route path="/StudentCertificate" element={<StudentCertificate />} />
         <Route path="/StudentCourse" element={<StudentCourse />} />
