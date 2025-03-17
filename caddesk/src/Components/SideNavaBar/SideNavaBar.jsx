@@ -307,6 +307,42 @@ const SideNavaBar = () => {
                                     </li>
                                 </ul>
                             </li>
+
+                            <li>
+                                <h6 class="submenu-hdr">Faculty Profile</h6>
+                                <ul>
+                                    <li>
+                                        <a href="/FacultyDashboard">
+                                            <i className="ti ti-user"></i><span>Faculty Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/FacultyTimeTable">
+                                            <i className="ti ti-book"></i><span>Faculty TimeTable</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/FacultyCommunication">
+                                            <i className="ti ti-wallet"></i><span>Faculty Communication</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Attendance">
+                                            <i className="ti ti-calendar"></i><span>Attendance</span>
+                                        </a>
+                                        </li>
+                                        <li>
+                                        <a href="/Attendance">
+                                            <i className="ti ti-calendar"></i><span>Accessment</span>
+                                        </a>
+                                        </li>
+                                        <li>
+                                        <a href="/FacultyLeaveRequests">
+                                            <i className="ti ti-calendar"></i><span>LeaveRequest</span>
+                                        </a>
+                                        </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
