@@ -83,7 +83,7 @@ const SideNavaBar = () => {
                         <ul>
                             <li>
                                 <ul>
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="/">
                                             <i className="ti ti-layout-2"></i>
                                             <span>Dashboard</span>
@@ -103,7 +103,7 @@ const SideNavaBar = () => {
                                         </ul>
                                     </li>
                                     {/* Lead management tabs start*/}
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i class="ti ti-chart-arcs"></i>
                                             <span>Lead & Inquiry</span>
@@ -127,7 +127,7 @@ const SideNavaBar = () => {
                                     {/* Lead management tabs end */}
 
                                     {/*  Admission & Enrollment Management tabs start  */}
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i class="ti ti-steam"></i>
                                             <span>Admission & Enrollment </span>
@@ -154,7 +154,7 @@ const SideNavaBar = () => {
                                     {/*  Admission & Enrollment Management tabs end  */}
 
                                     {/*  Student Information Management tabs start  */}
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i className="ti ti-user-star"></i>
                                             <span>Student Information</span>
@@ -194,7 +194,7 @@ const SideNavaBar = () => {
                                     {/*  Student Information Management tabs end  */}
 
                                     {/*  Fee Management & Accounting tabs start  */}
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i class="ti ti-report-money"></i><span>Fee & Accounting</span>
                                             <span className="menu-arrow"></span>
@@ -208,7 +208,7 @@ const SideNavaBar = () => {
                                     {/*  Fee Management & Accounting tabs end  */}
 
                                     {/*  Communication & Notifications tabs start  */}
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i className="ti ti-user-star"></i><span>Communication</span>
                                             <span className="menu-arrow"></span>
@@ -222,13 +222,13 @@ const SideNavaBar = () => {
                                     {/*  Communication & Notifications tabs end  */}
                                     {/*  Faculty & Staff Management tabs start  */}
 
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href=""><i class="ti ti-users"></i><span>Faculty & Staff </span><span className="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="/FacultyList">Staff Profiles</a></li>
                                             <li><a href="">Access Control</a></li>
                                             <li><a href="">Attendance & Leave Tracking</a></li>
-                                            <li><a href="">Payroll & Salary Management</a></li>
+                                            <li><a href="/payroll">Payroll & Salary Management</a></li>
                                             <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
                                             <li>extra tabs</li>
                                             <li><a href="/BatchAssignment">BatchAssignment</a></li>
@@ -242,7 +242,7 @@ const SideNavaBar = () => {
                                     {/*  Faculty & Staff Management tabs end  */}
                                     {/*  Course, Class & Batch Management tabs start  */}
 
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="" >
                                             <i class="ti ti-artboard"></i><span>Course, Class & Batch</span>
                                             <span className="menu-arrow"></span>
@@ -258,7 +258,7 @@ const SideNavaBar = () => {
                                     {/*  Course, Class & Batch Management tabs end  */}
 
 
-                                    <li className="submenu">
+                                    <li className="submenu active">
                                         <a href="">
                                             <i className="ti ti-file-invoice"></i><span>Reports and Analytics</span><span className="menu-arrow"></span>
                                         </a>
@@ -275,7 +275,7 @@ const SideNavaBar = () => {
                             <li>
                                 <h6 class="submenu-hdr">Student Profile</h6>
                                 <ul>
-                                    <li>
+                                    <li className="active">
                                         <a href="/StudentDashboard">
                                             <i className="ti ti-user"></i><span>Student Dashboard</span>
                                         </a>

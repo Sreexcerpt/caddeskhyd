@@ -49,7 +49,6 @@ import StudentFeedback from "./Pages/StudentProfile/StudentFeedback/StudentFeedb
 import FeeStructureManagement from "./Pages/Fee&Accounting/FeeStructureManagement/FeeStructureManagement";
 import StudentCertificate from "./Pages/StudentManagement/StudentCertificate";
 import StudentCourseDetails from "./Pages/StudentProfile/StudentCourseDetail/StudentCourseDetails";
-import PayRole from "./Pages/FacultyManagemnet/PayRole";
 import AccessControl from "./Pages/FacultyManagemnet/AccessControl";import PayRoll from "./Pages/Saff/PayRoll";
 import FacultyDashboard from "./Pages/FacultyProfile/FacultyDashboard";
 import Attendance from "./Pages/FacultyProfile/Attendance";
@@ -57,6 +56,7 @@ import FacultyTimeTable from "./Pages/FacultyProfile/FacultyTimeTable";
 import Assignment from "./Pages/FacultyProfile/Assignment";
 import FacultyLeaveRequests from "./Pages/FacultyProfile/FacultyLeaveRequests";
 import FacultyCommunication from "./Pages/FacultyProfile/FacultyCommunication";
+import Payroll from "./Pages/FacultyManagemnet/PayRole";
 
 const Layout = () => {
   const location = useLocation();
@@ -74,7 +74,7 @@ const Layout = () => {
         <Route path="/BatchForm" element={<BatchForm />} />
         <Route path="/CourseForm" element={<CourseForm />} />
         <Route path="/SubjectForm" element={<SubjectForm />} />
-        <Route path="/Payrole" element={<PayRole/>}/>
+        <Route path="/Payroll" element={<Payroll/>}/>
         <Route path="/FacultyList" element={<FacultyList />} />
         <Route path="/PaymentsAndInvoicing" element={<PaymentsAndInvoicing />} />
         <Route path="/StudentMyAttendance" element={<StudentMyAttendance />} />
