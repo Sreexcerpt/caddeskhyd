@@ -32,7 +32,7 @@ const FacultyCommunication = () => {
                       <div class="d-flex align-items-center flex-wrap row-gap-2 justify-content-sm-end">
                       <a href="javascript:void(0);" class="btn btn-primary mt-2" data-bs-toggle="offcanvas"
 											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-											send message To Student Here</a>
+											Send message To Student Here</a>
 								
                       </div>
                     </div>
@@ -55,21 +55,80 @@ const FacultyCommunication = () => {
                                 <thead>
                                   <tr>
                                     <th scope="col">S.no</th>
-                                    <th scope="col">Student Name</th>
+                                    <th scope="col">CourseName</th>
                                     <th scope="col">Batch Id</th>
-                                    <th scope="col">Course</th>
+                                    <th scope="col">No.Of Student</th>
                                     <th scope="col">Message</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">Status</th>   
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
                                     <td>1</td>
-                                    <th scope="row">Harshrath</th>
+                                    <th scope="row">Solid Works</th>
                                     <td>2013-2014</td>
-                                    <td>Solid Works</td>
+                                    <td>500</td>
+                                    <td>Send To assignment</td>
+                                    <td>1-2-2013</td>
+                                    <td>
+                                      <span class="badge bg-success-transparent">
+                                        Sent
+                                      </span>
+                                    </td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td>2</td>
+                                    <th scope="row">AutoCad</th>
+                                    <td>2014-2015</td>
+                                    <td>400</td>
+                                    <td>Complete The Module</td>
+                                    <td>1-2-2014</td>
+                                    <td>
+                                      <span class="badge bg-danger-transparent">
+                                        Not Sent
+                                      </span>
+                                    </td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td>3</td>
+                                    <th scope="row">Catia</th>
+                                    <td>2016-2017</td>
+                                    <td>100</td>
+                                    <td>Create 3D product</td>
+                                    <td>1-2-2017</td>
+                                    <td>
+                                      <span class="badge bg-warning-transparent">
+                                        Review
+                                      </span>
+                                    </td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td>4</td>
+                                    <th scope="row">Creo</th>
+                                    <td>2013-2014</td>
+                                    <td>500</td>
+                                    <td>Send To assignment</td>
+                                    <td>1-2-2013</td>
+                                    <td>
+                                      <span class="badge bg-success-transparent">
+                                        Sent
+                                      </span>
+                                    </td>
+                                   
+                                  </tr>
+
+                                  <tr>
+                                    <td>4</td>
+                                    <th scope="row">NX CAD</th>
+                                    <td>2013-2014</td>
+                                    <td>500</td>
                                     <td>Send To assignment</td>
                                     <td>1-2-2013</td>
                                     <td>
@@ -77,205 +136,29 @@ const FacultyCommunication = () => {
                                         Not Sent
                                       </span>
                                     </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>2</td>
-                                    <th scope="row">Karthik</th>
-                                    <td>2014-205</td>
-                                    <td>Solid Works</td>
-                                    <td>Send To Resume</td>
-                                    <td>1-8-2013</td>
-                                    <td>
-                                      <span class="badge bg-warning-transparent">
-                                        Process
-                                      </span>
-                                    </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <td>3</td>
-                                    <th scope="row">Vijay kumar</th>
-                                    <td>2014-2014</td>
-                                    <td>Auto Cad</td>
-                                    <td>Complete The module</td>
-                                    <td>1-7-2014</td>
-                                    <td>
-                                      <span class="badge bg-success-transparent">
-                                        Sent
-                                      </span>
-                                    </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <td>4</td>
-                                    <th scope="row">Kavana</th>
-                                    <td>2016-2017</td>
-                                    <td>Catia</td>
-                                    <td>Work on Task</td>
-                                    <td>1-8-2017</td>
-                                    <td>
-                                      <span class="badge bg-info-transparent">
-                                        Review
-                                      </span>
-                                    </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
+                                   
                                   </tr>
 
                                   <tr>
                                     <td>5</td>
-                                    <th scope="row">Prem</th>
-                                    <td>2016-2017</td>
-                                    <td>Catia</td>
-                                    <td>Work on Task</td>
-                                    <td>1-8-2017</td>
-                                    <td>
-                                      <span class="badge bg-danger-transparent">
-                                        Not Sent
-                                      </span>
-                                    </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <td>6</td>
-                                    <th scope="row">Prajawala</th>
-                                    <td>2019-2020</td>
-                                    <td>NxPro</td>
-                                    <td>Work on Module</td>
-                                    <td>1-8-2020</td>
-                                    <td>
-                                      <span class="badge bg-warning-transparent">
-                                        Process
-                                      </span>
-                                    </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <td>4</td>
-                                    <th scope="row">Nayana</th>
-                                    <td>2016-2017</td>
-                                    <td>AutoCad</td>
-                                    <td>Work on Task</td>
-                                    <td>1-8-2017</td>
+                                    <th scope="row">Fusion</th>
+                                    <td>2013-2014</td>
+                                    <td>500</td>
+                                    <td>Send To assignment</td>
+                                    <td>1-2-2013</td>
                                     <td>
                                       <span class="badge bg-info-transparent">
-                                        Review
+                                        Pending
                                       </span>
                                     </td>
-                                    <td>
-                                      <div class="hstack gap-2 fs-15">
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-info rounded-pill"
-                                        >
-                                          <i class="feather-edit"></i>
-                                        </a>
-                                        <a
-                                          href="javascript:void(0);"
-                                          class="btn btn-icon btn-sm btn-soft-danger rounded-pill"
-                                        >
-                                          <i class="feather-trash"></i>
-                                        </a>
-                                      </div>
-                                    </td>
+                                   
                                   </tr>
+                                 
                                 </tbody>
                               </table>
+                              
                             </div>
+                           
                           </div>
                         </div>
                       </div>
@@ -296,7 +179,6 @@ const FacultyCommunication = () => {
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
 										aria-labelledby="offcanvasRightLabel">
 										<div class="offcanvas-header border-bottom">
-				<h5 class="fw-semibold">Add New Contact</h5>
 				<button type="button"
 					class="btn-close custom-btn-close border p-1 me-0 d-flex align-items-center justify-content-center rounded-circle"
 					data-bs-dismiss="offcanvas" aria-label="Close">
@@ -307,38 +189,53 @@ const FacultyCommunication = () => {
 										<div class="offcanvas-body">
                     <div class="card">
 							<div class="card-header">
-								<h5 class="card-title">Add student Message</h5>
+								<h5 class="card-title">Message Send to Student</h5>
 							</div>
-							<div class="card-body">
-								<form action="#">
-									<div class="mb-3">
-										<label class="form-label">First Name</label>
-										<input type="text" class="form-control"/>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Last Name</label>
-										<input type="text" class="form-control"/>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Email Address</label>
-										<input type="email" class="form-control"/>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Username</label>
-										<input type="text" class="form-control"/>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Password</label>
-										<input type="password" class="form-control"/>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Repeat Password</label>
-										<input type="password" class="form-control"/>
-									</div>
-									<div class="text-end">
-										<button type="submit" class="btn btn-primary">Submit</button>
-									</div>
-								</form>
+							<div class="card-body p-4">
+              <form>
+                    <div class="row">
+                      
+
+                    <div class="row mb-3">
+												<label class="col-lg-3 col-form-label">Select Batch :</label>
+												<div class="col-lg-9">
+												<div class="mb-3">
+																<select class="select">
+																	<option>Select Batch</option>
+																	<option value="1">2016-2017</option>
+																	<option value="2">2018-2019</option>
+																</select>
+															</div>
+															
+												</div>
+											</div>
+
+                      <div class="row mb-3">
+												<label class="col-lg-3 col-form-label">Subject:</label>
+												<div class="col-lg-9">
+													<input type="text" class="form-control"/>
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<label class="col-lg-3 col-form-label">Message: </label>
+												<div class="col-lg-9">
+													<div class="mb-3">
+														<textarea class="form-control" rows="3"></textarea>
+													</div>
+												</div>
+											</div>
+											
+									
+								
+
+                    </div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
 							</div>
 						</div>
 										</div> 

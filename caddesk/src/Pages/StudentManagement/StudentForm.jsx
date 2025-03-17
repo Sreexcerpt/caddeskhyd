@@ -653,7 +653,7 @@ const StudentRegistrationForm = () => {
 										placeholder="Phone"/>
 								</div>
 								<div>
-									<label for="colFormLabelLg" class="col-form-label col-form-label-lg">Payment Mode(UPI,CHECK,NETBANKING..ETC)</label>
+									<label for="colFormLabelLg" class="col-form-label col-form-label-lg">Payment Mode(UPI,CHEQUE,NETBANKING..ETC)</label>
 									<input type="text" class="form-control form-control-lg" id="colFormLabelLg"
 										placeholder="Payment Mode"/>
 								</div>
