@@ -1,0 +1,62 @@
+/* From Uiverse.io by chase2k25 */ 
+/* Checkbox Container */
+.checkbox-container_karthik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hidden Checkbox Input */
+  .checkbox-input_karthik {
+    display: none;
+  }
+  
+  /* Checkbox Label */
+  .checkbox_karthik {
+    position: relative;
+    width: 20px;
+    /* height: 50px; */
+    /* background: #e0e0e0; */
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* X Mark Lines */
+  .line_karthik {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #ff0303; /* Disabled color */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* X Mark Line 1 */
+  .line1_karthik {
+    transform: rotate(45deg);
+  }
+  
+  /* X Mark Line 2 */
+  .line2_karthik {
+    transform: rotate(-45deg);
+  }
+  
+  /* Checked State */
+  .checkbox-input_karthik:checked + .checkbox_karthik {
+    background: #d4e9d4; /* Light green background */
+  }
+  
+  .checkbox-input_karthik:checked + .checkbox_karthik .line1_karthik {
+    transform: rotate(50deg) translateX(-3px) translateY(8px) scaleX(0.6);
+    background: #169c1fff;
+  }
+  
+  .checkbox-input_karthik:checked + .checkbox_karthik .line2_karthik {
+    transform: rotate(-50deg) translateX(6px) translateY(3px); /* Second line in tick's opposite direction */
+    background: #169c1fff;
+  }
+  

@@ -523,9 +523,6 @@ const StudentRegistrationForm = () => {
 									<div class="tab-pane show active" id="solid-tab1">
 									
 						<div class="card">
-							<div class="card-header">
-								<h5 class="card-title">Two Column Vertical Form</h5>
-							</div>
 							<div class="card-body">
 								<form action="#">
 									<h5 class="card-title">Personal Information</h5>
@@ -642,7 +639,30 @@ const StudentRegistrationForm = () => {
 										</div>
 									</div>
 									<div class="tab-pane" id="solid-tab3">
-										Tab content 3
+
+									<div class="card">
+							<div class="card-body">
+								<div class="mb-3">
+									<label for="colFormLabelSm" class="col-form-label col-form-label-sm">Email</label>
+									<input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+										placeholder="col-form-label-sm"/>
+								</div>
+								<div class="mb-3">
+									<label for="colFormLabel" class="col-form-label">Phone</label>
+									<input type="text" class="form-control" id="colFormLabel"
+										placeholder="Phone"/>
+								</div>
+								<div>
+									<label for="colFormLabelLg" class="col-form-label col-form-label-lg">Payment Mode(UPI,CHECK,NETBANKING..ETC)</label>
+									<input type="text" class="form-control form-control-lg" id="colFormLabelLg"
+										placeholder="Payment Mode"/>
+								</div>
+							</div>
+                            <div class="text-end">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+						</div>
+
 									</div>
 								</div>
 							</div>

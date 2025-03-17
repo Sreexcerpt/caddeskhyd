@@ -34,33 +34,7 @@ const LeaveRequestForm = () => {
 
   return (
     <>
-    {/* <div style={{marginLeft:'300px'}}>
-      <h2>Employee Leave Request</h2>
-      <form onSubmit={handleSubmit}>
-        <label> EmployeeId:</label>
 
-        <input type="text" name="employeeId" value={formData.employeeId} onChange={handleChange} required />
-        <label>Leave Type:</label>
-        <select name="leaveType" value={formData.leaveType} onChange={handleChange} required>
-    
-          <option value="">Select</option>
-          <option value="Sick Leave">Sick Leave</option>
-          <option value="Casual Leave">Casual Leave</option>
-          <option value="Annual Leave">Annual Leave</option>
-        </select>
-        
-        <label>From Date:</label>
-        <input type="date" name="fromDate" value={formData.fromDate} onChange={handleChange} required />
-        
-        <label>To Date:</label>
-        <input type="date" name="toDate" value={formData.toDate} onChange={handleChange} required />
-        
-        <label>Reason:</label>
-        <textarea name="reason" value={formData.reason} w onChange={handleChange} required style={{width:'400px'}}></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </div> */}
 
 
     <div class="page-wrapper cardhead">

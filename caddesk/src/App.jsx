@@ -44,6 +44,13 @@ import Invoice from "./Pages/AdmissionManagement/Invoice";
 import AutomatedNotifications from "./Pages/CommunicationNotifications/AutomatedNotifications";
 import CommunicationChannels from "./Pages/CommunicationNotifications/CommunicationChannels";
 import EventAnnouncementManagement from "./Pages/CommunicationNotifications/EventAnnouncementManagement";
+import PayRoll from "./Pages/Saff/PayRoll";
+import FacultyDashboard from "./Pages/FacultyProfile/FacultyDashboard";
+import Attendance from "./Pages/FacultyProfile/Attendance";
+import FacultyTimeTable from "./Pages/FacultyProfile/FacultyTimeTable";
+import Assignment from "./Pages/FacultyProfile/Assignment";
+import FacultyLeaveRequests from "./Pages/FacultyProfile/FacultyLeaveRequests";
+import FacultyCommunication from "./Pages/FacultyProfile/FacultyCommunication";
 
 const Layout = () => {
   const location = useLocation();
@@ -95,6 +102,13 @@ const Layout = () => {
         <Route path="/AutomatedNotifications" element={<AutomatedNotifications/>}/>
         <Route path="/CommunicationChannels" element={<CommunicationChannels/>}/>
         <Route path="/EventAnnouncementManagement" element={<EventAnnouncementManagement/>}/>
+        <Route path="/PayRoll" element={<PayRoll/>}/>
+        <Route path="/FacultyDashboard" element={<FacultyDashboard/>}/>
+        <Route path="/Attendance" element={<Attendance/>}/>
+        <Route path="/FacultyTimeTable" element={<FacultyTimeTable/>}/>
+        <Route path="/Assignment" element={<Assignment/>}/>
+        <Route path="/FacultyLeaveRequests" element={<FacultyLeaveRequests/>}/>
+        <Route path="/FacultyCommunication" element={<FacultyCommunication/>}/>
       </Routes>
     </>
   );
