@@ -1057,7 +1057,29 @@ app.get("/getTimetable/:batchId", async (req, res) => {
     res.json(timetable);
 });
 
+const DROPBOX_ACCESS_TOKEN = process.env.DROPBOX_ACCESS_TOKEN;
 
+app.post("/get-video-link", async (req, res) => {
+  const { videoPath } = req.body;
+
+  try {
+    const response = await axios.post(
+      "https://api.dropboxapi.com/2/files/get_temporary_link",
+      { path: videoPath },
+      {
+        headers: {
+          Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    res.json({ videoUrl: response.data.link });
+  } catch (error) {
+    console.error("Error fetching video:", error);
+    res.status(500).json({ error: "Failed to fetch video link" });
+  }
+});
 
 // Start server
 const PORT = process.env.PORT || 8080;
