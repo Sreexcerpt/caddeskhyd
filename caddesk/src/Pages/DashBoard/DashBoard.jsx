@@ -15,7 +15,7 @@ const DashBoard = () => {
                         <div className="page-header">
                             <div className="row align-items-center ">
                                 <div className="col-md-4">
-                                    <h3 className="page-title">Dashboard</h3>
+                                    <h3 >Dashboard</h3>
                                 </div>
                                 <div className="col-md-8 float-end ms-auto">
                                     <div className="d-flex title-head">
