@@ -338,7 +338,7 @@ const SideNavaBar = () => {
                                         </a>
                                         </li>
                                         <li>
-                                        <a href="/FacultyLeaveRequests">
+                                        <a href="/FacultyLeaveRequests" >
                                             <i className="ti ti-calendar"></i><span>LeaveRequest</span>
                                         </a>
                                         </li>

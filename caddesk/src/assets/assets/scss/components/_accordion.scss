@@ -1,3 +1,5 @@
+@import '../utils/variables';
+@import '../utils/mixins';
 .accordion-button {
     background-color: $white;
     color: $text-color;
