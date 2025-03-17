@@ -204,8 +204,89 @@ const FacultyDashboard = () => {
             <div class="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
 								<h5 class="mb-2">Documents</h5>
 							</div>
-         
+                            <div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
+							<div class="card-body">
+								<div class="d-flex align-items-center w-100">
+									<div class="me-2">
+										<span class="card-bg-primary text-white rounded-circle p-2">
+											<i class="fa-solid fa-file-pdf"></i>
+										</span>
+									</div>
+									<div class="">
+										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
+										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
+									</div>
+									<div class="ms-auto">
+										<a href="javascript:void(0);" class="text-fixed-white"><i
+												class="fa-solid fa-ellipsis-vertical"></i></a>
+									</div>
+								</div>
+							</div>
 							
+						</div>
+
+						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
+							<div class="card-body">
+								<div class="d-flex align-items-center w-100">
+									<div class="me-2">
+										<span class="card-bg-primary text-white rounded-circle p-2">
+											<i class="fa-solid fa-file-pdf"></i>
+										</span>
+									</div>
+									<div class="">
+										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
+										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
+									</div>
+									<div class="ms-auto">
+										<a href="javascript:void(0);" class="text-fixed-white"><i
+												class="fa-solid fa-ellipsis-vertical"></i></a>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
+							<div class="card-body">
+								<div class="d-flex align-items-center w-100">
+									<div class="me-2">
+										<span class="card-bg-primary text-white rounded-circle p-2">
+											<i class="fa-solid fa-file-pdf"></i>
+										</span>
+									</div>
+									<div class="">
+										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
+										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
+									</div>
+									<div class="ms-auto">
+										<a href="javascript:void(0);" class="text-fixed-white"><i
+												class="fa-solid fa-ellipsis-vertical"></i></a>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
+							<div class="card-body">
+								<div class="d-flex align-items-center w-100">
+									<div class="me-2">
+										<span class="card-bg-primary text-white rounded-circle p-2">
+											<i class="fa-solid fa-file-pdf"></i>
+										</span>
+									</div>
+									<div class="">
+										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
+										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
+									</div>
+									<div class="ms-auto">
+										<a href="javascript:void(0);" class="text-fixed-white"><i
+												class="fa-solid fa-ellipsis-vertical"></i></a>
+									</div>
+								</div>
+							</div>
+							
+						</div>
 						</div>
 					</div>
 					
