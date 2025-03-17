@@ -281,7 +281,7 @@ function Payroll() {
                                             <div class="daterange-picker d-flex align-items-center justify-content-center">
 
                                                 <div class="head-icons mb-0">
-                                                    <a href="/Payrole" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh"><i class="ti ti-refresh-dot"></i></a>
+                                                    <a href="/Payroll" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh"><i class="ti ti-refresh-dot"></i></a>
                                                     <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header"><i class="ti ti-chevrons-up"></i></a>
                                                 </div>
                                             </div>
@@ -327,7 +327,7 @@ function Payroll() {
                         </div>
                     </div>
                     <div >
-                        <h3>Faculty List</h3>
+                        {/* <h3>Faculty List</h3> */}
                         {/* <ul>
                             {faculties.map((faculty) => (
                                 <li key={faculty._id}>
@@ -338,56 +338,7 @@ function Payroll() {
                         </ul> */}
 
                         {/* Search and Filter Section */}
-                        <h3>Salary Records</h3>
-                        <input
-                            type="text"
-                            placeholder="Search by Name or ID"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-                        <select onChange={(e) => setSelectedYear(e.target.value)} value={selectedYear}>
-                            <option value="">Select Year</option>
-                            {[2025, 2024, 2023].map((year) => (
-                                <option key={year} value={year}>{year}</option>
-                            ))}
-                        </select>
-                        <select onChange={(e) => setSelectedMonth(e.target.value)} value={selectedMonth}>
-                            <option value="">Select Month</option>
-                            {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month) => (
-                                <option key={month} value={month}>{month}</option>
-                            ))}
-                        </select>
 
-                        {/* Salary Records Table */}
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Employee Name</th>
-                                    <th>Department</th>
-                                    <th>Employee ID</th>
-                                    <th>Date</th>
-                                    <th>Basic Pay</th>
-                                    <th>Salary</th>
-                                    <th>Travel Allowance</th>
-                                    <th>Medical Allowance</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {filteredSalaries.map((record, index) => (
-                                    <tr key={index}>
-                                        <td>{record.facultyId?.firstName} {record.facultyId?.lastName}</td>
-                                        <td>{record.facultyId?.department}</td>
-                                        <td>{record.facultyId?.staffOrFacultyId}</td>
-                                        <td>{record.date}</td>
-                                        <td>₹{record.basicPay}</td>
-                                        <td>₹{record.salary}</td>
-                                        <td>₹{record.travelAllowance}</td>
-                                        <td>₹{record.medicalAllowance}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-
-                        </table>
                         {/* <div id="standard-modal" class="modal fade" tabindex="-1" role="dialog"
                             aria-labelledby="standard-modalLabel" aria-hidden="true">
                             <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
@@ -432,65 +383,61 @@ function Payroll() {
                             </Modal>
                         </div> */}
                         <div id="standard-modal" class="modal fade" tabindex="-1" role="dialog"
-									aria-labelledby="standard-modalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h4 class="modal-title" id="standard-modalLabel">Modal Heading</h4>
-												<button type="button" class="btn-close" data-bs-dismiss="modal"
-													aria-label="Close"></button>
-											</div>
-											<div class="modal-body">
-                                            {selectedFaculty && (
-                                    <div>
-                                        <p>
-                                            <strong>Employee:</strong> {selectedFaculty.firstName} {selectedFaculty.lastName}
-                                        </p>
-                                        <p>
-                                            <strong>Annual Salary:</strong> {selectedFaculty.salary}
-                                        </p>
-                                        <label>Date:</label>
-                                        <input type="date" name="date" value={salaryDetails.date} onChange={handleChange} />
-
-                                        <label>Basic Pay:</label>
-                                        <input type="number" name="basicPay" value={salaryDetails.basicPay} onChange={handleChange} />
-
-                                        <label>Salary:</label>
-                                        <input type="number" name="salary" value={salaryDetails.salary} onChange={handleChange} />
-
-                                        <label>Travel Allowance:</label>
-                                        <input type="number" name="travelAllowance" value={salaryDetails.travelAllowance} onChange={handleChange} />
-
-                                        <label>Medical Allowance:</label>
-                                        <input type="number" name="medicalAllowance" value={salaryDetails.medicalAllowance} onChange={handleChange} />
-
-                                        <label>Washing Allowance:</label>
-                                        <input type="number" name="washingAllowance" value={salaryDetails.washingAllowance} onChange={handleChange} />
-
-                                        <label>DA (%):</label>
-                                        <input type="number" name="da" value={salaryDetails.da} onChange={handleChange} />
-
-                                        <label>HR (%):</label>
-                                        <input type="number" name="hr" value={salaryDetails.hr} onChange={handleChange} />
-
-                                        <button onClick={saveSalary}>Save & Download Receipt</button>
-                                        <button onClick={closeModal}>Cancel</button>
+                            aria-labelledby="standard-modalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="standard-modalLabel">Modal Heading</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
-                                )}
-											</div>
-											
-										</div>
-									</div>
-								</div>
+                                    <div class="modal-body">
+                                        {selectedFaculty && (
+                                            <div>
+                                                <p>
+                                                    <strong>Employee:</strong> {selectedFaculty.firstName} {selectedFaculty.lastName}
+                                                </p>
+                                                <p>
+                                                    <strong>Annual Salary:</strong> {selectedFaculty.salary}
+                                                </p>
+                                                <label>Date:</label>
+                                                <input type="date" name="date" value={salaryDetails.date} onChange={handleChange} />
 
-								<div class="button-list">
-									{/* <!-- Standard  modal --> */}
-									<button type="button" class="btn btn-primary mt-1" data-bs-toggle="modal"
-										data-bs-target="#standard-modal">Launch Demo Modal</button>
-								</div>
-							</div>
-				
-				
+                                                <label>Basic Pay:</label>
+                                                <input type="number" name="basicPay" value={salaryDetails.basicPay} onChange={handleChange} />
+
+                                                <label>Salary:</label>
+                                                <input type="number" name="salary" value={salaryDetails.salary} onChange={handleChange} />
+
+                                                <label>Travel Allowance:</label>
+                                                <input type="number" name="travelAllowance" value={salaryDetails.travelAllowance} onChange={handleChange} />
+
+                                                <label>Medical Allowance:</label>
+                                                <input type="number" name="medicalAllowance" value={salaryDetails.medicalAllowance} onChange={handleChange} />
+
+                                                <label>Washing Allowance:</label>
+                                                <input type="number" name="washingAllowance" value={salaryDetails.washingAllowance} onChange={handleChange} />
+
+                                                <label>DA (%):</label>
+                                                <input type="number" name="da" value={salaryDetails.da} onChange={handleChange} />
+
+                                                <label>HR (%):</label>
+                                                <input type="number" name="hr" value={salaryDetails.hr} onChange={handleChange} />
+
+                                                <button onClick={saveSalary}>Save & Download Receipt</button>
+                                                <button onClick={closeModal}>Cancel</button>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+
                 </div>
             </div>
         </div>

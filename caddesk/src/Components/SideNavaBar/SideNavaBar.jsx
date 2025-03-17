@@ -229,6 +229,7 @@ const SideNavaBar = () => {
                                             <li><a href="">Access Control</a></li>
                                             <li><a href="">Attendance & Leave Tracking</a></li>
                                             <li><a href="/payroll">Payroll & Salary Management</a></li>
+                                            <li><a href="/payview">PaySlip</a></li>
                                             <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
                                             <li>extra tabs</li>
                                             <li><a href="/BatchAssignment">BatchAssignment</a></li>

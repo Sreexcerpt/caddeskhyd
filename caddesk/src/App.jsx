@@ -57,7 +57,7 @@ import Assignment from "./Pages/FacultyProfile/Assignment";
 import FacultyLeaveRequests from "./Pages/FacultyProfile/FacultyLeaveRequests";
 import FacultyCommunication from "./Pages/FacultyProfile/FacultyCommunication";
 import Payroll from "./Pages/FacultyManagemnet/PayRole";
-
+import Payview from "./Pages/FacultyManagemnet/Payview";
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -81,6 +81,7 @@ const Layout = () => {
         <Route path="/FeeStructureManagement" element={<FeeStructureManagement />} />
         <Route path="/Courseview" element={<StudentCourseDetails/>}/>
         <Route path="/AccessControl" element={<AccessControl />} />
+        <Route path="/payview" element={<Payview/>}/>
         {/* <Route path="/StudentProfile" element={<StudentProfile />} /> */}
         <Route path="/StudentCertificate" element={<StudentCertificate />} />
         <Route path="/StudentCourse" element={<StudentCourse />} />
