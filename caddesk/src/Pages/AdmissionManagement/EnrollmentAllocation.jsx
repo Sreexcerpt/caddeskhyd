@@ -40,7 +40,29 @@ const EnrollmentAllocation = () => {
                 <div class="col-xl-12">
                 <div class="card">
                   <div class="card-header justify-content-between">
-                    <div class="card-title">EnrollmentAllocation</div>
+                    <div class="card-title">Enrollment & Allocation</div>
+                    <div class="row align-items-center">
+                    <div class="col-sm-4">
+                      <div class="icon-form mb-3 mb-sm-0">
+                        <span class="form-icon">
+                          <i class="ti ti-search"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search"
+                        />
+                      </div>
+                    </div>
+                    {/* <div class="col-sm-8">
+                      <div class="d-flex align-items-center flex-wrap row-gap-2 justify-content-sm-end">
+                      <a href="javascript:void(0);" class="btn btn-primary mt-2" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+											Enrollment & Allocation Add</a>
+								
+                      </div>
+                    </div> */}
+                  </div>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -49,10 +71,9 @@ const EnrollmentAllocation = () => {
                           <tr>
                             <th>S.no</th>
                             <th scope="col">Name</th>
-                            <th scope="col">EnrollmentDate</th>
                             <th scope="col">Course</th>
                             <th scope="col">Batch</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">EnrollmentDate</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -79,31 +100,170 @@ const EnrollmentAllocation = () => {
                                 </div>
                               </div>
                             </td>
+                           
+                            <td>
+                                <span class="badge rounded-pill bg-outline-success">Solid Works</span>
+                            </td>
+                           
+                            <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
+                            </td>
                             <td>
                                 <span>23-4-2023</span>
                             </td>
-                            <td>
-                                <span>Solid Works</span>
-                            </td>
-                            <td>
-                              <div class="avatar-list-stacked">
-                               
-                              <span>2017-25</span>
-                              </div>
-                            </td>
-                            <td>
-													<div class="hstack gap-2 fs-15">
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
-																class="feather-edit"></i></a>
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
-																class="feather-trash"></i></a>
-													</div>
-												</td>
                           </tr>
+                         
                           <tr>
                             <td>2</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                               
+                                <div>
+                                  <div class="lh-1">
+                                    <span>Karthik kumar</span>
+                                  </div>
+                                  <div class="lh-1">
+                                    <span class="fs-11 text-muted">
+                                      <a
+                                        href="/cdn-cgi/l/email-protection"
+                                        class="__cf_email__"
+                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
+                                      >
+                                        +9964537264
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                           
+                            <td>
+                                <span class="badge rounded-pill bg-outline-dark">Ansys</span>
+                            </td>
+                           
+                           <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
+                            </td>
+                            <td>
+                                <span>23-4-2023</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                               
+                                <div>
+                                  <div class="lh-1">
+                                    <span>Vikram kumar</span>
+                                  </div>
+                                  <div class="lh-1">
+                                    <span class="fs-11 text-muted">
+                                      <a
+                                        href="/cdn-cgi/l/email-protection"
+                                        class="__cf_email__"
+                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
+                                      >
+                                        +9964537264
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                           
+                            <td>
+                                <span class="badge rounded-pill bg-outline-warning">Nxcad</span>
+                            </td>
+                           
+                           <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
+                            </td>
+                            <td>
+                                <span>23-4-2023</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                               
+                                <div>
+                                  <div class="lh-1">
+                                    <span>Raju</span>
+                                  </div>
+                                  <div class="lh-1">
+                                    <span class="fs-11 text-muted">
+                                      <a
+                                        href="/cdn-cgi/l/email-protection"
+                                        class="__cf_email__"
+                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
+                                      >
+                                        +9964537264
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                           
+                            <td>
+                                <span class="badge rounded-pill bg-outline-info">Civil3D</span>
+                            </td>
+                           
+                           <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
+                            </td>
+                            <td>
+                                <span>23-4-2023</span>
+                            </td>
+                          </tr>
+                         
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                               
+                                <div>
+                                  <div class="lh-1">
+                                    <span>Vinay</span>
+                                  </div>
+                                  <div class="lh-1">
+                                    <span class="fs-11 text-muted">
+                                      <a
+                                        href="/cdn-cgi/l/email-protection"
+                                        class="__cf_email__"
+                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
+                                      >
+                                        +9964537264
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                           
+                            <td>
+                                <span class="badge rounded-pill bg-outline-success">Fusion 360</span>
+                            </td>
+                           
+                           <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
+                            </td>
+                            <td>
+                                <span >23-4-2023</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>6</td>
                             <td>
                               <div class="d-flex align-items-center">
                                
@@ -125,172 +285,18 @@ const EnrollmentAllocation = () => {
                                 </div>
                               </div>
                             </td>
+                           
                             <td>
-                                <span>23-4-2023</span>
+                                <span class="badge rounded-pill bg-outline-primary">Creo</span>
                             </td>
-                            <td>
-                                <span>Ansys</span>
-                            </td>
-                            <td>
-                              <div class="avatar-list-stacked">
-                               
-                              <span>2017-25</span>
-                              </div>
-                            </td>
-                            <td>
-													<div class="hstack gap-2 fs-15">
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
-																class="feather-edit"></i></a>
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
-																class="feather-trash"></i></a>
-													</div>
-												</td>
-                          </tr>
-
-
-                          <tr>
-                            <td>3</td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                               
-                                <div>
-                                  <div class="lh-1">
-                                    <span>Kavya</span>
-                                  </div>
-                                  <div class="lh-1">
-                                    <span class="fs-11 text-muted">
-                                      <a
-                                        href="/cdn-cgi/l/email-protection"
-                                        class="__cf_email__"
-                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
-                                      >
-                                        +9964537264
-                                      </a>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
+                           
+                           <td>
+                                <span>2018-2019<a href="javascript:void(0);" data-bs-toggle="offcanvas"
+											data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="badge rounded-pill bg-soft-primary"> <i class="feather-edit"></i></a></span>
                             </td>
                             <td>
                                 <span>23-4-2023</span>
                             </td>
-                            <td>
-                                <span>3DMAX</span>
-                            </td>
-                            <td>
-                              <div class="avatar-list-stacked">
-                               
-                              <span>2017-25</span>
-                              </div>
-                            </td>
-                            <td>
-													<div class="hstack gap-2 fs-15">
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
-																class="feather-edit"></i></a>
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
-																class="feather-trash"></i></a>
-													</div>
-												</td>
-                          </tr>
-
-
-                          <tr>
-                            <td>4</td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                               
-                                <div>
-                                  <div class="lh-1">
-                                    <span>Ajay kumar</span>
-                                  </div>
-                                  <div class="lh-1">
-                                    <span class="fs-11 text-muted">
-                                      <a
-                                        href="/cdn-cgi/l/email-protection"
-                                        class="__cf_email__"
-                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
-                                      >
-                                        +9964537264
-                                      </a>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                                <span>23-4-2023</span>
-                            </td>
-                            <td>
-                                <span>Catia</span>
-                            </td>
-                            <td>
-                              <div class="avatar-list-stacked">
-                               
-                              <span>2017-25</span>
-                              </div>
-                            </td>
-                            <td>
-													<div class="hstack gap-2 fs-15">
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
-																class="feather-edit"></i></a>
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
-																class="feather-trash"></i></a>
-													</div>
-												</td>
-                          </tr>
-
-
-                          <tr>
-                            <td>5</td>
-                            <td>
-                              <div class="d-flex align-items-center">
-                               
-                                <div>
-                                  <div class="lh-1">
-                                    <span>raju kumar</span>
-                                  </div>
-                                  <div class="lh-1">
-                                    <span class="fs-11 text-muted">
-                                      <a
-                                        href="/cdn-cgi/l/email-protection"
-                                        class="__cf_email__"
-                                        data-cfemail="9cf6f3fdf2f2fdeff1f5e8f4ada8dcf9e4fdf1ecf0f9b2fff3f1"
-                                      >
-                                        +9964537264
-                                      </a>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                                <span>23-4-2023</span>
-                            </td>
-                            <td>
-                                <span>Auto Cad</span>
-                            </td>
-                            <td>
-                              <div class="avatar-list-stacked">
-                               
-                              <span>2017-25</span>
-                              </div>
-                            </td>
-                            <td>
-													<div class="hstack gap-2 fs-15">
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-info rounded-pill"><i
-																class="feather-edit"></i></a>
-														<a href="javascript:void(0);"
-															class="btn btn-icon btn-sm btn-soft-danger rounded-pill"><i
-																class="feather-trash"></i></a>
-													</div>
-												</td>
                           </tr>
                        
                         </tbody>
@@ -316,6 +322,176 @@ const EnrollmentAllocation = () => {
 
 			</div>
 		</div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+										aria-labelledby="offcanvasRightLabel">
+										<div class="offcanvas-header border-bottom">
+				<button type="button"
+					class="btn-close custom-btn-close border p-1 me-0 d-flex align-items-center justify-content-center rounded-circle"
+					data-bs-dismiss="offcanvas" aria-label="Close">
+					<i class="ti ti-x"></i>
+				</button>
+			</div>
+
+										<div class="offcanvas-body">
+                    <div class="card">
+							<div class="card-header">
+								<h5 class="card-title">Enrollment&Allocation</h5>
+							</div>
+							<div class="card-body p-4">
+              <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table text-nowrap table-hover">
+                        <thead>
+                          <tr>
+                            <th>S.no</th>
+                            <th scope="col">Batch</th>
+                            <th scope="col">Star tDate</th>
+                            <th scope="col">End Date</th>
+                            <th scop="col">Add Batch</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>6</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>7</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>8</td>
+                            <td>
+                              2021-2022
+                            </td>
+                            <td>
+                                <span>23-4-2022</span>
+                            </td>
+                            <td>
+                                <span>23-5-2022</span>
+                            </td>
+                            <td>
+                            <span class="badge badge-xs bg-primary">Add</span>
+                            </td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+							</div>
+						</div>
+										</div> 
+									</div> 
     </div>
   );
 };

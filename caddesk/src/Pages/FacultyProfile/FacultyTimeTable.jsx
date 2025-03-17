@@ -18,20 +18,20 @@ const FacultyTimeTable = () => {
                         <tr>
                           <th>S.no</th>
                           <th>Day</th>
-                          <th>9:00-10:00</th>
-                          <th>10:00-11:00</th>
-                          <th>11:00-12:00</th>
-                          <th>12:00-1:00</th>
-                          <th>1:00-2:00</th>
-                          <th>2:00-3:00</th>
-                          <th>3:00-4:00</th>
-                          <th>4:00-5:00</th>
+                          <th><span class="badge bg-outline-success">9:00-10:00</span></th>
+                          <th><span class="badge bg-outline-success">10:00-11:00</span></th>
+                          <th><span class="badge bg-outline-success">11:00-12:00</span></th>
+                          <th><span class="badge bg-outline-success">12:00-1:00</span></th>
+                          <th><span class="badge bg-outline-success">1:00-2:00</span></th>
+                          <th><span class="badge bg-outline-success">2:00-3:00</span></th>
+                          <th><span class="badge bg-outline-success">3:00-4:00</span></th>
+                          <th><span class="badge bg-outline-success">4:00-5:00</span></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>Monday</td>
+                          <td><span class="badge bg-success-transparent">Monday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
@@ -43,7 +43,7 @@ const FacultyTimeTable = () => {
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td>Tuesday</td>
+                          <td><span class="badge bg-warning-transparent">Tuesday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
@@ -55,7 +55,7 @@ const FacultyTimeTable = () => {
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td>Wednesday</td>
+                          <td><span class="badge bg-info-transparent">Wednsday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
@@ -67,7 +67,7 @@ const FacultyTimeTable = () => {
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td>Thursday</td>
+                          <td><span class="badge bg-danger-transparent">Thrusday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
@@ -79,7 +79,7 @@ const FacultyTimeTable = () => {
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td>Friday</td>
+                          <td><span class="badge bg-soft-dark">Friday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
@@ -91,7 +91,7 @@ const FacultyTimeTable = () => {
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td>Saturday</td>
+                          <td><span class="badge bg-success-transparent">Saturday</span></td>
                           <td>AutoCAD</td>
                           <td>Ansys</td>
                           <td>Creo</td>
