@@ -60,8 +60,8 @@ const AutomatedNotifications = () => {
                                   <th scope="col">EnrollmentDate</th>
                                   <th scope="col">Course</th>
                                   <th scope="col">Batch</th>
-								  <th scope="col">Type of Notification</th>
-								  <th scope="col">Sending</th>
+                                  <th scope="col">Type of Notification</th>
+                                  <th scope="col">Sending</th>
                                   <th scope="col">Type Mode</th>
                                 </tr>
                               </thead>
@@ -99,25 +99,25 @@ const AutomatedNotifications = () => {
                                       <span>2017-25</span>
                                     </div>
                                   </td>
-                                   <td><span class="badge bg-soft-danger">Fee Due</span></td>
-								   <td>
-								   <div class="status-toggle">
-															<input type="checkbox" id="loc" class="check" checked=""/>
-															<label for="loc" class="checktoggle"> </label>
-														</div>
-								   </td>
+                                  <td><span class="badge bg-soft-danger">Fee Due</span></td>
+                                  <td>
+                                    <div class="status-toggle">
+                                      <input type="checkbox" id="loc" class="check" checked="" />
+                                      <label for="loc" class="checktoggle"> </label>
+                                    </div>
+                                  </td>
                                   <td>
                                     <div class="hstack gap-2 fs-15">
-									<span class="avatar avtar-lg border me-2 flex-shrink-0">
-																	<img src="./src/assets/assets/img/icons/gateway-01.svg"
-																		class="w-auto h-auto" alt=""/>
-																</span>
-                                    
+                                      <span class="avatar avtar-lg border me-2 flex-shrink-0">
+                                        <img src="./src/assets/assets/img/icons/gateway-01.svg"
+                                          class="w-auto h-auto" alt="" />
+                                      </span>
+
                                     </div>
                                   </td>
                                 </tr>
-                             
-								<tr>
+
+                                <tr>
                                   <td>2</td>
                                   <td>
                                     <div class="d-flex align-items-center">
@@ -150,25 +150,25 @@ const AutomatedNotifications = () => {
                                       <span>2017-25</span>
                                     </div>
                                   </td>
-                                   <td><span class="badge bg-soft-success">completion</span></td>
-								   <td>
-								   <div class="status-toggle">
-															<input type="checkbox"  class="check" checked=""/>
-															<label for="loc" class="checktoggle"> </label>
-														</div>
-								   </td>
-                                   <td>
+                                  <td><span class="badge bg-soft-success">completion</span></td>
+                                  <td>
+                                    <div class="status-toggle">
+                                      <input type="checkbox" class="check" checked="" />
+                                      <label for="loc" class="checktoggle"> </label>
+                                    </div>
+                                  </td>
+                                  <td>
                                     <div class="hstack gap-2 fs-15">
-									<span class="avatar avtar-lg border me-2 flex-shrink-0">
-																	<img src="./src/assets/assets/img/icons/mail-02.svg"
-																		class="w-auto h-auto" alt=""/>
-																</span>
-                                    
+                                      <span class="avatar avtar-lg border me-2 flex-shrink-0">
+                                        <img src="./src/assets/assets/img/icons/mail-02.svg"
+                                          class="w-auto h-auto" alt="" />
+                                      </span>
+
                                     </div>
                                   </td>
                                 </tr>
 
-								<tr>
+                                <tr>
                                   <td>3</td>
                                   <td>
                                     <div class="d-flex align-items-center">
@@ -201,25 +201,25 @@ const AutomatedNotifications = () => {
                                       <span>2017-25</span>
                                     </div>
                                   </td>
-                                   <td><span class="badge bg-soft-warning">Exam Date</span></td>
-								   <td>
-								   <div class="status-toggle">
-															<input type="checkbox" id="loc" class="check" checked=""/>
-															<label for="loc" class="checktoggle"> </label>
-														</div>
-								   </td>
-                                   <td>
+                                  <td><span class="badge bg-soft-warning">Exam Date</span></td>
+                                  <td>
+                                    <div class="status-toggle">
+                                      <input type="checkbox" id="loc" class="check" checked="" />
+                                      <label for="loc" class="checktoggle"> </label>
+                                    </div>
+                                  </td>
+                                  <td>
                                     <div class="hstack gap-2 fs-15">
-									<span class="avatar avtar-lg border me-2 flex-shrink-0">
-																	<img src="./src/assets/assets/img/icons/mail-01.svg"
-																		class="w-auto h-auto" alt=""/>
-																</span>
-                                    
+                                      <span class="avatar avtar-lg border me-2 flex-shrink-0">
+                                        <img src="./src/assets/assets/img/icons/mail-01.svg"
+                                          class="w-auto h-auto" alt="" />
+                                      </span>
+
                                     </div>
                                   </td>
                                 </tr>
 
-								<tr>
+                                <tr>
                                   <td>4</td>
                                   <td>
                                     <div class="d-flex align-items-center">
@@ -252,20 +252,20 @@ const AutomatedNotifications = () => {
                                       <span>2017-25</span>
                                     </div>
                                   </td>
-                                   <td><span class="badge bg-soft-info">Class Reminder</span></td>
-								   <td>
-								   <div class="status-toggle">
-															<input type="checkbox" id="loc" class="check" checked=""/>
-															<label for="loc" class="checktoggle"> </label>
-														</div>
-								   </td>
-                                   <td>
+                                  <td><span class="badge bg-soft-info">Class Reminder</span></td>
+                                  <td>
+                                    <div class="status-toggle">
+                                      <input type="checkbox" id="loc" class="check" checked="" />
+                                      <label for="loc" class="checktoggle"> </label>
+                                    </div>
+                                  </td>
+                                  <td>
                                     <div class="hstack gap-2 fs-15">
-									<span class="avatar avtar-lg border me-2 flex-shrink-0">
-																	<img src="./src/assets/assets/img/icons/mail-03.svg"
-																		class="w-auto h-auto" alt=""/>
-																</span>
-                                    
+                                      <span class="avatar avtar-lg border me-2 flex-shrink-0">
+                                        <img src="./src/assets/assets/img/icons/mail-03.svg"
+                                          class="w-auto h-auto" alt="" />
+                                      </span>
+
                                     </div>
                                   </td>
                                 </tr>

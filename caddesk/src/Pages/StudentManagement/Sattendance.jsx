@@ -160,16 +160,16 @@ const Sattendance = () => {
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="card">
-                        <div class="card-body">
+                        {/* <div class="card-body">
                           <form onSubmit={handleSubmit}>
-                          <div class="row">
-                            <div class="col-md-4 col-12 mb-6">
-                              <label class="col-form-label col-md-10">Student ID</label>
-                              <div class="col-md-10">
-                                <input type="text" class="form-control" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} required />
+                            <div class="row">
+                              <div class="col-md-4 col-12 mb-6">
+                                <label class="col-form-label col-md-10">Student ID</label>
+                                <div class="col-md-10">
+                                  <input type="text" class="form-control" name="studentId" placeholder="Student ID" value={formData.studentId} onChange={handleChange} required />
+                                </div>
                               </div>
-                            </div>
-                           
+
                               <div class="col-md-4 col-12 mb-6">
                                 <label class="col-form-label col-md-2">Date</label>
                                 <div class="col-md-10">
@@ -204,49 +204,49 @@ const Sattendance = () => {
                               </div>
                             </div>
                             <div class="col-md-5 col-12 mb-6">
-                            <button class="btn btn-success" type="submit">Submit</button></div>
+                              <button class="btn btn-success" type="submit">Submit</button></div>
                           </form>
-                        </div>
+                        </div> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table text-nowrap">
-                      <thead>
-                        <tr>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table text-nowrap">
+                        <thead>
+                          <tr>
 
-                          <th scope="col">Student ID</th>
-                          <th scope="col">Date</th>
-                          <th scope="col">Time</th>
-                          <th scope="col">Subject</th>
-                          <th scope="col">Status</th>
-                          <th scope="col">Actions</th>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
 
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {attendance.map((record) => (
-                          <tr key={record._id}>
-                            <td>{record.studentId}</td>
-                            <td>{record.date}</td>
-                            <td>{record.time}</td>
-                            <td>{record.subject}</td>
-                            <td>{record.status}</td>
-                            <td style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-                              <button style={{ border: "none", background: "transparent", cursor: "pointer" }}>
-                                <MdEdit size={20} color="blue" />
-                              </button>
-                              <button onClick={() => handleDelete(record._id)} style={{ border: "none", background: "transparent", cursor: "pointer" }}>
-                                <MdDelete size={20} color="red" />
-                              </button>
-                            </td>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                        </thead>
+                        <tbody>
+                          {attendance.map((record) => (
+                            <tr key={record._id}>
+                              <td>{record.studentId}</td>
+                              <td>{record.date}</td>
+                              <td>{record.time}</td>
+                              <td>{record.subject}</td>
+                              <td>{record.status}</td>
+                              <td style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+                                <button style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                                  <MdEdit size={20} color="blue" />
+                                </button>
+                                <button onClick={() => handleDelete(record._id)} style={{ border: "none", background: "transparent", cursor: "pointer" }}>
+                                  <MdDelete size={20} color="red" />
+                                </button>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
                 </div>
                 <h3>Attendance Summary</h3>
                 <Bar data={chartData} />

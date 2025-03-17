@@ -162,21 +162,23 @@ const SideNavaBar = () => {
                     </a>
                     <ul>
                       <li>
-                        <a href="/Students">Student Database</a>
+                        <a href="/StudentView">Student Database</a>
                       </li>
                       <li>
-                        <a href="/StudentView">Student View</a>
+                        <a href="/Students">Student Registraion</a>
                       </li>
                       <li>
                         <a href="/SAttendance">Attendance Tracking</a>
                       </li>
+                                            <li><a href="/studentatten">Student Attendance</a></li>
+                                            {/* <li><a href="/Attendancetracking">Attendance Tracking1</a></li> */}
                       <li>
                         <a href="">Course & Subject Mapping</a>
                       </li>
                       <li>
-                        <a href="">Certificate</a>
+                        <a href="/StudentCertificate">Certificate</a>
                       </li>
-                      <li>extra tabs</li>
+                      {/* <li>extra tabs</li>
                       <li>
                         <a href="/Course">Course</a>
                       </li>
@@ -185,231 +187,123 @@ const SideNavaBar = () => {
                       </li>
                       <li>
                         <a href="/StudentTimetable">Student Timetable</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
 
                   {/*  Student Information Management tabs end  */}
 
-                  {/*  Fee Management & Accounting tabs start  */}
-                  <li className="submenu">
-                    <a href="">
-                      <i class="ti ti-report-money"></i>
-                      <span>Fee & Accounting</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="">Fee Structure Management</a>
-                      </li>
-                      <li>
-                        <a href="">Online Payments & Invoicing</a>
-                      </li>
-                      <li>
-                        <a href="">Financial Reporting</a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/*  Fee Management & Accounting tabs end  */}
+                                    {/*  Fee Management & Accounting tabs start  */}
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i class="ti ti-report-money"></i><span>Fee & Accounting</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li><a href="">Fee Structure Management</a></li>
+                                            <li><a href="">Online Payments & Invoicing</a></li>
+                                            <li><a href="">Financial Reporting</a></li>
+                                        </ul>
+                                    </li>
+                                    {/*  Fee Management & Accounting tabs end  */}
 
-                  {/*  Communication & Notifications tabs start  */}
-                  <li className="submenu">
-                    <a href="">
-                      <i className="ti ti-user-star"></i>
-                      <span>Communication</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/AutomatedNotifications">
-                          Automated Notifications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/CommunicationChannels">
-                          Communication Channels
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/EventAnnouncementManagement">
-                          Event & Announcement Management
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/*  Communication & Notifications tabs end  */}
-                  {/*  Faculty & Staff Management tabs start  */}
+                                    {/*  Communication & Notifications tabs start  */}
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i className="ti ti-user-star"></i><span>Communication</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li><a href="/AutomatedNotifications">Automated Notifications</a></li>
+                                            <li><a href="/CommunicationChannels">Communication Channels</a></li>
+                                            <li><a href="/EventAnnouncementManagement">Event & Announcement Management</a></li>
+                                        </ul>
+                                    </li>
+                                    {/*  Communication & Notifications tabs end  */}
+                                    {/*  Faculty & Staff Management tabs start  */}
 
-                  <li className="submenu">
-                    <a href="">
-                      <i class="ti ti-users"></i>
-                      <span>Faculty & Staff </span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/FacultyList">Staff Profiles</a>
-                      </li>
-                      <li>
-                        <a href="">Access Control</a>
-                      </li>
-                      <li>
-                        <a href="">Attendance & Leave Tracking</a>
-                      </li>
-                      <li>
-                        <a href="/PayRoll">Payroll & Salary Management</a>
-                      </li>
-                      <li>
-                        <a href="/WorkloadDistribution">WorkloadDistribution</a>
-                      </li>
-                      <li>extra tabs</li>
-                      <li>
-                        <a href="/BatchAssignment">BatchAssignment</a>
-                      </li>
-                      <li>
-                        <a href="/AddFaculty">AddFaculty</a>
-                      </li>
-                      <li>
-                        <a href="/AttendanceTracker">AttendanceTracker</a>
-                      </li>
-                      <li>
-                        <a href="/LeaveRequests">LeaveRequests</a>
-                      </li>
-                      <li>
-                        <a href="/LeaveRequestForm">LeaveRequestForm</a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/*  Faculty & Staff Management tabs end  */}
-                  {/*  Course, Class & Batch Management tabs start  */}
+                                    <li className="submenu">
+                                        <a href=""><i class="ti ti-users"></i><span>Faculty & Staff </span><span className="menu-arrow"></span></a>
+                                        <ul>
+                                            <li><a href="/FacultyList">Staff Profiles</a></li>
+                                            <li><a href="">Access Control</a></li>
+                                            <li><a href="">Attendance & Leave Tracking</a></li>
+                                            <li><a href="">Payroll & Salary Management</a></li>
+                                            <li><a href="/WorkloadDistribution">WorkloadDistribution</a></li>
+                                            <li>extra tabs</li>
+                                            <li><a href="/BatchAssignment">BatchAssignment</a></li>
+                                            <li><a href="/AddFaculty">AddFaculty</a></li>
+                                            <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
+                                            <li><a href="/LeaveRequests">LeaveRequests</a></li>
+                                            <li><a href="/LeaveRequestForm">LeaveRequestForm</a></li>
 
-                  <li className="submenu">
-                    <a href="">
-                      <i class="ti ti-artboard"></i>
-                      <span>Course, Class & Batch</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/SubjectForm">Subjects Creation</a>
-                      </li>
-                      <li>
-                        <a href="/CourseForm">Course Creation</a>
-                      </li>
-                      <li>
-                        <a href="/BatchForm">Batch Creation</a>
-                      </li>
-                      <li>
-                        <a href="">Timetable Management</a>
-                      </li>
-                      <li>
-                        <a href="">Virtual Classroom Integration</a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/*  Course, Class & Batch Management tabs end  */}
+                                        </ul>
+                                    </li>
+                                    {/*  Faculty & Staff Management tabs end  */}
+                                    {/*  Course, Class & Batch Management tabs start  */}
 
-                  <li className="submenu">
-                    <a href="">
-                      <i className="ti ti-file-invoice"></i>
-                      <span>Reports and Analytics</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/RegisterReport">Register Report</a>
-                      </li>
-                      <li>
-                        <a href="/AttendanceReport">Attendance Report</a>
-                      </li>
-                      <li>
-                        <a href="/FeePaymentReport">FeePayment Report</a>
-                      </li>
-                      <li>
-                        <a href="/WalkinsReport">Walkins Report</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <h6 class="submenu-hdr">Student Profile</h6>
-                <ul>
-                  <li>
-                    <a href="/StudentDashboard">
-                      <i className="ti ti-user"></i>
-                      <span>Student Dashboard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/StudentCourse">
-                      <i className="ti ti-book"></i>
-                      <span>Course</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/StudentPayments">
-                      <i className="ti ti-wallet"></i>
-                      <span>Payments</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/StudentMyAttendance">
-                      <i className="ti ti-calendar"></i>
-                      <span>My Attendance</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    <li className="submenu">
+                                        <a href="" >
+                                            <i class="ti ti-artboard"></i><span>Course, Class & Batch</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li><a href="/SubjectForm">Subjects Creation</a></li>
+                                            <li><a href="/CourseForm">Course Creation</a></li>
+                                            <li><a href="/BatchForm">Batch Creation</a></li>
+                                            <li><a href="">Timetable Management</a></li>
+                                            <li><a href="">Virtual Classroom Integration</a></li>
+                                        </ul>
+                                    </li>
+                                    {/*  Course, Class & Batch Management tabs end  */}
 
-              <li>
-                <h6 class="submenu-hdr">Faculty Profile</h6>
-                <ul>
-                  <li>
-                    <a href="/FacultyDashboard">
-                      <i className="ti ti-user"></i>
-                      <span>Faculty Dashboard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/FacultyTimeTable">
-                      <i className="ti ti-book"></i>
-                      <span>Time Table</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/Attendance">
-                      <i className="ti ti-wallet"></i>
-                      <span>Attendance</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/Assignment">
-                      <i className="ti ti-calendar"></i>
-                      <span>Accessment</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/FacultyLeaveRequests">
-                      <i className="ti ti-calendar"></i>
-                      <span>Leave Requests</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/FacultyCommunication">
-                      <i className="ti ti-calendar"></i>
-                      <span>Communication</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i className="ti ti-file-invoice"></i><span>Reports and Analytics</span><span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li><a href="/RegisterReport">Register Report</a></li>
+                                            <li><a href="/AttendanceReport">Attendance Report</a></li>
+                                            <li><a href="/FeePaymentReport">FeePayment Report</a></li>
+                                            <li><a href="/WalkinsReport">Walkins Report</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6 class="submenu-hdr">Student Profile</h6>
+                                <ul>
+                                    <li>
+                                        <a href="/StudentDashboard">
+                                            <i className="ti ti-user"></i><span>Student Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentCourse">
+                                            <i className="ti ti-book"></i><span>Course</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentPayments">
+                                            <i className="ti ti-wallet"></i><span>Payments</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentMyAttendance">
+                                            <i className="ti ti-calendar"></i><span>My Attendance</span>
+                                        </a>
+                                        </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/* <!-- /Sidebar --> */}
         </div>
-      </div>
-      {/* <!-- /Sidebar --> */}
-    </div>
-  );
-};
+    )
+}
 
 export default SideNavaBar;

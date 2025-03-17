@@ -40,11 +40,17 @@ import StudentCourse from "./Pages/StudentProfile/StudentCourse/StudentCourse";
 import StudentMyAttendance from "./Pages/StudentProfile/StudentMyAttendence/StudentMyAttendance";
 import StudentPayments from "./Pages/StudentProfile/StudentPayments/StudentPayments";
 // import FacultyForm from "./testing";
+import PaymentsAndInvoicing from "./Pages/Fee&Accounting/PaymentsAndInvoicing/PaymentsAndInvoicing";
 import Invoice from "./Pages/AdmissionManagement/Invoice";
 import AutomatedNotifications from "./Pages/CommunicationNotifications/AutomatedNotifications";
 import CommunicationChannels from "./Pages/CommunicationNotifications/CommunicationChannels";
 import EventAnnouncementManagement from "./Pages/CommunicationNotifications/EventAnnouncementManagement";
-import PayRoll from "./Pages/Saff/PayRoll";
+import StudentFeedback from "./Pages/StudentProfile/StudentFeedback/StudentFeedback";
+import FeeStructureManagement from "./Pages/Fee&Accounting/FeeStructureManagement/FeeStructureManagement";
+import StudentCertificate from "./Pages/StudentManagement/StudentCertificate";
+import StudentCourseDetails from "./Pages/StudentProfile/StudentCourseDetail/StudentCourseDetails";
+import PayRole from "./Pages/FacultyManagemnet/PayRole";
+import AccessControl from "./Pages/FacultyManagemnet/AccessControl";import PayRoll from "./Pages/Saff/PayRoll";
 import FacultyDashboard from "./Pages/FacultyProfile/FacultyDashboard";
 import Attendance from "./Pages/FacultyProfile/Attendance";
 import FacultyTimeTable from "./Pages/FacultyProfile/FacultyTimeTable";
@@ -68,11 +74,18 @@ const Layout = () => {
         <Route path="/BatchForm" element={<BatchForm />} />
         <Route path="/CourseForm" element={<CourseForm />} />
         <Route path="/SubjectForm" element={<SubjectForm />} />
+        <Route path="/Payrole" element={<PayRole/>}/>
         <Route path="/FacultyList" element={<FacultyList />} />
+        <Route path="/PaymentsAndInvoicing" element={<PaymentsAndInvoicing />} />
         <Route path="/StudentMyAttendance" element={<StudentMyAttendance />} />
+        <Route path="/FeeStructureManagement" element={<FeeStructureManagement />} />
+        <Route path="/Courseview" element={<StudentCourseDetails/>}/>
+        <Route path="/AccessControl" element={<AccessControl />} />
         {/* <Route path="/StudentProfile" element={<StudentProfile />} /> */}
+        <Route path="/StudentCertificate" element={<StudentCertificate />} />
         <Route path="/StudentCourse" element={<StudentCourse />} />
         <Route path="/StudentPayments" element={<StudentPayments />} />
+        <Route path="/StudentFeedback" element={<StudentFeedback/>}/>
         <Route path="/BatchAssignment" element={<BatchAssignment />} />
         <Route path="/StudentDashboard" element={<StudentDashboard />} />
         <Route path="/LeaveRequestForm" element={<LeaveRequestForm />} />
