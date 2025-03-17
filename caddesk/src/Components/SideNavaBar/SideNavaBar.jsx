@@ -1,184 +1,184 @@
 import React from "react";
 
 const SideNavaBar = () => {
-  return (
-    <div>
-      {/* <!-- Sidebar --> */}
-      <div className="sidebar" id="sidebar">
-        <div className="modern-profile p-3 pb-0">
-          <div className="sidebar-nav mb-3">
-            <ul
-              className="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified bg-transparent"
-              role="tablist"
-            >
-              <li className="nav-item">
-                <a className="nav-link active border-0" href="">
-                  Menu
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link border-0" href="chat.html">
-                  Chats
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link border-0" href="email.html">
-                  Inbox
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="sidebar-header p-3 pb-0 pt-2">
-          <div className="d-flex align-items-center justify-content-between menu-item mb-3">
-            <div className="me-3">
-              <a
-                href="calendar.html"
-                className="btn btn-icon border btn-menubar"
-              >
-                <i className="ti ti-layout-grid-remove"></i>
-              </a>
-            </div>
-            <div className="me-3">
-              <a
-                href="chat.html"
-                className="btn btn-icon border btn-menubar position-relative"
-              >
-                <i className="ti ti-brand-hipchat"></i>
-              </a>
-            </div>
-            <div className="me-3 notification-item">
-              <a
-                href="activities.html"
-                className="btn btn-icon border btn-menubar position-relative me-1"
-              >
-                <i className="ti ti-bell"></i>
-                <span className="notification-status-dot"></span>
-              </a>
-            </div>
-            <div className="me-0">
-              <a href="email.html" className="btn btn-icon border btn-menubar">
-                <i className="ti ti-message"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="sidebar-inner slimscroll">
-          <div id="sidebar-menu" className="sidebar-menu">
-            <ul>
-              <li className="clinicdropdown">
-                <a href="profile.html">
-                  <img
-                    src="./src/assets/assets/img/profiles/avatar-14.jpg"
-                    className="img-fluid"
-                    alt="Profile"
-                  />
-                  <div className="user-names">
-                    <h5>Adrian Davies</h5>
-                    <h6>Tech Lead</h6>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <ul>
-                  <li className="submenu">
-                    <a href="/">
-                      <i className="ti ti-layout-2"></i>
-                      <span>Dashboard</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="">Leads Dashboard</a>
-                      </li>
-                      <li>
-                        <a href="/">Student Dashboard</a>
-                      </li>
+    return (
+        <div>
+            {/* <!-- Sidebar --> */}
+            <div className="sidebar" id="sidebar">
+                <div className="modern-profile p-3 pb-0">
+                    <div className="sidebar-nav mb-3">
+                        <ul
+                            className="nav nav-tabs nav-tabs-solid nav-tabs-rounded nav-justified bg-transparent"
+                            role="tablist"
+                        >
+                            <li className="nav-item">
+                                <a className="nav-link active border-0" href="">
+                                    Menu
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link border-0" href="chat.html">
+                                    Chats
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link border-0" href="email.html">
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="sidebar-header p-3 pb-0 pt-2">
+                    <div className="d-flex align-items-center justify-content-between menu-item mb-3">
+                        <div className="me-3">
+                            <a
+                                href="calendar.html"
+                                className="btn btn-icon border btn-menubar"
+                            >
+                                <i className="ti ti-layout-grid-remove"></i>
+                            </a>
+                        </div>
+                        <div className="me-3">
+                            <a
+                                href="chat.html"
+                                className="btn btn-icon border btn-menubar position-relative"
+                            >
+                                <i className="ti ti-brand-hipchat"></i>
+                            </a>
+                        </div>
+                        <div className="me-3 notification-item">
+                            <a
+                                href="activities.html"
+                                className="btn btn-icon border btn-menubar position-relative me-1"
+                            >
+                                <i className="ti ti-bell"></i>
+                                <span className="notification-status-dot"></span>
+                            </a>
+                        </div>
+                        <div className="me-0">
+                            <a href="email.html" className="btn btn-icon border btn-menubar">
+                                <i className="ti ti-message"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" className="sidebar-menu">
+                        <ul>
+                            <li className="clinicdropdown">
+                                <a href="profile.html">
+                                    <img
+                                        src="./src/assets/assets/img/profiles/avatar-14.jpg"
+                                        className="img-fluid"
+                                        alt="Profile"
+                                    />
+                                    <div className="user-names">
+                                        <h5>Adrian Davies</h5>
+                                        <h6>Tech Lead</h6>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li className="submenu">
+                                        <a href="/">
+                                            <i className="ti ti-layout-2"></i>
+                                            <span>Dashboard</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Leads Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Student Dashboard</a>
+                                            </li>
 
-                      <li>
-                        <a href="">Staff Dashboard</a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/* Lead management tabs start*/}
-                  <li className="submenu">
-                    <a href="">
-                      <i class="ti ti-chart-arcs"></i>
-                      <span>Lead & Inquiry</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/AddingLead">Lead Capture & Tracking</a>
-                      </li>
-                      <li>
-                        <a href="/LeadAssignment">LeadAssignment</a>
-                      </li>
-                      <li>
-                        <a href="/LeadFollowup">LeadFollowup</a>
-                      </li>
-                      <li>
-                        <a href="/Counsellorreport">Report And Insights</a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/* Lead management tabs end */}
+                                            <li>
+                                                <a href="">Staff Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    {/* Lead management tabs start*/}
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i class="ti ti-chart-arcs"></i>
+                                            <span>Lead & Inquiry</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="/AddingLead">Lead Capture & Tracking</a>
+                                            </li>
+                                            <li>
+                                                <a href="/LeadAssignment">LeadAssignment</a>
+                                            </li>
+                                            <li>
+                                                <a href="/LeadFollowup">LeadFollowup</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Counsellorreport">Report And Insights</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    {/* Lead management tabs end */}
 
-                  {/*  Admission & Enrollment Management tabs start  */}
-                  <li className="submenu">
-                    <a href="">
-                      <i class="ti ti-steam"></i>
-                      <span>Admission & Enrollment </span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/ApplicationProcessing">
-                          Application Processing
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/EnrollmentAllocation">
-                          Enrollment & Allocation
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/FeeInvoiceGeneration">
-                          Fee & Invoice Generation
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  {/*  Admission & Enrollment Management tabs end  */}
+                                    {/*  Admission & Enrollment Management tabs start  */}
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i class="ti ti-steam"></i>
+                                            <span>Admission & Enrollment </span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="/ApplicationProcessing">
+                                                    Application Processing
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/EnrollmentAllocation">
+                                                    Enrollment & Allocation
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/FeeInvoiceGeneration">
+                                                    Fee & Invoice Generation
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    {/*  Admission & Enrollment Management tabs end  */}
 
-                  {/*  Student Information Management tabs start  */}
-                  <li className="submenu">
-                    <a href="">
-                      <i className="ti ti-user-star"></i>
-                      <span>Student Information</span>
-                      <span className="menu-arrow"></span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/StudentView">Student Database</a>
-                      </li>
-                      <li>
-                        <a href="/Students">Student Registraion</a>
-                      </li>
-                      <li>
-                        <a href="/SAttendance">Attendance Tracking</a>
-                      </li>
+                                    {/*  Student Information Management tabs start  */}
+                                    <li className="submenu">
+                                        <a href="">
+                                            <i className="ti ti-user-star"></i>
+                                            <span>Student Information</span>
+                                            <span className="menu-arrow"></span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="/StudentView">Student Database</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Students">Student Registraion</a>
+                                            </li>
+                                            <li>
+                                                <a href="/SAttendance">Attendance Tracking</a>
+                                            </li>
                                             <li><a href="/studentatten">Student Attendance</a></li>
                                             {/* <li><a href="/Attendancetracking">Attendance Tracking1</a></li> */}
-                      <li>
-                        <a href="">Course & Subject Mapping</a>
-                      </li>
-                      <li>
-                        <a href="/StudentCertificate">Certificate</a>
-                      </li>
-                      {/* <li>extra tabs</li>
+                                            <li>
+                                                <a href="">Course & Subject Mapping</a>
+                                            </li>
+                                            <li>
+                                                <a href="/StudentCertificate">Certificate</a>
+                                            </li>
+                                            {/* <li>extra tabs</li>
                       <li>
                         <a href="/Course">Course</a>
                       </li>
@@ -188,10 +188,10 @@ const SideNavaBar = () => {
                       <li>
                         <a href="/StudentTimetable">Student Timetable</a>
                       </li> */}
-                    </ul>
-                  </li>
+                                        </ul>
+                                    </li>
 
-                  {/*  Student Information Management tabs end  */}
+                                    {/*  Student Information Management tabs end  */}
 
                                     {/*  Fee Management & Accounting tabs start  */}
                                     <li className="submenu">
@@ -286,6 +286,11 @@ const SideNavaBar = () => {
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="/Courseview">
+                                            <i className="ti ti-book"></i><span>Course view</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="/StudentPayments">
                                             <i className="ti ti-wallet"></i><span>Payments</span>
                                         </a>
@@ -294,7 +299,12 @@ const SideNavaBar = () => {
                                         <a href="/StudentMyAttendance">
                                             <i className="ti ti-calendar"></i><span>My Attendance</span>
                                         </a>
-                                        </li>
+                                    </li>
+                                    <li>
+                                        <a href="/StudentFeedback">
+                                            <i className="ti ti-book"></i><span>Feedback</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

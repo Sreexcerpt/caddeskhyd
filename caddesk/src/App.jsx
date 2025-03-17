@@ -1,8 +1,8 @@
 import React from "react";
+import "../src/assets/assets/plugins/select2/css/select2.min.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import SideNavaBar from "./Components/SideNavaBar/SideNavaBar";
-import "../src/assets/assets/plugins/select2/css/select2.min.css";
 import DashBoard from "./Pages/DashBoard/DashBoard";
 import Register from "./Pages/Register/Register";
 import FacultyForm from "./Pages/FacultyManagemnet/AddFaculty";
