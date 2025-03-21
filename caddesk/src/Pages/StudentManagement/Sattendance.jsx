@@ -31,7 +31,7 @@ const Sattendance = () => {
 
   const fetchAttendance = async () => {
     try {
-      const response = await fetch("http://localhost:8080/attendance");
+      const response = await fetch("/attendance");
       const data = await response.json();
       setAttendance(data);
     } catch (error) {
@@ -48,7 +48,7 @@ const Sattendance = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:8080/attendance", {
+      await fetch("/attendance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -65,7 +65,7 @@ const Sattendance = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Delete this record?")) {
       try {
-        await fetch(`http://localhost:8080/attendance/${id}`, { method: "DELETE" });
+        await fetch(`/attendance/${id}`, { method: "DELETE" });
         fetchAttendance();
       } catch (error) {
         console.error("Error deleting record:", error);

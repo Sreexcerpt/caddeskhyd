@@ -13,7 +13,7 @@ const SubjectForm = () => {
 
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/subjects");
+      const response = await axios.get("/api/subjects");
       setSubjects(response.data);
     } catch (error) {
       console.error("Error fetching subjects:", error);
@@ -24,13 +24,13 @@ const SubjectForm = () => {
     e.preventDefault();
     if (editId) {
       // Update subject
-      await axios.put(`http://localhost:8080/api/subjects/${editId}`, {
+      await axios.put(`/api/subjects/${editId}`, {
         subjectCode,
         subjectName,
       });
     } else {
       // Add new subject
-      await axios.post("http://localhost:8080/api/subjects", {
+      await axios.post("/api/subjects", {
         subjectCode,
         subjectName,
       });
@@ -48,7 +48,7 @@ const SubjectForm = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/subjects/${id}`);
+    await axios.delete(`/api/subjects/${id}`);
     fetchSubjects();
   };
 

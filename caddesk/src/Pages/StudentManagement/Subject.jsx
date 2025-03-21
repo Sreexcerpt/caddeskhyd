@@ -12,7 +12,7 @@ const SubjectForm = () => {
   }, []);
 
   const fetchSubjects = () => {
-    axios.get("http://localhost:8080/api/get-subjects")
+    axios.get("/api/get-subjects")
       .then((response) => setSubjects(response.data))
       .catch((error) => console.error("Error fetching subjects:", error));
   };
@@ -20,7 +20,7 @@ const SubjectForm = () => {
   // ✅ Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8080/api/add-subject", { subjectCode, subjectName })
+    axios.post("/api/add-subject", { subjectCode, subjectName })
       .then(() => {
         alert("Subject Added Successfully");
         fetchSubjects(); // Refresh subject list

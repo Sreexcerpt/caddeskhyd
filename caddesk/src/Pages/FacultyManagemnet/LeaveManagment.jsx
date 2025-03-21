@@ -19,7 +19,7 @@ const LeaveRequests = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:8080/api/leave");
+      const response = await fetch("/api/leave");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -36,7 +36,7 @@ const LeaveRequests = () => {
   // Handle Approve or Reject
   const updateLeaveStatus = async (id, status) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/leave/${id}`, {
+      const response = await fetch(`/api/leave/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -84,7 +84,7 @@ const Invoice = () => {
 															<p class="text-title mb-2 fw-medium">Payment Status </p>
 															<span class="badge badge-danger align-items-center mb-3"><i class="ti ti-point-filled "></i>Due in 10 Days</span>
 															<div>
-																<img src="assets/assets/img/profiles/qr.png" class="img-fluid" alt="QR"/>
+																<img src="assets/img/profiles/qr.png" class="img-fluid" alt="QR"/>
 															</div>
 														</div>
 													</div>

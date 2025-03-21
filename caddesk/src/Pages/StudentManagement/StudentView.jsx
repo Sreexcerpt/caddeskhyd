@@ -11,7 +11,7 @@ const StudentList = () => {
   // Fetch students from backend
   const fetchStudents = async () => {
     try {
-      const response = await fetch("http://localhost:8080/students");
+      const response = await fetch("/students");
       const data = await response.json();
 
       // Sort in descending order (recent first)
@@ -30,7 +30,7 @@ const StudentList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
       try {
-        await fetch(`http://localhost:8080/students/${id}`, { method: "DELETE" });
+        await fetch(`/students/${id}`, { method: "DELETE" });
         alert("Student deleted successfully!");
         fetchStudents();
       } catch (error) {
@@ -54,7 +54,7 @@ const StudentList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/students/${editingStudent._id}`, {
+      const response = await fetch(`/students/${editingStudent._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editingStudent),

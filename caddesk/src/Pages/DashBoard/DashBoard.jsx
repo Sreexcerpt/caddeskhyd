@@ -429,15 +429,15 @@ const LeadsDashboard = () => {
                     ))}
                 </div>
                 <div className="row">
-                    <div className="col-xl-6">
+                    <div className="col-xl-4">
                         <div className="card">
                             <div className="card-header">
                                 <h3>Lead Status Breakdown</h3>
                             </div>
                             <div className="card-body">
-                                <ResponsiveContainer width="100%" height={300}>
+                                <ResponsiveContainer width="100%" height={330}>
                                     <PieChart>
-                                        <Pie data={leadData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} label>
+                                        <Pie data={leadData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={125} label>
                                             {leadData.map((entry, index) => (
                                                 <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                                             ))}
@@ -450,18 +450,18 @@ const LeadsDashboard = () => {
                         </div>
                     </div>
 
-                    <div className="col-xl-6">
+                    <div className="col-xl-8">
                         <div className="card">
                             <div className="card-header">
                                 <h3>Lead Category Comparison</h3>
                             </div>
                             <div className="card-body">
-                                <ResponsiveContainer width="100%" height={300}>
+                                <ResponsiveContainer width="100%" height={330}>
                                     <BarChart data={barData}>
                                         <XAxis dataKey="category" />
                                         <YAxis />
                                         <Tooltip />
-                                        <Legend />
+                                        {/* <Legend /> */}
                                         <Bar dataKey="count" fill="#1976D2" />
                                     </BarChart>
                                 </ResponsiveContainer>

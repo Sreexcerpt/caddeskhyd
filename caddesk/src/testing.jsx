@@ -33,7 +33,7 @@ const FacultyForm = () => {
 
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/subjects");
+      const response = await axios.get("/api/subjects");
       setSubjects(response.data);
     } catch (error) {
       console.error("Error fetching subjects:", error);
@@ -42,7 +42,7 @@ const FacultyForm = () => {
 
   const fetchFaculties = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/faculties");
+      const response = await axios.get("/api/faculties");
       setFaculties(response.data);
     } catch (error) {
       console.error("Error fetching faculties:", error);
@@ -78,9 +78,9 @@ const FacultyForm = () => {
     const facultyPayload = { ...facultyData, subjects: selectedSubjects };
 
     if (editId) {
-      await axios.put(`http://localhost:8080/api/faculties/${editId}`, facultyPayload);
+      await axios.put(`/api/faculties/${editId}`, facultyPayload);
     } else {
-      await axios.post("http://localhost:8080/api/faculties", facultyPayload);
+      await axios.post("/api/faculties", facultyPayload);
     }
 
     setFacultyData({
@@ -115,7 +115,7 @@ const FacultyForm = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/faculties/${id}`);
+    await axios.delete(`/api/faculties/${id}`);
     fetchFaculties();
   };
 

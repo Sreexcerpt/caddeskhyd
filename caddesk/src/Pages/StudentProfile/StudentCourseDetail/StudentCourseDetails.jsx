@@ -7,8 +7,8 @@ const StudentCourseDetails = () => {
     useEffect(() => {
         const fetchVideo = async () => {
             try {
-                const response = await axios.post("http://localhost:8080/get-video-link", {
-                    videoPath: "/productvideo5.mp4", // Path in Dropbox
+                const response = await axios.post("/get-video-link", {
+                    videoPath: "/study.mp4", // Path in Dropbox
                 });
 
                 setVideoUrl(response.data.videoUrl);
@@ -83,10 +83,13 @@ const StudentCourseDetails = () => {
                                                 </div>
                                                 <div className='card-body'>
                                                     {videoUrl ? (
-                                                        <video width="500" controls>
+                                                        <div>
+                                                        <video width="100%" controls controlsList="nodownload">
                                                             <source src={videoUrl} type="video/mp4" />
                                                             Your browser does not support the video tag.
                                                         </video>
+                                                        
+                                                        </div>
                                                     ) : (
                                                         <p>Loading video...</p>
                                                     )}

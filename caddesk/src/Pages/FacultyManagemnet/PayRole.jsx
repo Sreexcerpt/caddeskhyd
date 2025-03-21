@@ -161,7 +161,7 @@ function Payroll() {
 
     const fetchFaculties = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/faculties");
+            const response = await axios.get("/api/faculties");
             setFaculties(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error("Error fetching faculties:", error);
@@ -170,7 +170,7 @@ function Payroll() {
 
     const fetchSalaryRecords = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/salary-records");
+            const response = await axios.get("/api/salary-records");
             setSalaryRecords(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error("Error fetching salary records:", error);
@@ -203,7 +203,7 @@ function Payroll() {
 
     const saveSalary = async () => {
         try {
-            await axios.post("http://localhost:8080/api/save-salary", {
+            await axios.post("/api/save-salary", {
                 facultyId: selectedFaculty._id,
                 ...salaryDetails,
             });
@@ -387,7 +387,7 @@ function Payroll() {
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h4 class="modal-title" id="standard-modalLabel">Modal Heading</h4>
+                                        <h4 class="modal-title" id="standard-modalLabel">Salary details</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -400,32 +400,55 @@ function Payroll() {
                                                 <p>
                                                     <strong>Annual Salary:</strong> {selectedFaculty.salary}
                                                 </p>
-                                                <label>Date:</label>
-                                                <input type="date" name="date" value={salaryDetails.date} onChange={handleChange} />
-
-                                                <label>Basic Pay:</label>
-                                                <input type="number" name="basicPay" value={salaryDetails.basicPay} onChange={handleChange} />
-
-                                                <label>Salary:</label>
-                                                <input type="number" name="salary" value={salaryDetails.salary} onChange={handleChange} />
-
-                                                <label>Travel Allowance:</label>
-                                                <input type="number" name="travelAllowance" value={salaryDetails.travelAllowance} onChange={handleChange} />
-
-                                                <label>Medical Allowance:</label>
-                                                <input type="number" name="medicalAllowance" value={salaryDetails.medicalAllowance} onChange={handleChange} />
-
-                                                <label>Washing Allowance:</label>
-                                                <input type="number" name="washingAllowance" value={salaryDetails.washingAllowance} onChange={handleChange} />
-
-                                                <label>DA (%):</label>
-                                                <input type="number" name="da" value={salaryDetails.da} onChange={handleChange} />
-
-                                                <label>HR (%):</label>
-                                                <input type="number" name="hr" value={salaryDetails.hr} onChange={handleChange} />
-
-                                                <button onClick={saveSalary}>Save & Download Receipt</button>
-                                                <button onClick={closeModal}>Cancel</button>
+                                                <div className="row">
+                                                    <div className="col-xl-6">
+                                                        <label>Date:</label>
+                                                        <input type="date" name="date" value={salaryDetails.date} onChange={handleChange} />
+                                                    </div>
+                                                    <div className="col-xl-6">
+                                                        <label>Basic Pay:</label>
+                                                        <input type="number" name="basicPay" value={salaryDetails.basicPay} onChange={handleChange} />
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-xl-6">
+                                                        <label>Salary:</label>
+                                                        <input type="number" name="salary" value={salaryDetails.salary} onChange={handleChange} />
+                                                    </div>
+                                                    <div className="col-xl-6">
+                                                        <label>Travel Allowance:</label>
+                                                        <input type="number" name="travelAllowance" value={salaryDetails.travelAllowance} onChange={handleChange} />
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-xl-6">
+                                                        <label>Medical Allowance:</label>
+                                                        <input type="number" name="medicalAllowance" value={salaryDetails.medicalAllowance} onChange={handleChange} />
+                                                    </div>
+                                                    <div className="col-xl-6">
+                                                        <label>Washing Allowance:</label>
+                                                        <input type="number" name="washingAllowance" value={salaryDetails.washingAllowance} onChange={handleChange} />
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-xl-6">
+                                                        <label>DA (%):</label>
+                                                        <input type="number" name="da" value={salaryDetails.da} onChange={handleChange} />
+                                                    </div>
+                                                    <div className="col-xl-6">
+                                                        <label>HR (%):</label>
+                                                        <input type="number" name="hr" value={salaryDetails.hr} onChange={handleChange} />
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-xl-6">
+                                                        <button onClick={saveSalary}>Save </button>
+                                                    </div>
+                                                    <div className="col-xl-6">
+                                                        <button onClick={closeModal} data-bs-dismiss="modal"
+                                                            aria-label="Close">Cancel</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         )}
                                     </div>
@@ -434,7 +457,7 @@ function Payroll() {
                             </div>
                         </div>
 
-                        
+
                     </div>
 
 

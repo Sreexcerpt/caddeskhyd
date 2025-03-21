@@ -109,7 +109,7 @@ const AutomatedNotifications = () => {
                                   <td>
                                     <div class="hstack gap-2 fs-15">
                                       <span class="avatar avtar-lg border me-2 flex-shrink-0">
-                                        <img src="./src/assets/assets/img/icons/gateway-01.svg"
+                                        <img src="/assets/img/icons/gateway-01.svg"
                                           class="w-auto h-auto" alt="" />
                                       </span>
 
@@ -160,7 +160,7 @@ const AutomatedNotifications = () => {
                                   <td>
                                     <div class="hstack gap-2 fs-15">
                                       <span class="avatar avtar-lg border me-2 flex-shrink-0">
-                                        <img src="./src/assets/assets/img/icons/mail-02.svg"
+                                        <img src="/assets/img/icons/mail-02.svg"
                                           class="w-auto h-auto" alt="" />
                                       </span>
 
@@ -211,7 +211,7 @@ const AutomatedNotifications = () => {
                                   <td>
                                     <div class="hstack gap-2 fs-15">
                                       <span class="avatar avtar-lg border me-2 flex-shrink-0">
-                                        <img src="./src/assets/assets/img/icons/mail-01.svg"
+                                        <img src="/assets/img/icons/mail-01.svg"
                                           class="w-auto h-auto" alt="" />
                                       </span>
 
@@ -262,7 +262,7 @@ const AutomatedNotifications = () => {
                                   <td>
                                     <div class="hstack gap-2 fs-15">
                                       <span class="avatar avtar-lg border me-2 flex-shrink-0">
-                                        <img src="./src/assets/assets/img/icons/mail-03.svg"
+                                        <img src="/assets/img/icons/mail-03.svg"
                                           class="w-auto h-auto" alt="" />
                                       </span>
 

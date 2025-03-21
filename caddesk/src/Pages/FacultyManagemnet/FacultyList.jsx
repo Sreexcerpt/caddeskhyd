@@ -37,7 +37,7 @@ const FacultyList = () => {
   const fetchFaculties = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8080/api/faculties');
+      const response = await axios.get('/api/faculties');
       setFaculties(response.data);
       setLoading(false);
     } catch (err) {
@@ -107,7 +107,7 @@ const FacultyList = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8080/api/faculty/${currentFaculty._id}`, formData);
+      await axios.put(`/api/faculty/${currentFaculty._id}`, formData);
       fetchFaculties();
       handleCloseModal();
       alert('Faculty information updated successfully!');
@@ -120,7 +120,7 @@ const FacultyList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this faculty member?')) {
       try {
-        await axios.delete(`http://localhost:8080/api/faculty/${id}`);
+        await axios.delete(`/api/faculty/${id}`);
         fetchFaculties();
         alert('Faculty removed successfully!');
       } catch (err) {

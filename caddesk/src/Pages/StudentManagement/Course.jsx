@@ -13,7 +13,7 @@ const CourseForm = () => {
 
   useEffect(() => {
     // Fetch subjects from the backend
-    axios.get("http://localhost:8080/api/get-subjects")
+    axios.get("/api/get-subjects")
       .then((response) => setSubjects(response.data))
       .catch((error) => console.error("Error fetching subjects:", error));
   }, []);
@@ -31,7 +31,7 @@ const CourseForm = () => {
     e.preventDefault();
     const newCourse = { ...formData, subjects: selectedSubjects };
 
-    axios.post("http://localhost:8080/api/add-course", newCourse)
+    axios.post("/api/add-course", newCourse)
       .then((res) => alert("Course Added Successfully"))
       .catch((err) => console.error("Error adding course:", err));
   };

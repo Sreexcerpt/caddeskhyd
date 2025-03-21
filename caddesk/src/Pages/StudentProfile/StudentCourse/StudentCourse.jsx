@@ -70,7 +70,7 @@ const StudentCourse = () => {
                                         <div className='row'>
                                             <div className='col-xl-3'>
                                                 <div class="card">
-                                                    <img src="./src/assets/assets/img/img-02.jpg" class="card-img-top" alt="..." />
+                                                    <img src="/assets/img/img-02.jpg" class="card-img-top" alt="..." />
                                                     <div class="card-body">
                                                         <h4>Name</h4>
                                                         <p class="card-text">Some quick example text to build on the card title and
@@ -80,7 +80,7 @@ const StudentCourse = () => {
                                             </div>
                                             <div className='col-xl-3'>
                                                 <div class="card">
-                                                    <img src="./src/assets/assets/img/img-02.jpg" class="card-img-top" alt="..." />
+                                                    <img src="/assets/img/img-02.jpg" class="card-img-top" alt="..." />
                                                     <div class="card-body">
                                                         <h4>Name</h4>
                                                         <p class="card-text">Some quick example text to build on the card title and
@@ -90,7 +90,7 @@ const StudentCourse = () => {
                                             </div>
                                             <div className='col-xl-3'>
                                                 <div class="card">
-                                                    <img src="./src/assets/assets/img/img-02.jpg" class="card-img-top" alt="..." />
+                                                    <img src="/assets/img/img-02.jpg" class="card-img-top" alt="..." />
                                                     <div class="card-body">
                                                         <h4>Name</h4>
                                                         <p class="card-text">Some quick example text to build on the card title and
@@ -100,7 +100,7 @@ const StudentCourse = () => {
                                             </div>
                                             <div className='col-xl-3'>
                                                 <div class="card">
-                                                    <img src="./src/assets/assets/img/img-02.jpg" class="card-img-top" alt="..." />
+                                                    <img src="/assets/img/img-02.jpg" class="card-img-top" alt="..." />
                                                     <div class="card-body">
                                                         <h4>Name</h4>
                                                         <p class="card-text">Some quick example text to build on the card title and

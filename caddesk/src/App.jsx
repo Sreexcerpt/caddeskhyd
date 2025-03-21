@@ -1,6 +1,6 @@
-import React from "react";
-import "../src/assets/assets/plugins/select2/css/select2.min.css";
-import "../src/assets/assets/scss/base/_base.scss";
+import React, {useState,useEffect} from "react";
+// import "../src/assets/plugins/select2/css/select2.min.css";
+// import "../src/assets/scss/base/_base.scss";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import SideNavaBar from "./Components/SideNavaBar/SideNavaBar";
@@ -61,14 +61,33 @@ import Payroll from "./Pages/FacultyManagemnet/PayRole";
 import Payview from "./Pages/FacultyManagemnet/Payview";
 import Staffdash from "./Pages/DashBoard/Staffdash";
 import Studentdash from "./Pages/DashBoard/Studentdash";
+import Joblist from "./Pages/HRMS/Joblist/Joblist";
+import HireFromUs from "./Pages/HRMS/HireFromUs/HireFromUs";
+import InternalHiring from "./Pages/HRMS/InternalHiring/InternalHiring";
+import Batchviewandedit from "./Pages/FacultyManagemnet/Batchviewandedit";
+      
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
+  
+ const roles = JSON.parse(localStorage.getItem("roles")) || [];
+
+ // Set the first role as default activeRole
+ const [activeRole, setActiveRole] = useState(localStorage.getItem("activeRole") || roles[0] || "");
+ console.log("activeroel",localStorage.getItem("activeRole"))
+
+ // Update localStorage when role changes
+ useEffect(() => {
+     localStorage.setItem("activeRole", activeRole);
+ }, [activeRole]);
+
+ 
+
 
   return (
     <>
-      {!isLoginPage && <Header />}
-      {!isLoginPage && <SideNavaBar />}
+ {!isLoginPage && <Header roles={roles} activeRole={activeRole} onRoleChange={setActiveRole}/>}
+ {!isLoginPage && <SideNavaBar  activeRole={activeRole} />}
       <Routes>
         <Route path="/" element={<DashBoard />} />
         <Route path="/staffdashboard" element={<Staffdash/>}/>
@@ -77,6 +96,9 @@ const Layout = () => {
         <Route path="/Login" element={<Register />} />
         <Route path="/AddFaculty" element={<FacultyForm />} />
         <Route path="/BatchForm" element={<BatchForm />} />
+        <Route path="/HireFromUs" element={<HireFromUs />} />
+        <Route path="/joblist" element={<Joblist/>}/>
+        <Route path="/internalhiring" element={<InternalHiring/>}/>
         <Route path="/CourseForm" element={<CourseForm />} />
         <Route path="/SubjectForm" element={<SubjectForm />} />
         <Route path="/Payroll" element={<Payroll/>}/>
@@ -127,6 +149,7 @@ const Layout = () => {
         <Route path="/FacultyTimeTable" element={<FacultyTimeTable/>}/>
         <Route path="/Assignment" element={<Assignment/>}/>
         <Route path="/FacultyLeaveRequests" element={<FacultyLeaveRequests/>}/>
+        <Route path="/Batchviewandedit" element={<Batchviewandedit/>}/>
         <Route path="/FacultyCommunication" element={<FacultyCommunication/>}/>
       </Routes>
     </>

@@ -29,7 +29,7 @@ const Payview = () => {
 
     const fetchFaculties = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/faculties");
+            const response = await axios.get("/api/faculties");
             setFaculties(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error("Error fetching faculties:", error);
@@ -38,7 +38,7 @@ const Payview = () => {
 
     const fetchSalaryRecords = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/salary-records");
+            const response = await axios.get("/api/salary-records");
             setSalaryRecords(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             console.error("Error fetching salary records:", error);
@@ -71,7 +71,7 @@ const Payview = () => {
 
     const saveSalary = async () => {
         try {
-            await axios.post("http://localhost:8080/api/save-salary", {
+            await axios.post("/api/save-salary", {
                 facultyId: selectedFaculty._id,
                 ...salaryDetails,
             });

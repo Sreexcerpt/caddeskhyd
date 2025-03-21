@@ -419,9 +419,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
-
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const axios = require("axios");
 const app = express();
-
+const path = require("path")
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -805,7 +807,7 @@ const subjectSchema = new mongoose.Schema({
     lastName: String,
     email: String,
     phone: String,
-    role: String,
+    role: [],
     department: String,
     qualification: String,
     experience: Number,
@@ -815,7 +817,7 @@ const subjectSchema = new mongoose.Schema({
     gender: String,
     employmentType: String,
     status: String,
-    salary: Number,
+    salary: String,
     staffOrFacultyId: String,
     subjects: [{ subjectCode: String, subjectName: String }],
   });
@@ -823,11 +825,36 @@ const subjectSchema = new mongoose.Schema({
   const Faculty = mongoose.model("Faculty", facultySchema);
   
   app.post("/api/faculties", async (req, res) => {
-    console.log("faculty",req.body)
-    const faculty = new Faculty(req.body);
-    await faculty.save();
-    res.json(faculty);
+    try {
+      console.log("Received Faculty Data:", req.body);
+  
+      // Extract password from the request
+      let {email, password, ...otherData } = req.body;
+      const existingFaculty = await Faculty.findOne({ email });
+  
+      if (existingFaculty) {
+        return res.status(400).json({ message: "Email already exists" });
+      }
+      // Hash the password before saving
+      if (password) {
+        const saltRounds = 10; // Number of salt rounds (higher = more secure)
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        password = hashedPassword;
+      }
+  
+      // Create new faculty with hashed password
+      const faculty = new Faculty({ ...otherData, password });
+  
+      // Save to database
+      await faculty.save();
+  
+      res.status(201).json({ message: "Faculty added successfully", faculty });
+    } catch (error) {
+      console.error("Error saving faculty:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
   });
+  
   
   app.get("/api/faculties", async (req, res) => {
     const faculties = await Faculty.find();
@@ -886,16 +913,22 @@ app.post("/api/assign-faculty", async (req, res) => {
       res.status(500).json({ message: "Server error", error });
     }
   });
-  const timetableSchema = new mongoose.Schema({
+const timetableSchema = new mongoose.Schema({
     batchId: { type: String, required: true },
     courseId: { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
     schedule: [{
-        date: { type: String, required: true }, // Store YYYY-MM-DD format
-        day: { type: String, required: true },
-        timeSlot: { type: String, default: null}
+        day: { type: String, required: true }, // Monday, Tuesday, etc.
+        timeSlot: { type: String, required: true } // "08:00-09:00", etc.
     }],
-    subject: { subjectCode: String, subjectName: String },
-    faculty: { staffOrFacultyId: String, firstName: String, lastName: String }
+    subject: { 
+        subjectCode: String, 
+        subjectName: String 
+    },
+    faculty: { 
+        staffOrFacultyId: String, 
+        firstName: String, 
+        lastName: String 
+    }
 });
 
 const Timetable = mongoose.model("Timetable", timetableSchema);
@@ -914,14 +947,21 @@ app.get("/getCourses", async (req, res) => {
   }
 });
 // ✅ API: Fetch batches
+// app.get("/getBatches", async (req, res) => {
+//   const batches = await Batch.find();
+//   res.json(batches);
+// });
+
+
+
+
+
 app.get("/getBatches", async (req, res) => {
   const batches = await Batch.find();
   res.json(batches);
 });
+   
 
-
-
-// ✅ API: Fetch subjects for a batch
 app.get("/getSubjectsByBatch/:batchId", async (req, res) => {
   const batch = await Batch.findOne({ batchId: req.params.batchId });
   if (!batch) return res.status(404).json({ message: "Batch not found" });
@@ -930,79 +970,121 @@ app.get("/getSubjectsByBatch/:batchId", async (req, res) => {
   res.json(course ? course.subjects : []);
 });
 
-// ✅ API: Fetch faculties based on subject
+app.get('/api/timetable/batch/:batchId', async (req, res) => {
+    try {
+        const timetable = await Timetable.find({ batchId: req.params.batchId });
+        res.json(timetable);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 app.get("/getFaculties/:subjectCode", async (req, res) => {
   const faculties = await Faculty.find({ "subjects.subjectCode": req.params.subjectCode });
   res.json(faculties);
 });
-app.get("/getBatches/:courseName", async (req, res) => {
-  try {
-      const batches = await Batch.find({ course: req.params.courseName }); // Find by course name (string)
-      res.json(batches);
-  } catch (err) {
-      res.status(500).json({ message: err.message });
-  }
+
+app.get('/api/timetable/faculty/:facultyId', async (req, res) => {
+    try {
+        const timetable = await Timetable.find({ 'faculty.staffOrFacultyId': req.params.facultyId });
+        res.json(timetable);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/api/timetable/batch/:batchId', async (req, res) => {
+    try {
+        const timetable = await Timetable.find({ batchId: req.params.batchId });
+        res.json(timetable);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 });
 
 
-// ✅ API: Add Timetable Entry
-// app.post("/addTimetable", async (req, res) => {
-//     try {
-//         const { batchId, courseId, day, timeSlot, subject, faculty } = req.body;
-
-//         // Check if faculty is already assigned at the same time
-//         const existingEntry = await Timetable.findOne({ day, timeSlot, "faculty.staffOrFacultyId": faculty.staffOrFacultyId });
-
-//         if (existingEntry) {
-//             return res.status(400).json({ message: "Faculty is already assigned to another batch at this time!" });
-//         }
-
-//         const newTimetable = new Timetable({ batchId,courseId,  day, timeSlot, subject, faculty });
-//         await newTimetable.save();
-//         res.status(201).json({ message: "Timetable entry added successfully" });
-//     } catch (error) {
-//         res.status(500).json({ message: error.message });
-//     }
-// });
+app.get('/api/timetable/batch/:batchId', async (req, res) => {
+    try {
+        const timetable = await Timetable.find({ batchId: req.params.batchId });
+        res.json(timetable);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
 app.post("/addTimetable", async (req, res) => {
-  try {
-      let { batchId, schedule, subject, faculty } = req.body;
-
-      // **Remove empty schedules** (if timeSlot is empty, ignore it)
-      schedule = schedule.filter(entry => entry.timeSlot);
-
-      // If all schedules are empty, reject request
-      if (schedule.length === 0) {
-          return res.status(400).json({ message: "At least one schedule entry must have a time slot!" });
-      }
-
-      // **Check if faculty is already assigned at the same time on the same date**
-      for (let entry of schedule) {
-          const existingEntry = await Timetable.findOne({
-              "schedule": {
-                  $elemMatch: { // ✅ Only match within the same date
-                      date: entry.date,
-                      timeSlot: entry.timeSlot
-                  }
-              },
-              "faculty.staffOrFacultyId": faculty.staffOrFacultyId
-          });
-
-          if (existingEntry) {
-              return res.status(400).json({ message: `Faculty is already assigned on ${entry.date} at ${entry.timeSlot}!` });
-          }
-      }
-
-      // ✅ Save the new timetable entry
-      const newTimetable = new Timetable({ batchId, schedule, subject, faculty });
-      await newTimetable.save();
-      res.status(201).json({ message: "Timetable entry added successfully!" });
-
-  } catch (error) {
-      res.status(500).json({ message: error.message });
-  }
+    try {
+        let { batchId, schedule, subject, faculty } = req.body;
+        
+        // Remove empty schedules (if timeSlot is empty, ignore it)
+        schedule = schedule.filter(entry => entry.timeSlot);
+        
+        // If all schedules are empty, reject request
+        if (schedule.length === 0) {
+            return res.status(400).json({ message: "At least one schedule entry must have a time slot!" });
+        }
+        
+        // Check for batch schedule conflicts (same batch, same day, same time)
+        for (let entry of schedule) {
+            const existingBatchEntry = await Timetable.findOne({
+                batchId: batchId,
+                "schedule": {
+                    $elemMatch: {
+                        day: entry.day,
+                        timeSlot: entry.timeSlot
+                    }
+                }
+            });
+            
+            if (existingBatchEntry) {
+                return res.status(400).json({ 
+                    message: `Schedule conflict: The batch already has a class on ${entry.day} at ${entry.timeSlot}!`,
+                    conflictDetails: {
+                        subject: existingBatchEntry.subject,
+                        faculty: existingBatchEntry.faculty,
+                        day: entry.day,
+                        timeSlot: entry.timeSlot
+                    }
+                });
+            }
+        }
+        
+        // Check for faculty schedule conflicts (same faculty, same day, same time)
+        for (let entry of schedule) {
+            const existingFacultyEntry = await Timetable.findOne({
+                "faculty.staffOrFacultyId": faculty.staffOrFacultyId,
+                "schedule": {
+                    $elemMatch: {
+                        day: entry.day,
+                        timeSlot: entry.timeSlot
+                    }
+                }
+            });
+            
+            if (existingFacultyEntry) {
+                return res.status(400).json({ 
+                    message: `Faculty schedule conflict: ${faculty.firstName} ${faculty.lastName} is already assigned on ${entry.day} at ${entry.timeSlot}!`,
+                    conflictDetails: {
+                        batchId: existingFacultyEntry.batchId,
+                        subject: existingFacultyEntry.subject,
+                        day: entry.day,
+                        timeSlot: entry.timeSlot
+                    }
+                });
+            }
+        }
+        
+        // Save the new timetable entry
+        const newTimetable = new Timetable({ batchId, schedule, subject, faculty });
+        await newTimetable.save();
+        
+        res.status(201).json({ message: "Timetable entry added successfully!" });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
+
+
 
 
 // // Get booked schedules for a batch
@@ -1051,6 +1133,47 @@ app.get("/getAssignedSchedules/:batchId", async (req, res) => {
   }
 });
 
+
+app.put('/api/timetable/:id', async (req, res) => {
+  try {
+    const timetableId = req.params.id;
+    const { subject, faculty } = req.body;
+    
+    const updatedTimetable = await Timetable.findByIdAndUpdate(
+      timetableId,
+      { $set: { subject, faculty } },
+      { new: true }
+    );
+    
+    if (!updatedTimetable) {
+      return res.status(404).json({ message: 'Timetable entry not found' });
+    }
+    
+    res.status(200).json(updatedTimetable);
+  } catch (err) {
+    console.error('Error updating timetable:', err);
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
+// DELETE endpoint to remove timetable entry
+app.delete('/api/timetable/:id', async (req, res) => {
+  try {
+    const timetableId = req.params.id;
+    
+    const deletedTimetable = await Timetable.findByIdAndDelete(timetableId);
+    
+    if (!deletedTimetable) {
+      return res.status(404).json({ message: 'Timetable entry not found' });
+    }
+    
+    res.status(200).json({ message: 'Timetable entry deleted successfully' });
+  } catch (err) {
+    console.error('Error deleting timetable:', err);
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
 // ✅ API: Fetch timetable for a batch
 app.get("/getTimetable/:batchId", async (req, res) => {
     const timetable = await Timetable.find({ batchId: req.params.batchId });
@@ -1059,8 +1182,36 @@ app.get("/getTimetable/:batchId", async (req, res) => {
 
 const DROPBOX_ACCESS_TOKEN = process.env.DROPBOX_ACCESS_TOKEN;
 
+// app.post("/get-video-link", async (req, res) => {
+//   const { videoPath } = req.body;
+
+//   try {
+//     const response = await axios.post(
+//       "https://api.dropboxapi.com/2/files/get_temporary_link",
+//       { path: videoPath },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
+//           "Content-Type": "application/json",
+//         },
+//       }
+//     );
+
+//     res.json({ videoUrl: response.data.link });
+//   } catch (error) {
+//     console.error("Error fetching video:", error);
+//     res.status(500).json({ error: "Failed to fetch video link" });
+//   }
+// });
 app.post("/get-video-link", async (req, res) => {
   const { videoPath } = req.body;
+
+  // Ensure videoPath is provided
+  if (!videoPath) {
+    return res.status(400).json({ error: "Missing videoPath in request body" });
+  }
+
+  console.log("Requested video path:", videoPath);
 
   try {
     const response = await axios.post(
@@ -1074,13 +1225,21 @@ app.post("/get-video-link", async (req, res) => {
       }
     );
 
+  
+
     res.json({ videoUrl: response.data.link });
   } catch (error) {
-    console.error("Error fetching video:", error);
+    console.error("Error fetching video:", error.response?.data || error.message);
+
+    // Handle different Dropbox errors
+    if (error.response) {
+      const { status, data } = error.response;
+      return res.status(status).json({ error: data?.error_summary || "Dropbox API error" });
+    }
+
     res.status(500).json({ error: "Failed to fetch video link" });
   }
 });
-
 
 const SalarySchema = new mongoose.Schema({
     facultyId: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty", required: true },
@@ -1129,6 +1288,198 @@ app.get("/api/salary-records", async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 });
+
+
+
+
+const UserSchema = new mongoose.Schema({
+  name: String,
+  email: { type: String, unique: true },
+  password: String,
+  role: { type: String,  default: "user" }
+});
+const User = mongoose.model("User", UserSchema);
+
+// app.post("/login", async (req, res) => {
+//   const { email, password } = req.body;
+//   console.log("Login Request:", req.body);
+
+//   try {
+//     let user = await User.findOne({ email });
+
+//     if (!user) {
+//       user = await Faculty.findOne({ email }); // Check in Faculty collection
+//     }
+
+//     console.log("User Found:", user); // Debugging
+
+//     if (!user) {
+//       return res.status(400).json({ msg: "Invalid Credentials (User Not Found)" });
+//     }
+
+//     if (!user.password) {
+//       return res.status(400).json({ msg: "Invalid Credentials (No Password)" });
+//     }
+
+//     // const isMatch = await bcrypt.compare(password, user.password);
+//     // console.log("Password Match:", isMatch);  
+//     // if (!isMatch) {
+//     //   return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
+//     // }
+//     try {
+//       console.log("Checking Password...");
+//       console.log("Entered Password:", password);
+//       console.log("Stored Hashed Password:", user.password);
+    
+//       const isMatch = await bcrypt.compare(password, user.password);
+//       console.log("Password Match Result:", isMatch);  // This should print true or false
+      
+//       if (!isMatch) {
+//         console.log("Invalid Password!");
+//         return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
+//       }
+//     } catch (err) {
+//       console.error("bcrypt.compare() Error:", err);
+//       return res.status(500).json({ msg: "Error during password verification" });
+//     }
+    
+    
+//     // Ensure role is always an array
+//     const roles = Array.isArray(user.role) ? user.role : [user.role];
+
+//     const token = jwt.sign({ id: user._id, roles }, "your_jwt_secret", { expiresIn: "1h" });
+
+//     res.json({ token, roles });
+//   } catch (err) {
+//     console.error("Login Error:", err);
+//     res.status(500).json({ msg: "Internal Server Error" });
+//   }
+// });
+
+
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  console.log("🔹 Received Login Request:", { email, password });
+
+  try {
+    let user = await User.findOne({ email }).lean();
+    if (!user) {
+      user = await Faculty.findOne({ email }).lean();
+    }
+
+    if (!user) {
+      console.log("❌ User Not Found:", email);
+      return res.status(400).json({ msg: "Invalid Credentials (User Not Found)" });
+    }
+
+    console.log("✅ User Found:", { email: user.email, id: user._id });
+
+    if (!user.password) {
+      console.log("❌ No Password Found for User:", email);
+      return res.status(400).json({ msg: "Invalid Credentials (No Password)" });
+    }
+
+    // Compare password
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log("🔍 Password Match Result:", isMatch);
+
+    if (!isMatch) {
+      console.log("❌ Wrong Password for:", email);
+      return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
+    }
+
+    // Assign role
+    const roles = Array.isArray(user.role) ? user.role : [user.role] || [];
+
+    // Generate JWT
+    const token = jwt.sign(
+      { id: user._id, roles },
+      process.env.JWT_SECRET || "your_jwt_secret",
+      { expiresIn: "1h" }
+    );
+
+    console.log("✅ Login Successful for:", email);
+    res.json({ token, roles });
+
+  } catch (err) {
+    console.error("❌ Login Error:", err);
+    res.status(500).json({ msg: "Internal Server Error" });
+  }
+});
+
+
+
+const RoleSchema = new mongoose.Schema({
+  roleId: String,
+  roleName: String,
+  permissions: [String],
+});
+
+const Role = mongoose.model("Role", RoleSchema);
+
+// Get all roles
+app.get("/api/roles", async (req, res) => {
+  const roles = await Role.find();
+  res.json(roles);
+});
+
+// Add new role
+app.post("/api/roles", async (req, res) => {
+  const role = new Role(req.body);
+  await role.save();
+  res.json(role);
+});
+
+// Update role
+app.put("/api/roles/:id", async (req, res) => {
+  await Role.findByIdAndUpdate(req.params.id, req.body);
+  res.send("Role Updated");
+});
+
+// Delete role
+app.delete("/api/roles/:id", async (req, res) => {
+  await Role.findByIdAndDelete(req.params.id);
+  res.send("Role Deleted");
+});
+
+app.get('/api/permissions/:roleName', async (req, res) => {
+  try {
+    const { roleName } = req.params;
+    
+    // Find the role in the database
+    const roleData = await Role.findOne({ roleName });
+    
+    if (!roleData) {
+      return res.status(404).json({ 
+        success: false, 
+        message: 'Role not found' 
+      });
+    }
+    
+    // Return permissions for the role
+    return res.status(200).json({
+      success: true,
+      data: roleData.permissions
+    });
+    
+  } catch (error) {
+    console.error('Error fetching permissions:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Server error',
+      error: error.message
+    });
+  }
+});
+
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Route all other requests to serve 'index.html' for SPA routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 
 // Start server
 const PORT = process.env.PORT || 8080;

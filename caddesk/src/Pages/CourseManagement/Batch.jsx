@@ -19,7 +19,7 @@ const BatchForm = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/courses");
+      const response = await axios.get("/api/courses");
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
@@ -28,7 +28,7 @@ const BatchForm = () => {
 
   const fetchBatches = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/batches");
+      const response = await axios.get("/api/batches");
       setBatches(response.data);
     } catch (error) {
       console.error("Error fetching batches:", error);
@@ -47,9 +47,9 @@ const BatchForm = () => {
     };
 
     if (editId) {
-      await axios.put(`http://localhost:8080/api/batches/${editId}`, batchData);
+      await axios.put(`/api/batches/${editId}`, batchData);
     } else {
-      await axios.post("http://localhost:8080/api/batches", batchData);
+      await axios.post("/api/batches", batchData);
     }
 
     setBatchId("");
@@ -73,7 +73,7 @@ const BatchForm = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/batches/${id}`);
+    await axios.delete(`/api/batches/${id}`);
     fetchBatches();
   };
 

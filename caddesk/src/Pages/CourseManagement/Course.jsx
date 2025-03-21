@@ -19,7 +19,7 @@ const CourseForm = () => {
 
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/subjects");
+      const response = await axios.get("/api/subjects");
       setSubjects(response.data);
     } catch (error) {
       console.error("Error fetching subjects:", error);
@@ -28,7 +28,7 @@ const CourseForm = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/courses");
+      const response = await axios.get("/api/courses");
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
@@ -47,9 +47,9 @@ const CourseForm = () => {
     };
 
     if (editId) {
-      await axios.put(`http://localhost:8080/api/courses/${editId}`, courseData);
+      await axios.put(`/api/courses/${editId}`, courseData);
     } else {
-      await axios.post("http://localhost:8080/api/courses", courseData);
+      await axios.post("/api/courses", courseData);
     }
 
     setCourseCode("");
@@ -73,7 +73,7 @@ const CourseForm = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/api/courses/${id}`);
+    await axios.delete(`/api/courses/${id}`);
     fetchCourses();
   };
 

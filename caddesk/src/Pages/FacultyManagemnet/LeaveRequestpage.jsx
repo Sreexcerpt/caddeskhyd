@@ -16,7 +16,7 @@ const LeaveRequestForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/api/leave", {
+      const response = await fetch("/api/leave", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -34,9 +34,6 @@ const LeaveRequestForm = () => {
 
   return (
     <>
-  
-
-
       <div class="page-wrapper cardhead">
         <div class="content container-fluid">
           {/* <!-- Page Header --> */}
