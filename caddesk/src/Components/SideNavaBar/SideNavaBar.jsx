@@ -619,7 +619,17 @@ const SideNavBar = ({ activeRole }) => {
                                                         Fee & Invoice Generation
                                                     </a>
                                                 </li>
-                                            </ul>
+                                                <li>
+                                                <a href="/EnquiryForm">
+                                                    Enquiry Form 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/RegistrationForm">
+                                                RegistrationForm 
+                                                </a>
+                                            </li>
+                                        </ul>
                                         </li>
                                     )}
                                     
