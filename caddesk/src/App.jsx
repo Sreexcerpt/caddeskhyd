@@ -63,7 +63,6 @@ import Staffdash from "./Pages/DashBoard/Staffdash";
 import Studentdash from "./Pages/DashBoard/Studentdash";
 import EnquiryForm from "./Pages/Form/EnquiryForm";
 import RegistrationForm from "./Pages/Form/RegistrationForm";
-
 import Joblist from "./Pages/HRMS/Joblist/Joblist";
 import HireFromUs from "./Pages/HRMS/HireFromUs/HireFromUs";
 import InternalHiring from "./Pages/HRMS/InternalHiring/InternalHiring";

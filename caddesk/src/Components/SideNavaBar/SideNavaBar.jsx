@@ -589,6 +589,9 @@ const SideNavBar = ({ activeRole }) => {
                                                     <a href="/LeadFollowup">Lead Followup</a>
                                                 </li>
                                                 <li>
+                                                    <a href="/EnquiryForm">Enquiry Form</a>
+                                                </li>
+                                                <li>
                                                     <a href="/Counsellorreport">Report And Insights</a>
                                                 </li>
                                             </ul>
@@ -646,7 +649,7 @@ const SideNavBar = ({ activeRole }) => {
                                                     <a href="/StudentView">Student Database</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/Students">Student Registraion</a>
+                                                    <a href="/RegistrationForm">Student Registraion</a>
                                                 </li>
                                                 <li>
                                                     <a href="/SAttendance">Attendance Tracking</a>
