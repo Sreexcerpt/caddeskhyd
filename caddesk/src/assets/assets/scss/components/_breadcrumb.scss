@@ -1,3 +1,5 @@
+@import '../utils/variables';
+@import '../utils/mixins';
 .page-header-breadcrumb {
   .breadcrumb-item+.breadcrumb-item::before {
     content: var(--bs-breadcrumb-divider, "\ea65");
