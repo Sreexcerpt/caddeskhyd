@@ -61,6 +61,9 @@ import Payroll from "./Pages/FacultyManagemnet/PayRole";
 import Payview from "./Pages/FacultyManagemnet/Payview";
 import Staffdash from "./Pages/DashBoard/Staffdash";
 import Studentdash from "./Pages/DashBoard/Studentdash";
+import EnquiryForm from "./Pages/Form/EnquiryForm";
+import RegistrationForm from "./Pages/Form/RegistrationForm";
+
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -128,6 +131,8 @@ const Layout = () => {
         <Route path="/Assignment" element={<Assignment/>}/>
         <Route path="/FacultyLeaveRequests" element={<FacultyLeaveRequests/>}/>
         <Route path="/FacultyCommunication" element={<FacultyCommunication/>}/>
+        <Route path="/EnquiryForm" element={<EnquiryForm/>}/>
+        <Route path="/RegistrationForm" element={<RegistrationForm/>}/>
       </Routes>
     </>
   );

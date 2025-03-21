@@ -149,6 +149,16 @@ const SideNavaBar = () => {
                                                     Fee & Invoice Generation
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="/EnquiryForm">
+                                                    Enquiry Form 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/RegistrationForm">
+                                                RegistrationForm 
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
                                     {/*  Admission & Enrollment Management tabs end  */}

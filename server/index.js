@@ -1135,3 +1135,63 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+
+
+
+
+// Enquiry Form For Student Create Karthik Schema//
+
+const enquirySchema = new mongoose.Schema({
+  email: { type: String, required: true },
+  name: { type: String, required: true },
+  mobileNumber: { type: String, required: true },
+  location: { type: String, required: true },
+  qualification: { type: String, required: true },
+  courseType: { type: String, required: true },
+  yearOfPassout: { type: Number, required: true },
+  interestedCourses: { type: String, required: true },
+  CollegeName: { type: String, required: true },
+  HowDidYouCameToKnowAboutCADDESK: { type: String, required: true },
+  IfReferenceMentionTheName: { type: String },
+  Whenyouareplanningtojoincourses: { type: String, required: true },
+}, { timestamps: true });
+
+
+// Schema & Model
+const RegistrationSchema = new mongoose.Schema({
+  name: String,
+  fatherName: String,
+  contactAddress: String,
+  email: String,
+  qualification: String,
+  collegeName: String,
+  phone: String,
+  courseName: String,
+  courseFee: Number,
+  joiningDate: Date,
+});
+
+
+const Enquiry = mongoose.model("Enquiry", enquirySchema);
+const NewRegistration = mongoose.model("Registration", RegistrationSchema);
+
+app.post("/api/enquiry", async (req, res) => {
+  try {
+    const enquiry = new Enquiry(req.body);
+    await enquiry.save();
+    res.status(201).json({ message: "Enquiry data saved successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Error saving Enquiry data" });
+  }
+});
+
+app.post("/api/newrestration", async (req, res) => {
+  try {
+    const newRegistration = new NewRegistration(req.body);
+    await newRegistration.save();
+    res.status(201).json({ message: "Student registered successfully!" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to register student" });
+  }
+});
