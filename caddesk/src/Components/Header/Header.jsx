@@ -453,6 +453,7 @@ const navigate=useNavigate()
               className="white-logo"
               alt="Logo"
             />
+            
           </a>
           <a href="/" className="logo-small">
             <img src="/assets/img/cad.png" alt="Logo" />

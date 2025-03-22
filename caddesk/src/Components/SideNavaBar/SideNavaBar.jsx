@@ -466,6 +466,9 @@ const SideNavBar = ({ activeRole }) => {
 
     // Helper function to check if a menu item is allowed
     const hasPermission = (menuItem) => permissions.includes(menuItem);
+    const token = localStorage.getItem("token");
+    const firstName= localStorage.getItem("firstName");
+    console.log()
     return (
         <div>
             {/* <!-- Sidebar --> */}
@@ -539,7 +542,7 @@ const SideNavBar = ({ activeRole }) => {
                                         alt="Profile"
                                     />
                                     <div className="user-names">
-                                        <h5>Adrian Davies</h5>
+                                        <h5>{firstName}</h5>
                                         {/* <h6>{roles || "User"}</h6> */}
                                     </div>
                                 </a>
@@ -714,6 +717,7 @@ const SideNavBar = ({ activeRole }) => {
                                                 <li><a href="/BatchAssignment">BatchAssignment</a></li>
                                                 <li><a href="/Batchviewandedit">Batchviewandedit</a></li>
                                                 <li><a href="/AddFaculty">AddFaculty</a></li>
+                                                <li><a href="/Branch">Branch</a></li>
                                                 <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
                                                 <li><a href="/LeaveRequests">LeaveRequests</a></li>
                                                 <li><a href="/LeaveRequestForm">LeaveRequestForm</a></li>

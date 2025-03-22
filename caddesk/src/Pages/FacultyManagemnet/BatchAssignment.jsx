@@ -129,7 +129,7 @@
 //         e.preventDefault();
 
 //         const selectedSubject = subjects.find(sub => sub.subjectCode === form.subjectCode);
-//         const selectedFaculty = faculties.find(fac => fac.staffOrFacultyId === form.facultyId);
+//         const selectedFaculty = faculties.find(fac => fac.employeeId === form.facultyId);
 
 //         if (!selectedSubject || !selectedFaculty) {
 //             alert("Please select a valid subject and faculty");
@@ -148,7 +148,7 @@
 //             batchId: form.batchId,
 //             schedule: scheduledDays,
 //             subject: { subjectCode: selectedSubject.subjectCode, subjectName: selectedSubject.subjectName },
-//             faculty: { staffOrFacultyId: selectedFaculty.staffOrFacultyId, firstName: selectedFaculty.firstName, lastName: selectedFaculty.lastName }
+//             faculty: { employeeId: selectedFaculty.employeeId, firstName: selectedFaculty.firstName, lastName: selectedFaculty.lastName }
 //         };
 
 //         axios.post("/addTimetable", payload)
@@ -243,8 +243,8 @@
 //                                                         <option value="">Select Faculty</option>
 //                                                         {faculties.map(faculty => (
 //                                                             <option
-//                                                                 key={faculty.staffOrFacultyId}
-//                                                                 value={faculty.staffOrFacultyId}
+//                                                                 key={faculty.employeeId}
+//                                                                 value={faculty.employeeId}
 //                                                             >
 //                                                                 {faculty.firstName} {faculty.lastName}
 //                                                             </option>
@@ -498,7 +498,7 @@ const BatchAssignment = () => {
         setError(null);
 
         const selectedSubject = subjects.find(sub => sub.subjectCode === form.subjectCode);
-        const selectedFaculty = faculties.find(fac => fac.staffOrFacultyId === form.facultyId);
+        const selectedFaculty = faculties.find(fac => fac.employeeId === form.facultyId);
 
         if (!selectedSubject || !selectedFaculty) {
             setError("Please select a valid subject and faculty");
@@ -521,7 +521,7 @@ const BatchAssignment = () => {
                 subjectName: selectedSubject.subjectName 
             },
             faculty: { 
-                staffOrFacultyId: selectedFaculty.staffOrFacultyId, 
+                employeeId: selectedFaculty.employeeId, 
                 firstName: selectedFaculty.firstName, 
                 lastName: selectedFaculty.lastName 
             }
@@ -647,8 +647,8 @@ const BatchAssignment = () => {
                                                                 <option value="">Select Faculty</option>
                                                                 {faculties.map(faculty => (
                                                                     <option
-                                                                        key={faculty.staffOrFacultyId}
-                                                                        value={faculty.staffOrFacultyId}
+                                                                        key={faculty.employeeId}
+                                                                        value={faculty.employeeId}
                                                                     >
                                                                         {faculty.firstName} {faculty.lastName}
                                                                     </option>

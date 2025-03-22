@@ -19,7 +19,7 @@
 //     employmentType: "full-time",
 //     status: "active",
 //     salary: "",
-//     staffOrFacultyId: "", // New field added
+//     employeeId: "", // New field added
 //   });
 
 //   const [message, setMessage] = useState("");
@@ -36,7 +36,7 @@
 //       setFormData({
 //         firstName: "", lastName: "", email: "", phone: "", role: "faculty", department: "",
 //         qualification: "", experience: "", dob: "", joinDate: "", address: "", gender: "",
-//         employmentType: "full-time", status: "active", salary: "", staffOrFacultyId: "",
+//         employmentType: "full-time", status: "active", salary: "", employeeId: "",
 //       });
 //     } catch (err) {
 //       setMessage(err.response?.data?.msg || "An error occurred");
@@ -168,7 +168,7 @@
 //                           <div class="row mb-3">
 //                             <label class="col-lg-3 col-form-label">Staff / Faculty ID</label>
 //                             <div class="col-lg-9">
-//                               <input type="text" name="staffOrFacultyId" placeholder="Staff/Faculty ID" value={formData.staffOrFacultyId} onChange={handleChange} required />
+//                               <input type="text" name="employeeId" placeholder="Staff/Faculty ID" value={formData.employeeId} onChange={handleChange} required />
 //                             </div>
 //                           </div>
 //                         </div>
@@ -213,7 +213,7 @@
 //     employmentType: "Full-Time",
 //     status: "Active",
 //     salary: "",
-//     staffOrFacultyId: "",
+//     employeeId: "",
 //     subjects: [],
 //   });
 //   const [faculties, setFaculties] = useState([]);
@@ -292,7 +292,7 @@
 //       employmentType: "Full-Time",
 //       status: "Active",
 //       salary: "",
-//       staffOrFacultyId: "",
+//       employeeId: "",
 //       subjects: [],
 //     });
 
@@ -532,7 +532,7 @@
 //                             </div>
 //                             <div class="col-xl-4">
 //                               <label>Staff / Faculty ID</label>
-//                               <input type="text" name="staffOrFacultyId" placeholder="Staff/Faculty ID" value={facultyData.staffOrFacultyId} onChange={handleChange} required />
+//                               <input type="text" name="employeeId" placeholder="Staff/Faculty ID" value={facultyData.employeeId} onChange={handleChange} required />
 //                             </div>
 //                             <div class="col-xl-4">
 //                               <button type="submit">{editId ? "Update" : "Add"} Faculty</button>
@@ -557,10 +557,12 @@
 //recent one by kavana
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import "../../assets/assets/plugins/select2/css/select2.min.css";
+//import "../../assets/plugins/select2/css/select2.min.css";
 const FacultyForm = () => {
   const [subjects, setSubjects] = useState([]);
   const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [selectedBranch, setSelectedBranch] = useState(""); // Track selected branch
+  const [loading, setLoading] = useState(false);
   const [roles, setRoles] = useState([]); // Store fetched roles
   const [facultyData, setFacultyData] = useState({
     firstName: "",
@@ -578,13 +580,14 @@ const FacultyForm = () => {
     employmentType: "Full-Time",
     status: "Active",
     salary: "",
-    staffOrFacultyId: "",
+    employeeId: "",
     subjects: [],
     password:'',
+    branches:''
   });
   const [salaryType, setSalaryType] = useState(""); // Dropdown selection
   const [salaryAmount, setSalaryAmount] = useState(""); // Input salary
-
+  const [branches, setBranches] = useState([]);
   // Handle dropdown change
   const handleDropdownChange = (e) => {
       const selectedType = e.target.value;
@@ -631,6 +634,21 @@ const FacultyForm = () => {
     }
   };
   
+  useEffect(() => {
+    const fetchBranches = async () => {
+        try {
+            setLoading(true);
+            const response = await axios.get('http://localhost:8080/api/branches'); // Adjust API if needed
+            setBranches(response.data);
+            setLoading(false);
+        } catch (err) {
+           
+            setLoading(false);
+        }
+    };
+
+    fetchBranches();
+}, []);
   const fetchSubjects = async () => {
     try {
       const response = await axios.get("http://localhost:8080/api/subjects");
@@ -725,7 +743,7 @@ const FacultyForm = () => {
   //     employmentType: "Full-Time",
   //     status: "Active",
   //     salary: "",
-  //     staffOrFacultyId: "",
+  //     employeeId: "",
   //     subjects: [],
   //     password:'',
 
@@ -743,7 +761,9 @@ const FacultyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const facultyPayload = { ...facultyData, subjects: selectedSubjects };
+    const facultyPayload = { ...facultyData,  subjects: selectedSubjects, 
+      branches: selectedBranch // Ensure selected branch is included
+       };
   
     try {
       let response;
@@ -773,7 +793,7 @@ const FacultyForm = () => {
         employmentType: "Full-Time",
         status: "Active",
         salary: "",
-        staffOrFacultyId: "",
+        employeeId: "",
         subjects: [],
         password: "",
       });
@@ -938,7 +958,15 @@ const FacultyForm = () => {
                                 <option value="Faculty">Faculty</option>
                                 <option value="Staff">Staff</option>
                               </select> */}
-                              <label>Role</label>
+                               <label>Branch:</label>
+            <select value={selectedBranch} onChange={(e) => setSelectedBranch(e.target.value)}>
+                <option value="">Select a Branch</option>
+                {branches.map((branch) => (
+                    <option key={branch._id} value={branch.branchId}>
+                        {branch.branchName}
+                    </option>
+                ))}
+            </select>
                               <label>Role</label>
 <select name="role" multiple="multiple" value={facultyData.role}  onChange={handleChange} required>
   <option value="">Select Role</option>
@@ -1084,7 +1112,7 @@ const FacultyForm = () => {
                             </div>
                             <div class="col-xl-4">
                               <label>Staff / Faculty ID</label>
-                              <input type="text" name="staffOrFacultyId" placeholder="Staff/Faculty ID" value={facultyData.staffOrFacultyId} onChange={handleChange} required />
+                              <input type="text" name="employeeId" placeholder="Staff/Faculty ID" value={facultyData.employeeId} onChange={handleChange} required />
                             </div>
                             <div class="col-xl-4">
                               <button type="submit">{editId ? "Update" : "Add"} Faculty</button>
@@ -1109,6 +1137,3 @@ const FacultyForm = () => {
 };
 
 export default FacultyForm;
-
-
-

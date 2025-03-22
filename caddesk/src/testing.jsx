@@ -20,7 +20,7 @@ const FacultyForm = () => {
     employmentType: "Full-Time",
     status: "Active",
     salary: "",
-    staffOrFacultyId: "",
+    employeeId: "",
     subjects: [],
   });
   const [faculties, setFaculties] = useState([]);
@@ -99,7 +99,7 @@ const FacultyForm = () => {
       employmentType: "Full-Time",
       status: "Active",
       salary: "",
-      staffOrFacultyId: "",
+      employeeId: "",
       subjects: [],
     });
 
@@ -177,7 +177,7 @@ const FacultyForm = () => {
         )}
 
         <input type="number" name="salary" placeholder="Salary" value={facultyData.salary} onChange={handleChange} required />
-        <input type="text" name="staffOrFacultyId" placeholder="Staff/Faculty ID" value={facultyData.staffOrFacultyId} onChange={handleChange} required />
+        <input type="text" name="employeeId" placeholder="Staff/Faculty ID" value={facultyData.employeeId} onChange={handleChange} required />
         
         <button type="submit">{editId ? "Update" : "Add"} Faculty</button>
       </form>

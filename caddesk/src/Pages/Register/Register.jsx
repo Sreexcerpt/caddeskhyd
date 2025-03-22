@@ -181,6 +181,7 @@ const handleSubmit = async (e) => {
     // Save token and roles as JSON in localStorage
     localStorage.setItem("token", token);
     localStorage.setItem("roles", JSON.stringify(roles));
+    localStorage.setItem("firstName", JSON.stringify(firstName));
 
     setMessage("Login successful");
     setTimeout(() => {

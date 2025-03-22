@@ -12,7 +12,8 @@ const FacultyList = () => {
 
   // Form fields
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     role: 'faculty',
@@ -37,7 +38,7 @@ const FacultyList = () => {
   const fetchFaculties = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('/api/faculties');
+      const response = await axios.get('http://localhost:8080/api/faculties');
       setFaculties(response.data);
       setLoading(false);
     } catch (err) {
@@ -59,7 +60,9 @@ const FacultyList = () => {
   const handleEdit = (faculty) => {
     setCurrentFaculty(faculty);
     setFormData({
-      name: faculty.name,
+    
+firstName: faculty.firstName,
+lastName: faculty.lastName,
       email: faculty.email,
       phone: faculty.phone,
       role: faculty.role,
@@ -84,7 +87,10 @@ const FacultyList = () => {
     setIsModalOpen(false);
     setCurrentFaculty(null);
     setFormData({
-      name: '',
+     
+firstName: '',
+lastName: '',
+
       email: '',
       phone: '',
       role: 'faculty',
@@ -107,7 +113,7 @@ const FacultyList = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/faculty/${currentFaculty._id}`, formData);
+      await axios.put(`http://localhost:8080/api/faculty/${currentFaculty._id}`, formData);
       fetchFaculties();
       handleCloseModal();
       alert('Faculty information updated successfully!');
@@ -120,7 +126,7 @@ const FacultyList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this faculty member?')) {
       try {
-        await axios.delete(`/api/faculty/${id}`);
+        await axios.delete(`http://localhost:8080/api/faculty/${id}`);
         fetchFaculties();
         alert('Faculty removed successfully!');
       } catch (err) {
@@ -360,6 +366,7 @@ const FacultyList = () => {
 									</tr>
 								</thead>
 								<tbody>
+                  
                 {faculties.map((faculty) => (<tr key={faculty._id}>
 										<td>
 											<label class="checkboxs">
@@ -370,7 +377,8 @@ const FacultyList = () => {
 										<td>
 											<div class="userimgname">
 												
-												<a href="javascript:void(0);">{faculty.name}</a>
+                      <a href="javascript:void(0);">{faculty.firstName} {faculty.lastName}</a>
+
 											</div>
 										</td>
 										<td>{faculty.email}</td>

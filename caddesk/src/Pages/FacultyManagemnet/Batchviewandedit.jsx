@@ -96,7 +96,7 @@ const BatchTimetable = () => {
         timetableId: entry._id,
         subjectCode: entry.subject.subjectCode,
         subjectName: entry.subject.subjectName,
-        facultyId: entry.faculty.staffOrFacultyId,
+        facultyId: entry.faculty.employeeId,
         facultyName: `${entry.faculty.firstName} ${entry.faculty.lastName}`,
         scheduleInfo: entry.schedule.map(s => `${s.day} ${s.timeSlot}`).join(", ")
       });
@@ -138,7 +138,7 @@ const BatchTimetable = () => {
 
   // Handle faculty change in edit modal
   const handleFacultyChange = (facultyId) => {
-    const faculty = faculties.find(f => f.staffOrFacultyId === facultyId);
+    const faculty = faculties.find(f => f.employeeId === facultyId);
     if (faculty) {
       setEditData({
         ...editData, 
@@ -158,7 +158,7 @@ const BatchTimetable = () => {
           subjectName: editData.subjectName
         },
         faculty: {
-          staffOrFacultyId: editData.facultyId,
+          employeeId: editData.facultyId,
           firstName: editData.facultyName.split(' ')[0],
           lastName: editData.facultyName.split(' ')[1] || ''
         }
@@ -356,7 +356,7 @@ const BatchTimetable = () => {
             >
               <option value="">Select Faculty</option>
               {faculties.map(faculty => (
-                <option key={faculty.staffOrFacultyId} value={faculty.staffOrFacultyId}>
+                <option key={faculty.employeeId} value={faculty.employeeId}>
                   {faculty.firstName} {faculty.lastName}
                 </option>
               ))}

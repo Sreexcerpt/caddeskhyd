@@ -98,7 +98,7 @@ const Payview = () => {
         doc.setFontSize(12);
         doc.text(`Employee Name: ${selectedFaculty.firstName} ${selectedFaculty.lastName}`, 20, 30);
         doc.text(`Department: ${selectedFaculty.department}`, 20, 40);
-        doc.text(`Employee ID: ${selectedFaculty.staffOrFacultyId}`, 20, 50);
+        doc.text(`Employee ID: ${selectedFaculty.employeeId}`, 20, 50);
         doc.text(`Date: ${salaryDetails.date}`, 20, 60);
         doc.text(`Basic Pay: ₹${salaryDetails.basicPay}`, 20, 70);
         doc.text(`Salary: ₹${salaryDetails.salary}`, 20, 80);
@@ -116,10 +116,10 @@ const Payview = () => {
             ? `${record.facultyId.firstName} ${record.facultyId.lastName}`.toLowerCase()
             : "";
 
-        const staffOrFacultyId = record.facultyId?.staffOrFacultyId || ""; // Ensure it exists
+        const employeeId = record.facultyId?.employeeId || ""; // Ensure it exists
 
         const matchesSearch = searchQuery
-            ? facultyName.includes(searchQuery.toLowerCase()) || staffOrFacultyId.includes(searchQuery)
+            ? facultyName.includes(searchQuery.toLowerCase()) || employeeId.includes(searchQuery)
             : true;
 
         const matchesYear = selectedYear ? record.date.startsWith(selectedYear) : true;
@@ -213,7 +213,7 @@ const Payview = () => {
                                         <tr key={index}>
                                             <td>{record.facultyId?.firstName} {record.facultyId?.lastName}</td>
                                             <td>{record.facultyId?.department}</td>
-                                            <td>{record.facultyId?.staffOrFacultyId}</td>
+                                            <td>{record.facultyId?.employeeId}</td>
                                             <td>{record.date}</td>
                                             <td>₹{record.basicPay}</td>
                                             <td>₹{record.salary}</td>

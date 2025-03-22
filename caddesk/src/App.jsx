@@ -67,6 +67,7 @@ import Joblist from "./Pages/HRMS/Joblist/Joblist";
 import HireFromUs from "./Pages/HRMS/HireFromUs/HireFromUs";
 import InternalHiring from "./Pages/HRMS/InternalHiring/InternalHiring";
 import Batchviewandedit from "./Pages/FacultyManagemnet/Batchviewandedit";
+import Branch from "./Pages/FacultyManagemnet/Branch";
       
 const Layout = () => {
   const location = useLocation();
@@ -155,6 +156,8 @@ const Layout = () => {
         <Route path="/FacultyCommunication" element={<FacultyCommunication/>}/>
         <Route path="/EnquiryForm" element={<EnquiryForm/>}/>
         <Route path="/RegistrationForm" element={<RegistrationForm/>}/>
+        <Route path="/Branch" element={<Branch/>}/>
+
       </Routes>
     </>
   );
