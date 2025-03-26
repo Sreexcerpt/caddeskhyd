@@ -1,0 +1,279 @@
+const studentSchema = new mongoose.Schema({
+    studentName: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    mobileNumber: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+        lowercase: true
+    },
+    location: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    qualification: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    otherQualification: {
+        type: String,
+        trim: true
+    },
+    yearOfPassing: {
+        type: Number,
+        required: true
+    },
+    occupation: {
+        type: String,
+        required: true,
+        enum: ['student', 'fresher', 'professional', 'other']
+    },
+    instituteName: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    selectedCourse: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    otherCourse: {
+        type: String,
+        trim: true
+    },
+    learningMode: {
+        type: String,
+        required: true,
+        enum: ['online', 'offline']
+    },
+    startDate: {
+        type: Date,
+        required: true
+    },
+    reference: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    friendName: {
+        type: String,
+        trim: true
+    },
+    submissionDate: {
+        type: Date,
+        default: Date.now
+    },
+    status: {
+        type: String,
+        default: 'pending',
+        enum: ['pending', 'approved', 'rejected']
+    }
+});
+
+const Student = mongoose.model('Studentwalkin', studentSchema);
+
+// Validation Middleware
+const validateStudent = (req, res, next) => {
+    const { 
+        email, 
+        mobileNumber, 
+        qualification, 
+        selectedCourse, 
+        reference 
+    } = req.body;
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Mobile number validation (assuming Indian format)
+    const mobileRegex = /^[6-9]\d{9}$/;
+    if (!mobileRegex.test(mobileNumber)) {
+        return res.status(400).json({ error: 'Invalid mobile number format' });
+    }
+
+    // Other qualification validation
+    if (qualification === 'other' && !req.body.otherQualification) {
+        return res.status(400).json({ error: 'Other qualification is required' });
+    }
+
+    // Other course validation
+    if (selectedCourse === 'other' && !req.body.otherCourse) {
+        return res.status(400).json({ error: 'Other course is required' });
+    }
+
+    // Friend name validation
+    if (reference === 'friends' && !req.body.friendName) {
+        return res.status(400).json({ error: 'Friend name is required for referral' });
+    }
+
+    next();
+};
+
+// Routes
+// POST - Create new student registration
+app.post('/api/submit-form', validateStudent, async (req, res) => {
+    try {
+        const student = new Student(req.body);
+        await student.save();
+        res.status(201).json({
+            message: 'Registration successful',
+            studentId: student._id
+        });
+    } catch (error) {
+        res.status(400).json({
+            error: 'Registration failed',
+            details: error.message
+        });
+    }
+});
+
+// GET - Fetch all students (with pagination)
+app.get('/api/students', async (req, res) => {
+    try {
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const skip = (page - 1) * limit;
+
+        const students = await Student.find()
+            .sort({ submissionDate: -1 })
+            .skip(skip)
+            .limit(limit);
+
+        const total = await Student.countDocuments();
+
+        res.json({
+            students,
+            currentPage: page,
+            totalPages: Math.ceil(total / limit),
+            totalStudents: total
+        });
+    } catch (error) {
+        res.status(500).json({
+            error: 'Error fetching students',
+            details: error.message
+        });
+    }
+});
+
+// GET - Fetch specific student by ID
+app.get('/api/students/:id', async (req, res) => {
+    try {
+        const student = await Student.findById(req.params.id);
+        if (!student) {
+            return res.status(404).json({ error: 'Student not found' });
+        }
+        res.json(student);
+    } catch (error) {
+        res.status(500).json({
+            error: 'Error fetching student',
+            details: error.message
+        });
+    }
+});
+
+// PUT - Update student status
+app.put('/api/students/:id/status', async (req, res) => {
+    try {
+        const { status } = req.body;
+        if (!['pending', 'approved', 'rejected'].includes(status)) {
+            return res.status(400).json({ error: 'Invalid status' });
+        }
+
+        const student = await Student.findByIdAndUpdate(
+            req.params.id,
+            { status },
+            { new: true }
+        );
+
+        if (!student) {
+            return res.status(404).json({ error: 'Student not found' });
+        }
+
+        res.json({
+            message: 'Status updated successfully',
+            student
+        });
+    } catch (error) {
+        res.status(500).json({
+            error: 'Error updating status',
+            details: error.message
+        });
+    }
+});
+
+// Search endpoint
+app.get('/api/students/search', async (req, res) => {
+    try {
+        const { query } = req.query;
+        const students = await Student.find({
+            $or: [
+                { studentName: new RegExp(query, 'i') },
+                { email: new RegExp(query, 'i') },
+                { mobileNumber: new RegExp(query, 'i') },
+                { instituteName: new RegExp(query, 'i') }
+            ]
+        }).limit(10);
+
+        res.json(students);
+    } catch (error) {
+        res.status(500).json({
+            error: 'Error searching students',
+            details: error.message
+        });
+    }
+});
+
+
+
+
+const RegistrationSchema = new mongoose.Schema({
+  regid: { type: String, unique: true, required: true },
+  fName: String,
+  lName: String,
+  fatherName: String,
+  contactAddress: String,
+  email: String,
+  city:String,
+  state:String,
+  walkinCenter: String,
+  qualification: String,
+  collegeName: String,
+  phone: String,
+  courseName: String,
+  courseFee: String,
+  joiningDate: String,
+  aadhar: String,
+  resume: String,
+  password: { type: String, required: true },
+  feeType: { type: String, default: "Single" }, // ✅ Moved inside schema
+  installmentCount: { type: Number, default: 0 } ,
+  formStatus: { type: String, default: "Pending" }, // Automatically updated after form submission  
+  regStatus: { type: String, default: "Pending" } // ✅ Defined properly
+});
+
+
+// Auto-generate `regid`
+RegistrationSchema.pre("save", async function (next) {
+  if (!this.regid) {
+    const count = await Registration.countDocuments();
+    this.regid = `cad${String(count + 1).padStart(2, "0")}`; // Example: cad01, cad02, cad03...
+  }
+  next();
+});
+
+const Registration = mongoose.model("Registration", RegistrationSchema);
+module.exports = Registration;

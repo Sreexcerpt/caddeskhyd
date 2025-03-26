@@ -1,7 +1,48 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
+import axios from 'axios';
 
 const FacultyDashboard = () => {
+  const [studentBatches, setStudentBatches] = useState([]);
+  const [timetable, setTimetable] = useState([]);
+  const facultyId = JSON.parse(localStorage.getItem("user"))?.employeeId;
+  const userFullName = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      return `${user.firstName || ''} ${user.lastName || ''}`.trim();
+    }
+    return "Faculty Member";
+  };
+
+  useEffect(() => {
+    if (!facultyId) {
+      console.error("No faculty ID found in localStorage");
+      return;
+    }
+
+    // const fetchStudentBatches = async () => {
+    //   try {
+    //     const res = await axios.get(`http://localhost:8080/student-batches/${facultyId}`);
+    //     setStudentBatches(res.data);
+    //   } catch (err) {
+    //     console.error("Error fetching student batches:", err);
+    //   }
+    // };
+
+    const fetchTimetable = async () => {
+      try {
+        const res = await axios.get(`http://localhost:8080/timetable/${facultyId}`);
+        setTimetable(res.data);
+      } catch (err) {
+        console.error("Error fetching timetable:", err);
+      }
+    };
+
+    // fetchStudentBatches();
+    fetchTimetable();
+  }, [facultyId]);
+
   const options = {
     chart: {
       type: 'bar',
@@ -20,7 +61,6 @@ const FacultyDashboard = () => {
         horizontal: false
       }
     },
-
     fill: {
       opacity: 1
     },
@@ -38,22 +78,18 @@ const FacultyDashboard = () => {
 
   const series = [
     {
-
       group: 'budget',
       data: [44000, 55000, 41000]
     },
     {
-
       group: 'actual',
       data: [48000, 50000, 40000]
     },
     {
-   
       group: 'budget',
       data: [13000, 36000, 20000]
     },
     {
-   
       group: 'actual',
       data: [20000, 40000, 25000]
     }
@@ -61,316 +97,209 @@ const FacultyDashboard = () => {
 
   return (
     <div>
-
-		<div class="page-wrapper">
-			<div class="content">
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="page-header">
-							<div class="row align-items-center ">
-								<div class="col-md-4">
-									<h3 >Dashboard</h3>
-								</div>
-								<div class="col-md-8 float-end ms-auto">
-									<div class="d-flex title-head">
-										<div class="daterange-picker d-flex align-items-center justify-content-center">
-											<div class="form-sort me-2">
-												<i class="ti ti-calendar"></i>
-												<input type="text" class="form-control  date-range bookingrange"/>
-											</div>
-											<div class="head-icons mb-0">
-												<a href="" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh">
-													<i class="ti ti-refresh-dot"></i>
-												</a>
-												<a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header">
-													<i class="ti ti-chevrons-up"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-        {/* <!-- Welcome Wrap --> */}
-				<div class="welcome-wrap mb-4">
-					<div class=" d-flex align-items-center justify-content-between flex-wrap">
-						<div class="mb-3">
-							<h2 class="mb-1 text-white">Vijay Kumar</h2>
-							<p class="text-light">You have 27 student added your domain. please reacch out to the header teachers if you want them excluded from your domain</p>
-						</div>
-						<div class="d-flex align-items-center flex-wrap mb-1">
-							<a href="" class="btn btn-light btn-md mb-2">All Batches</a>
-						</div>
-					</div>
-				</div>	
-				{/* <!-- /Welcome Wrap --> */}
-
-        <div class="row">
-       
-      
-					<div class="col-xxl-4 col-xl-6 d-flex">
-						<div class="card flex-fill">
-							<div class="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
-								<h5 class="mb-2">Student Batch</h5>
-							</div>
-							<div class="card-body pb-2">
-              <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Class-A</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 ">2016-2017</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-wrap gap-2 mb-4">
-									<span class="badge bg-danger-transparent">Solid Works</span>
-									<span class="badge bg-info-transparent">AutoCad</span>
-									<span class="badge bg-success-transparent">NxPro</span>
-								</div>
-												
-									</div>
-								</div>
-							</div>
-						</div>
-
-            <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Class-B</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 ">2017-2018 Finished by today</p>
-									</div>
-									<div class="ms-auto">
-                  <div class="d-flex flex-wrap gap-2 mb-4">
-									<span class="badge bg-warning-transparent">Solid Works</span>
-								</div>				
-									</div>
-								</div>
-							</div>
-						</div>
-
-            <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Class-C</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 ">2020-2021</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-wrap gap-2 mb-4">
-									<span class="badge bg-info-transparent">Solid Works</span>
-									<span class="badge bg-success-transparent">NxPro</span>
-								</div>
-												
-									</div>
-								</div>
-							</div>
-						</div>
-
-            <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Class-D</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 ">Finished by today</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-wrap gap-2 mb-4">
-									<span class="badge bg-info-transparent">AutoCad</span>
-									<span class="badge bg-success-transparent">NxPro</span>
-								</div>
-									</div>
-								</div>
-							</div>
-						</div>
-								
-							</div>
-						</div>
-					</div>
-
-          <div class="col-xxl-4 col-xl-6 d-flex">
-						<div class="card flex-fill">
-            <div class="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
-								<h5 class="mb-2">Documents</h5>
-							</div>
-                            <div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-									<div class="me-2">
-										<span class="card-bg-primary text-white rounded-circle p-2">
-											<i class="fa-solid fa-file-pdf"></i>
-										</span>
-									</div>
-									<div class="">
-										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
-										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
-									</div>
-									<div class="ms-auto">
-										<a href="javascript:void(0);" class="text-fixed-white"><i
-												class="fa-solid fa-ellipsis-vertical"></i></a>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-									<div class="me-2">
-										<span class="card-bg-primary text-white rounded-circle p-2">
-											<i class="fa-solid fa-file-pdf"></i>
-										</span>
-									</div>
-									<div class="">
-										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
-										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
-									</div>
-									<div class="ms-auto">
-										<a href="javascript:void(0);" class="text-fixed-white"><i
-												class="fa-solid fa-ellipsis-vertical"></i></a>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-									<div class="me-2">
-										<span class="card-bg-primary text-white rounded-circle p-2">
-											<i class="fa-solid fa-file-pdf"></i>
-										</span>
-									</div>
-									<div class="">
-										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
-										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
-									</div>
-									<div class="ms-auto">
-										<a href="javascript:void(0);" class="text-fixed-white"><i
-												class="fa-solid fa-ellipsis-vertical"></i></a>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-
-						<div class="card  m-2" style={{backgroundColor:"#3C2371"}}>
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-									<div class="me-2">
-										<span class="card-bg-primary text-white rounded-circle p-2">
-											<i class="fa-solid fa-file-pdf"></i>
-										</span>
-									</div>
-									<div class="">
-										<div class="fs-15 fw-semibold text-fixed-white">Class-A Result</div>
-										<p class="mb-0 text-fixed-white op-7 fs-12">2 May 2024 (2016-2017)</p>
-									</div>
-									<div class="ms-auto">
-										<a href="javascript:void(0);" class="text-fixed-white"><i
-												class="fa-solid fa-ellipsis-vertical"></i></a>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-						</div>
-					</div>
-					
-
-          <div class="col-xxl-4 col-xl-6 d-flex">
-						<div class="card flex-fill">
-							<div class="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
-								<h5 class="mb-2">Upcoming Activities</h5>
-							</div>
-							<div class="card-body pb-2">
-              <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Staff Metting</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 "><i class="ti ti-calendar"></i>10:00Am To 11:00Am</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-column flex-wrap gap-2 mb-4">
-									<span class="badge bg-danger-transparent"><i class="ti ti-calendar"></i>12-3-2013</span>
-                  <p class="mb-0 text-fixed-black op-7 fs-12 "><i class="ti ti-phone-check"></i> Google Meeting</p>
-								</div>
-												
-									</div>
-								</div>
-							</div>
-						</div>
-
-            <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Parents Meeting</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 "><i class="ti ti-calendar"></i>10:00Am To 11:00Am</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-column flex-wrap gap-2 mb-4">
-									<span class="badge bg-danger-transparent"><i class="ti ti-calendar"></i>12-3-2013</span>
-                  <p class="mb-0 text-fixed-black op-7 fs-12 "><i class="ti ti-phone-check"></i> Offline</p>
-								</div>
-												
-									</div>
-								</div>
-							</div>
-						</div>
-
-            <div class="card border border-info" >
-							<div class="card-body">
-								<div class="d-flex align-items-center w-100">
-								
-									<div class="">
-										<div class="fs-15 fw-semibold">Course Meeting</div>
-										<p class="mb-0 text-fixed-black op-7 fs-12 ">10:00Am To 11:00Am</p>
-									</div>
-									<div class="ms-auto">
-                
-                  <div class="d-flex flex-column flex-wrap gap-2 mb-4">
-									<span class="badge bg-danger-transparent"><i class="ti ti-calendar"></i>12-3-2013</span>
-                  <p class="mb-0 text-fixed-black op-7 fs-12 "><i class="ti ti-phone-check"></i> Function Hall</p>
-								</div>
-												
-									</div>
-								</div>
-							</div>
-						</div>
-
-            
-
-								
-							</div>
-						</div>
-					</div>
-
+      <div className="page-wrapper">
+        <div className="content">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="page-header">
+                <div className="row align-items-center">
+                  <div className="col-md-4">
+                    <h3 className="page-title">Dashboard</h3>
+                  </div>
+                  <div className="col-md-8 float-end ms-auto">
+                    <div className="d-flex title-head">
+                      <div className="daterange-picker d-flex align-items-center justify-content-center">
+                        <div className="form-sort me-2">
+                          <i className="ti ti-calendar"></i>
+                          <input type="text" className="form-control date-range bookingrange"/>
+                        </div>
+                        <div className="head-icons mb-0">
+                          <a href="" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh">
+                            <i className="ti ti-refresh-dot"></i>
+                          </a>
+                          <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header">
+                            <i className="ti ti-chevrons-up"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* <!-- Welcome Wrap --> */}
+          <div className="welcome-wrap mb-4">
+            <div className="d-flex align-items-center justify-content-between flex-wrap">
+              <div className="mb-3">
+                <h2 className="mb-1 text-white">{userFullName()}</h2>
+                <p className="text-light">You have 27 student added your domain. please reach out to the header teachers if you want them excluded from your domain</p>
+              </div>
+              <div className="d-flex align-items-center flex-wrap mb-1">
+                <a href="" className="btn btn-light btn-md mb-2">All Batches</a>
+              </div>
+            </div>
+          </div>	
+          {/* <!-- /Welcome Wrap --> */}
+
+          <div className="row">
+            {/* Today's Timetable Card */}
+            <div className="col-xxl-4 col-xl-6 d-flex">
+              <div className="card flex-fill">
+                <div className="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
+                  <h5 className="mb-2">Today's Timetable</h5>
+                </div>
+                <div className="card-body pb-2">
+                  {timetable.length > 0 ? (
+                    timetable.map((entry, index) => 
+                      entry.schedule.map((scheduleItem, i) => (
+                        <div key={`${index}-${i}`} className="card border border-info mb-3">
+                          <div className="card-body">
+                            <div className="d-flex align-items-center w-100">
+                              <div className="">
+                                <div className="fs-15 fw-semibold">{entry.subject.subjectName} ({entry.subject.subjectCode})</div>
+                                <p className="mb-0 text-fixed-black op-7 fs-12"><i className="ti ti-clock"></i> {scheduleItem.timeSlot}</p>
+                              </div>
+                              <div className="ms-auto">
+                                <div className="d-flex flex-wrap gap-2 mb-4">
+                                  <span className="badge bg-info-transparent">Class</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    )
+                  ) : (
+                    <div className="card border border-warning">
+                      <div className="card-body">
+                        <p className="mb-0 text-fixed-black fs-14">No classes scheduled for today.</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Student Batches Card */}
+            <div className="col-xxl-4 col-xl-6 d-flex">
+              <div className="card flex-fill">
+                <div className="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
+                  <h5 className="mb-2">Your Student Batches</h5>
+                </div>
+                <div className="card-body pb-2">
+                  {studentBatches && studentBatches.length > 0 ? (
+                    studentBatches.map((batch, index) => (
+                      <div key={index} className="card border border-info mb-3">
+                        <div className="card-body">
+                          <div className="d-flex align-items-center w-100">
+                            <div className="">
+                              <div className="fs-15 fw-semibold">{batch.batchName || `Batch ${index + 1}`}</div>
+                              <p className="mb-0 text-fixed-black op-7 fs-12">
+                                <i className="ti ti-users"></i> {batch.studentCount || 0} Students
+                              </p>
+                            </div>
+                            <div className="ms-auto">
+                              <div className="d-flex flex-wrap gap-2 mb-4">
+                                {batch.subjects && batch.subjects.map((subject, subIndex) => (
+                                  <span key={subIndex} className={`badge bg-${getColorForSubject(subIndex)}-transparent`}>
+                                    {subject}
+                                  </span>
+                                ))}
+                                {(!batch.subjects || batch.subjects.length === 0) && (
+                                  <span className="badge bg-secondary-transparent">No Subjects</span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="card border border-warning">
+                      <div className="card-body">
+                        <p className="mb-0 text-fixed-black fs-14">No student batches assigned yet.</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xxl-4 col-xl-6 d-flex">
+              <div className="card flex-fill">
+                <div className="card-header pb-2 d-flex align-items-center justify-content-between flex-wrap">
+                  <h5 className="mb-2">Upcoming Activities</h5>
+                </div>
+                <div className="card-body pb-2">
+                  <div className="card border border-info" >
+                    <div className="card-body">
+                      <div className="d-flex align-items-center w-100">
+                        <div className="">
+                          <div className="fs-15 fw-semibold">Staff Meeting</div>
+                          <p className="mb-0 text-fixed-black op-7 fs-12 "><i className="ti ti-calendar"></i> 10:00Am To 11:00Am</p>
+                        </div>
+                        <div className="ms-auto">
+                          <div className="d-flex flex-column flex-wrap gap-2 mb-4">
+                            <span className="badge bg-danger-transparent"><i className="ti ti-calendar"></i> 12-3-2013</span>
+                            <p className="mb-0 text-fixed-black op-7 fs-12 "><i className="ti ti-phone-check"></i> Google Meeting</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="card border border-info" >
+                    <div className="card-body">
+                      <div className="d-flex align-items-center w-100">
+                        <div className="">
+                          <div className="fs-15 fw-semibold">Parents Meeting</div>
+                          <p className="mb-0 text-fixed-black op-7 fs-12 "><i className="ti ti-calendar"></i> 10:00Am To 11:00Am</p>
+                        </div>
+                        <div className="ms-auto">
+                          <div className="d-flex flex-column flex-wrap gap-2 mb-4">
+                            <span className="badge bg-danger-transparent"><i className="ti ti-calendar"></i> 12-3-2013</span>
+                            <p className="mb-0 text-fixed-black op-7 fs-12 "><i className="ti ti-phone-check"></i> Offline</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="card border border-info" >
+                    <div className="card-body">
+                      <div className="d-flex align-items-center w-100">
+                        <div className="">
+                          <div className="fs-15 fw-semibold">Course Meeting</div>
+                          <p className="mb-0 text-fixed-black op-7 fs-12 ">10:00Am To 11:00Am</p>
+                        </div>
+                        <div className="ms-auto">
+                          <div className="d-flex flex-column flex-wrap gap-2 mb-4">
+                            <span className="badge bg-danger-transparent"><i className="ti ti-calendar"></i> 12-3-2013</span>
+                            <p className="mb-0 text-fixed-black op-7 fs-12 "><i className="ti ti-phone-check"></i> Function Hall</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+  );
+};
+
+// Helper function to get different colors for subject badges
+const getColorForSubject = (index) => {
+  const colors = ['primary', 'success', 'danger', 'warning', 'info'];
+  return colors[index % colors.length];
+};
+
+export default FacultyDashboard;
 
 
-    </div>
-  )
-}
-
-export default FacultyDashboard
+  

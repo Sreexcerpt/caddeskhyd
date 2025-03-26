@@ -1,6 +1,32 @@
+import { useEffect, useState } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, LineChart, Line, AreaChart, Area } from "recharts";
 
-const Staffdash = () => {
+const EmployeeDashboardM = () => {
+  const [faculties, setFaculties] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFaculties = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/faculties");
+        const data = await response.json();
+        setFaculties(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching faculties:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchFaculties();
+  }, []);
+
+  // Calculate dynamic metrics
+  const totalStaff = faculties.length;
+  const activeTeachers = faculties.filter(faculty => faculty.status === "Active").length;
+  const attendanceRate = totalStaff > 0 ? Math.round((activeTeachers / totalStaff) * 100) : 0;
+
+  // Dummy chart data (Replace with API data if available)
   const staffPerformanceData = [
     { name: "Excellent", value: 25 },
     { name: "Good", value: 40 },
@@ -40,15 +66,18 @@ const Staffdash = () => {
               <div className="page-header">
                 <div className="row align-items-center ">
                   <div className="col-md-4">
-                    <h3 >Staff Dashboard</h3>
+                    <h3>Staff Dashboard</h3>
                   </div>
                   <div className="col-md-8 float-end ms-auto">
                     <div className="d-flex title-head">
                       <div className="daterange-picker d-flex align-items-center justify-content-center">
-
                         <div className="head-icons mb-0">
-                          <a href="/staffdashboard" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Refresh"><i className="ti ti-refresh-dot"></i></a>
-                          <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header"><i className="ti ti-chevrons-up"></i></a>
+                          <a href="/staffdashboard" data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh">
+                            <i className="ti ti-refresh-dot"></i>
+                          </a>
+                          <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Collapse" id="collapse-header">
+                            <i className="ti ti-chevrons-up"></i>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -57,18 +86,18 @@ const Staffdash = () => {
               </div>
             </div>
           </div>
-          <div className="row">
 
-            {/* Metrics */}
+          {/* Metrics */}
+          <div className="row">
             {[
-              { title: "Total Staff", value: 100, color: "#4CAF50" },
-              { title: "Attendance Rate", value: "85%", color: "#2196F3" },
-              { title: "Active Teachers", value: 60, color: "#FFC107" },
-              { title: "Staff  Assistance", value: 5, color: "#F44336" },
+              { title: "Total Staff", value: totalStaff, color: "#4CAF50" },
+              { title: "Attendance Rate", value: `${attendanceRate}%`, color: "#2196F3" },
+              { title: "Active Teachers", value: activeTeachers, color: "#FFC107" },
+              { title: "Staff Assistance", value: 5, color: "#F44336" },
             ].map((metric, index) => (
-              <div className="col-xl-3" key={index} >
+              <div className="col-xl-3" key={index}>
                 <div className="card" style={{ backgroundColor: metric.color }}>
-                  <div className="card-header" >
+                  <div className="card-header">
                     <h3 style={{ color: "#fff" }}>{metric.title}</h3>
                   </div>
                   <div className="card-body">
@@ -78,6 +107,7 @@ const Staffdash = () => {
               </div>
             ))}
           </div>
+
           <div className="row">
             {/* Charts */}
             <div className="col-xl-5">
@@ -104,7 +134,7 @@ const Staffdash = () => {
             <div className="col-xl-7">
               <div className="card">
                 <div className="card-header">
-                  <h3>Attendance Overview </h3>
+                  <h3>Attendance Overview</h3>
                 </div>
                 <div className="card-body">
                   <ResponsiveContainer width="100%" height={300}>
@@ -120,6 +150,7 @@ const Staffdash = () => {
               </div>
             </div>
           </div>
+
           <div className="row">
             {/* Line Chart for Workload Trends */}
             <div className="col-xl-6">
@@ -147,7 +178,6 @@ const Staffdash = () => {
                 <div className="card-header">
                   <h3>Experience Distribution</h3>
                 </div>
-
                 <div className="card-body">
                   <ResponsiveContainer width="100%" height={280}>
                     <AreaChart data={experienceDistribution}>
@@ -164,9 +194,8 @@ const Staffdash = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
 
-export default Staffdash;
+export default EmployeeDashboardM;

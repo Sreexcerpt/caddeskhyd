@@ -7,7 +7,7 @@
 //     const [loading, setLoading] = useState(true);
 //     const role = localStorage.getItem("role"); // Get role from localStorage
 //     const token = localStorage.getItem("token");
-    
+
 //     // Fetch permissions when component mounts
 //     useEffect(() => {
 //         const fetchPermissions = async () => {
@@ -16,7 +16,7 @@
 //                     setLoading(false);
 //                     return;
 //                 }
-                
+
 //                 const response = await axios.get(`/api/permissions/${role}`);
 //                 if (response.data.success) {
 //                     setPermissions(response.data.data);
@@ -27,10 +27,10 @@
 //                 setLoading(false);
 //             }
 //         };
-        
+
 //         fetchPermissions();
 //     }, [role]);
-    
+
 //     // Helper function to check if user has permission for a menu item
 //     const hasPermission = (menuItem) => {
 //         return permissions.includes(menuItem);
@@ -118,7 +118,7 @@
 //                         <ul>
 //                             <li>
 //                                 <ul>
-                                    
+
 //                                     <li className="submenu active">
 //                                         <a href="#">
 //                                             <i className="ti ti-layout-2"></i>
@@ -188,45 +188,45 @@
 //                                         </ul>
 //                                     </li>
 //                                     {/*  Admission & Enrollment Management tabs end  */}
-                                    // <li className="submenu active">
-                                    //     <a href="#">
-                                    //         <i class="ti ti-steam"></i>
-                                    //         <span>HRMS </span>
-                                    //         <span className="menu-arrow"></span>
-                                    //     </a>
-                                    //     <ul>
-                                    //         <li>
-                                    //             <a href="/HireFromUs">
-                                    //             Hire From Us
-                                    //             </a>
-                                    //         </li>
-                                    //         <li>
-                                    //             <a href="/joblist">
-                                    //             Jobs
-                                    //             </a>
-                                    //         </li>
-                                    //         <li>
-                                    //             <a href="/internalhiring">
-                                    //             Internal Hiring
-                                    //             </a>
-                                    //         </li>
-                                    //         {/* <li>
-                                    //             <a href="#">
-                                    //             Employee Joining Form
-                                    //             </a>
-                                    //         </li>
-                                    //         <li>
-                                    //             <a href="/FeeInvoiceGeneration">
-                                    //             HR Documents
-                                    //             </a>
-                                    //         </li> */}
-                                    //         {/* <li>
-                                    //             <a href="/FeeInvoiceGeneration">
-                                    //             Internal Hiring
-                                    //             </a>
-                                    //         </li> */}
-                                    //     </ul>
-                                    // </li>
+// <li className="submenu active">
+//     <a href="#">
+//         <i class="ti ti-steam"></i>
+//         <span>HRMS </span>
+//         <span className="menu-arrow"></span>
+//     </a>
+//     <ul>
+//         <li>
+//             <a href="/HireFromUs">
+//             Hire From Us
+//             </a>
+//         </li>
+//         <li>
+//             <a href="/joblist">
+//             Jobs
+//             </a>
+//         </li>
+//         <li>
+//             <a href="/internalhiring">
+//             Internal Hiring
+//             </a>
+//         </li>
+//         {/* <li>
+//             <a href="#">
+//             Employee Joining Form
+//             </a>
+//         </li>
+//         <li>
+//             <a href="/FeeInvoiceGeneration">
+//             HR Documents
+//             </a>
+//         </li> */}
+//         {/* <li>
+//             <a href="/FeeInvoiceGeneration">
+//             Internal Hiring
+//             </a>
+//         </li> */}
+//     </ul>
+// </li>
 //                                     {/*  Student Information Management tabs start  */}
 //                                     <li className="submenu active">
 //                                         <a href="#">
@@ -435,8 +435,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const SideNavBar = ({ activeRole }) => {
-    
- 
+
+
     const [permissions, setPermissions] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -467,7 +467,13 @@ const SideNavBar = ({ activeRole }) => {
     // Helper function to check if a menu item is allowed
     const hasPermission = (menuItem) => permissions.includes(menuItem);
     const token = localStorage.getItem("token");
-    const firstName= localStorage.getItem("firstName");
+    const userFullName = () => {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user) {
+            return `${user.firstName || ''} ${user.lastName || ''}`.trim();
+        }
+        return "Faculty Member";
+    };
     console.log()
     return (
         <div>
@@ -542,7 +548,7 @@ const SideNavBar = ({ activeRole }) => {
                                         alt="Profile"
                                     />
                                     <div className="user-names">
-                                        <h5>{firstName}</h5>
+                                        <h5>{userFullName()}</h5>
                                         {/* <h6>{roles || "User"}</h6> */}
                                     </div>
                                 </a>
@@ -561,18 +567,18 @@ const SideNavBar = ({ activeRole }) => {
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="">Leads Dashboard</a>
+                                                    <a href="/">Leads Dashboard</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/">Student Dashboard</a>
+                                                    <a href="/studentsDashboard">Student Dashboard</a>
                                                 </li>
                                                 <li>
-                                                    <a href="">Staff Dashboard</a>
+                                                    <a href="/Employeedashboard">Employee Dashboard</a>
                                                 </li>
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Lead & Inquiry */}
                                     {hasPermission("Lead & Inquiry") && (
                                         <li className="submenu">
@@ -583,7 +589,7 @@ const SideNavBar = ({ activeRole }) => {
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="/AddingLead">Lead Capture & Tracking</a>
+                                                    <a href="/EnquiryForm">Lead Capture</a>
                                                 </li>
                                                 <li>
                                                     <a href="/LeadAssignment">Lead Assignment</a>
@@ -592,15 +598,12 @@ const SideNavBar = ({ activeRole }) => {
                                                     <a href="/LeadFollowup">Lead Followup</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/EnquiryForm">Enquiry Form</a>
-                                                </li>
-                                                <li>
                                                     <a href="/Counsellorreport">Report And Insights</a>
                                                 </li>
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Admission & Enrollment */}
                                     {hasPermission("Admission & Enrollment") && (
                                         <li className="submenu">
@@ -610,6 +613,11 @@ const SideNavBar = ({ activeRole }) => {
                                                 <span className="menu-arrow"></span>
                                             </a>
                                             <ul>
+                                                <li>
+                                                    <a href="/RegistrationForm">
+                                                        Registration Form
+                                                    </a>
+                                                </li>
                                                 <li>
                                                     <a href="/ApplicationProcessing">
                                                         Application Processing
@@ -625,20 +633,29 @@ const SideNavBar = ({ activeRole }) => {
                                                         Fee & Invoice Generation
                                                     </a>
                                                 </li>
-                                                <li>
-                                                <a href="/EnquiryForm">
-                                                    Enquiry Form 
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/RegistrationForm">
-                                                RegistrationForm 
-                                                </a>
-                                            </li>
-                                        </ul>
+
+
+                                            </ul>
                                         </li>
                                     )}
-                                    
+                                    {hasPermission("Telecaller Management") && (
+                                        <li className="submenu">
+                                            <a href="">
+                                                <i className="ti ti-steam"></i>
+                                                <span>Telecaller Management </span>
+                                                <span className="menu-arrow"></span>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="/Telecaller">
+                                                        Telecaller
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    )}
+
                                     {/* Student Information */}
                                     {hasPermission("Student Information") && (
                                         <li className="submenu">
@@ -667,7 +684,7 @@ const SideNavBar = ({ activeRole }) => {
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Fee & Accounting */}
                                     {hasPermission("Fee & Accounting") && (
                                         <li className="submenu">
@@ -678,12 +695,12 @@ const SideNavBar = ({ activeRole }) => {
                                             </a>
                                             <ul>
                                                 <li><a href="">Fee Structure Management</a></li>
-                                                <li><a href="">Online Payments & Invoicing</a></li>
+                                                <li><a href="/PaymentsAndInvoicing">Online Payments & Invoicing</a></li>
                                                 <li><a href="">Financial Reporting</a></li>
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Communication */}
                                     {hasPermission("Communication") && (
                                         <li className="submenu">
@@ -699,7 +716,7 @@ const SideNavBar = ({ activeRole }) => {
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Faculty & Staff */}
                                     {hasPermission("Faculty & Staff") && (
                                         <li className="submenu">
@@ -720,11 +737,11 @@ const SideNavBar = ({ activeRole }) => {
                                                 <li><a href="/Branch">Branch</a></li>
                                                 <li><a href="/AttendanceTracker">AttendanceTracker</a></li>
                                                 <li><a href="/LeaveRequests">LeaveRequests</a></li>
-                                                <li><a href="/LeaveRequestForm">LeaveRequestForm</a></li>
+                                                {/* <li><a href="/LeaveRequestForm">LeaveRequestForm</a></li> */}
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Course, Class & Batch */}
                                     {hasPermission("Course, Class & Batch") && (
                                         <li className="submenu">
@@ -738,11 +755,11 @@ const SideNavBar = ({ activeRole }) => {
                                                 <li><a href="/CourseForm">Course Creation</a></li>
                                                 <li><a href="/BatchForm">Batch Creation</a></li>
                                                 <li><a href="">Timetable Management</a></li>
-                                                <li><a href="">Virtual Classroom Integration</a></li>
+                                                <li><a href="">Virtual Classroom</a></li>
                                             </ul>
                                         </li>
                                     )}
-                                    
+
                                     {/* Reports and Analytics */}
                                     {hasPermission("Reports and Analytics") && (
                                         <li className="submenu">
@@ -762,29 +779,29 @@ const SideNavBar = ({ activeRole }) => {
                                 </ul>
                             </li>
                             {hasPermission("HRMS") && (
-                                  <li className="submenu active">
-                                  <a href="#">
-                                      <i class="ti ti-steam"></i>
-                                      <span>HRMS </span>
-                                      <span className="menu-arrow"></span>
-                                  </a>
-                                  <ul>
-                                      <li>
-                                          <a href="/HireFromUs">
-                                          Hire From Us
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="/joblist">
-                                          Jobs
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="/internalhiring">
-                                          Internal Hiring
-                                          </a>
-                                      </li>
-                                      {/* <li>
+                                <li className="submenu active">
+                                    <a href="#">
+                                        <i class="ti ti-steam"></i>
+                                        <span>HRMS </span>
+                                        <span className="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="/HireFromUs">
+                                                Hire From Us
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/joblist">
+                                                Jobs
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/internalhiring">
+                                                Internal Hiring
+                                            </a>
+                                        </li>
+                                        {/* <li>
                                           <a href="#">
                                           Employee Joining Form
                                           </a>
@@ -794,13 +811,13 @@ const SideNavBar = ({ activeRole }) => {
                                           HR Documents
                                           </a>
                                       </li> */}
-                                      {/* <li>
+                                        {/* <li>
                                           <a href="/FeeInvoiceGeneration">
                                           Internal Hiring
                                           </a>
                                       </li> */}
-                                  </ul>
-                              </li>
+                                    </ul>
+                                </li>
                             )}
                             {/* Student Profile section */}
                             {hasPermission("Student Profile") && (
@@ -840,7 +857,7 @@ const SideNavBar = ({ activeRole }) => {
                                     </ul>
                                 </li>
                             )}
-                            
+
                             {/* Faculty Profile section */}
                             {hasPermission("Faculty Profile") && (
                                 <li>
@@ -876,6 +893,21 @@ const SideNavBar = ({ activeRole }) => {
                                                 <i className="ti ti-calendar"></i><span>LeaveRequest</span>
                                             </a>
                                         </li>
+                                    </ul>
+                                </li>
+                            )}
+
+                            {hasPermission("Telecaller Profile") && (
+                                <li>
+                                <h6 className="submenu-hdr">Telecaller Profile</h6>
+                                <ul>
+                                    <li>
+                                    
+                                            <a href="/LeadFollowups">
+                                            <i className="ti ti-steam"></i><span>Telecaller</span>
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </li>
                             )}

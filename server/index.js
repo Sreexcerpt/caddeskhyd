@@ -1,420 +1,3 @@
-// require("dotenv").config();
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const bcrypt = require("bcryptjs");
-// const jwt = require("jsonwebtoken");
-// const cors = require("cors");
-
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-
-// // Database Connection
-// mongoose.connect("mongodb+srv://excerpttech:excerpttech2021@cluster0.5vdeszu.mongodb.net/CADDESKCRM", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// })
-// .then(() => console.log("MongoDB Connected"))
-// .catch(err => console.log(err));
-
-// // User Model
-// const UserSchema = new mongoose.Schema({
-//   name: String,
-//   email: { type: String, unique: true },
-//   password: String,
-//   role: { type: String,  default: "user" }
-// });
-// const User = mongoose.model("User", UserSchema);
-
-// // Register Route
-// app.post("/register", async (req, res) => {
-//   const { name, email, password, role } = req.body;
-  
-//   try {
-//     let user = await User.findOne({ email });
-//     if (user) return res.status(400).json({ msg: "User already exists" });
-
-//     const hashedPassword = await bcrypt.hash(password, 10);
-//     user = new User({ name, email, password: hashedPassword, role });
-//     await user.save();
-
-//     res.status(201).json({ msg: "User registered successfully" });
-//   } catch (err) {
-//     res.status(500).json({ msg: err.message });
-//   }
-// });
-
-// // Login Route
-// app.post("/login", async (req, res) => {
-//   const { email, password } = req.body;
-  
-//   try {
-//     const user = await User.findOne({ email });
-//     if (!user) return res.status(400).json({ msg: "Invalid Credentials" });
-
-//     const isMatch = await bcrypt.compare(password, user.password);
-//     if (!isMatch) return res.status(400).json({ msg: "Invalid Credentials" });
-
-//     const token = jwt.sign({ id: user._id, role: user.role }, "your_jwt_secret", { expiresIn: "1h" });
-
-//     res.json({ token, role: user.role });
-//   } catch (err) {
-//     res.status(500).json({ msg: err.message });
-//   }
-// });
-
-// // Middleware for Protected Routes
-// const authMiddleware = (req, res, next) => {
-//   const token = req.header("x-auth-token");
-//   if (!token) return res.status(401).json({ msg: "No token, authorization denied" });
-
-//   try {
-//     const decoded = jwt.verify(token, "your_jwt_secret");
-//     req.user = decoded;
-//     next();
-//   } catch (err) {
-//     res.status(401).json({ msg: "Token is not valid" });
-//   }
-// };
-
-
-// const FacultyStaffSchema = new mongoose.Schema({
-//   firstName: { type: String, required: true },
-//   lastName: { type: String, required: true },
-//   email: { type: String, unique: true, required: true },
-//   phone: { type: String, required: true },
-//   role: { type: String, enum: ["faculty", "staff"], required: true },
-//   department: { type: String, required: true },
-//   qualification: { type: String, required: true },
-//   experience: { type: Number, required: true },
-//   dob: { type: Date, required: true },
-//   joinDate: { type: Date, required: true },
-//   address: { type: String, required: true },
-//   gender: { type: String, required: true },
-//   employmentType: { type: String, required: true },
-//   salary: { type: Number, required: true },
-//   employeeId: { type: String, unique: true, required: true }, // Ensure unique & required
-
-// });
-
-// const Faculty = mongoose.model("FacultyStaff", FacultyStaffSchema);
-
-// app.post("/api/faculty", async (req, res) => {
-//   console.log("Received Faculty Data:", req.body); // Debugging log
-
-//   const { employeeId } = req.body;
-
-//   if (!employeeId) {
-//     console.error("Missing Faculty ID in request");
-//     return res.status(400).json({ msg: "Faculty ID is missing" });
-//   }
-
-//   try {
-//     const newFaculty = new Faculty({
-//       ...req.body, 
-//       employeeId // Ensure correct field mapping
-//     });
-
-//     await newFaculty.save();
-//     res.status(201).json({ msg: "Faculty added successfully!" });
-
-//   } catch (error) {
-//     console.error("Error saving faculty:", error);
-//     if (error.code === 11000) {
-//       return res.status(400).json({ msg: "Duplicate Faculty ID: Faculty ID must be unique." });
-//     }
-//     res.status(500).json({ msg: error.message });
-//   }
-// });
-
-
-
-
-// app.get("/api/faculties", async (req, res) => {
-//   try {
-//     const faculties = await Faculty.find();
-//     res.json(faculties);
-//   } catch (error) {
-//     res.status(500).json({ msg: error.message });
-//   }
-// });
-
-
-// // Update faculty/staff
-// app.put("/api/faculty/:id", async (req, res) => {
-//   try {
-//     const { name, email, phone, role, department, qualification, experience, dob, joinDate, address, gender, employmentType, status, salary } = req.body;
-//     const facultyId = req.params.id;
-    
-//     // Check if faculty/staff exists
-//     const faculty = await Faculty.findById(facultyId);
-//     if (!faculty) {
-//       return res.status(404).json({ msg: "Faculty/Staff not found" });
-//     }
-    
-//     // Check if email is being changed and if it already exists
-//     if (email !== faculty.email) {
-//       const emailExists = await Faculty.findOne({ email, _id: { $ne: facultyId } });
-//       if (emailExists) {
-//         return res.status(400).json({ msg: "Email already in use by another faculty/staff member" });
-//       }
-//     }
-    
-//     // Update faculty/staff record
-//     const updatedFaculty = await Faculty.findByIdAndUpdate(
-//       facultyId,
-//       { name, email, phone, role, department, qualification, experience, dob, joinDate, address, gender, employmentType, status, salary },
-//       { new: true }
-//     );
-    
-//     res.json({ msg: "Faculty/Staff updated successfully!", faculty: updatedFaculty });
-//   } catch (error) {
-//     console.error("Update error:", error);
-//     res.status(500).json({ msg: error.message });
-//   }
-// });
-
-// // Delete faculty/staff
-// app.delete("/api/faculty/:id", async (req, res) => {
-//   try {
-//     const facultyId = req.params.id;
-    
-//     // Check if faculty/staff exists
-//     const faculty = await Faculty.findById(facultyId);
-//     if (!faculty) {
-//       return res.status(404).json({ msg: "Faculty/Staff not found" });
-//     }
-    
-//     // Delete faculty/staff record
-//     await Faculty.findByIdAndDelete(facultyId);
-    
-//     res.json({ msg: "Faculty/Staff deleted successfully!" });
-//   } catch (error) {
-//     console.error("Delete error:", error);
-//     res.status(500).json({ msg: error.message });
-//   }
-// });
-
-// const leaveSchema = new mongoose.Schema({
-//   employeeName: String,
-//   employeeId: String,
-//   leaveType: String,
-//   fromDate: Date,
-//   toDate: Date,
-//   reason: String,
-//   status: { type: String, default: "Pending" }, // Default status
-// });
-
-// const Leave = mongoose.model("Leave", leaveSchema);
-
-// // API to Submit Leave Request
-// app.post("/api/leave", async (req, res) => {
-//   try {
-//     const newLeave = new Leave(req.body);
-//     await newLeave.save();
-//     res.status(201).json({ message: "Leave request submitted successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to submit leave request" });
-//   }
-// });
-
-// // API to Get All Leave Requests
-// app.get("/api/leave", async (req, res) => {
-//   try {
-//     const leaves = await Leave.find();
-//     res.json(leaves);
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to fetch leave requests" });
-//   }
-// });
-
-
-// // API to Update Leave Request Status (Approve/Reject)
-// app.put("/api/leave/:id", async (req, res) => {
-//   try {
-//     const { status } = req.body; // Get status from frontend (Approved/Rejected)
-//     const updatedLeave = await Leave.findByIdAndUpdate(
-//       req.params.id,
-//       { status },
-//       { new: true }
-//     );
-
-//     if (!updatedLeave) {
-//       return res.status(404).json({ error: "Leave request not found" });
-//     }
-
-//     res.json({ message: `Leave request ${status.toLowerCase()}`, updatedLeave });
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to update leave request" });
-//   }
-// });
-
-
-
-
-// const subjectSchema = new mongoose.Schema({
-//   subjectCode: { type: String, required: true, unique: true },
-//   subjectName: { type: String, required: true },
-// });
-
-// const Subject= mongoose.model("Subject", subjectSchema);
-
-
-// // ✅ Add a Subject
-// app.post("/api/add-subject", async (req, res) => {
-//   try {
-//     const { subjectCode, subjectName } = req.body;
-//     const newSubject = new Subject({ subjectCode, subjectName });
-//     await newSubject.save();
-//     res.status(201).json({ message: "Subject added successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-// // ✅ Get All Subjects
-// app.get("/api/get-subjects", async (req, res) => {
-//   try {
-//     const subjects = await Subject.find({});
-//     res.json(subjects);
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-
-
-// const courseSchema = new mongoose.Schema({
-//   courseCode: { type: String, required: true, unique: true },
-//   courseName: { type: String, required: true },
-//   description: { type: String },
-//   duration: { type: String }, // Example: "4 Years"
-//   subjects: [{ type: String }] // Storing Subject IDs
-// });
-
-// const Course=  mongoose.model("Course", courseSchema);
-
-
-// app.post("/api/add-course", async (req, res) => {
-//   try {
-//     const { courseCode, courseName, description, duration, subjects } = req.body;
-//     const newCourse = new Course({ courseCode, courseName, description, duration, subjects });
-//     await newCourse.save();
-//     res.status(201).json({ message: "Course added successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-
-// // Define Student Schema
-// const studentSchema = new mongoose.Schema({
-//   studentId: String,
-//   firstName: String,
-//   lastName: String,
-//   middleName: String,
-//   dob: String,
-//   gender: String,
-//   nationality: String,
-//   aadharNumber: String,
-//   bloodGroup: String,
-//   emergencyContact: String,
-//   address: String,
-//   phoneNumber: String,
-//   email: String,
-//   guardianName: String,
-//   guardianPhone: String,
-//   guardianEmail: String,
-//   previousSchool: String,
-//   previousQualification: String,
-//   courseEnrolled: String,
-//   batchAssigned: String,
-//   grades: String,
-//   testScores: String,
-//   extracurricularActivities: String,
-//   disciplinaryRecords: String
-// });
-
-// const Student = mongoose.model("Student", studentSchema);
-
-// // API Routes
-
-// // Create a new student
-// app.post("/register1", async (req, res) => {
-//   try {
-//     const newStudent = new Student(req.body);
-//     await newStudent.save();
-//     res.status(201).json({ message: "Student registered successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-// // Get all students
-// app.get("/students", async (req, res) => {
-//   try {
-//     const students = await Student.find();
-//     res.status(200).json(students);
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-// // Get a student by ID
-// app.get("/students/:id", async (req, res) => {
-//   try {
-//     const student = await Student.findById(req.params.id);
-//     if (!student) return res.status(404).json({ message: "Student not found" });
-//     res.status(200).json(student);
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-// // Update student details
-// app.put("/students/:id", async (req, res) => {
-//   try {
-//     const updatedStudent = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
-//     if (!updatedStudent) return res.status(404).json({ message: "Student not found" });
-//     res.status(200).json({ message: "Student updated successfully", updatedStudent });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-// // Delete a student
-// app.delete("/students/:id", async (req, res) => {
-//   try {
-//     const deletedStudent = await Student.findByIdAndDelete(req.params.id);
-//     if (!deletedStudent) return res.status(404).json({ message: "Student not found" });
-//     res.status(200).json({ message: "Student deleted successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-
-
-
-// // Start Server
-// const PORT = process.env.PORT || 8080;
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Required dependencies
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -428,7 +11,7 @@ const path = require("path")
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+const fs = require("fs");
 
 // Multer setup for file uploads
 const storage = multer.diskStorage({
@@ -470,6 +53,163 @@ const branchSchema = new mongoose.Schema({
 });
 
  const Branch= mongoose.model('Branch', branchSchema);
+
+ const subjectSchema = new mongoose.Schema({
+  subjectCode: String,
+  subjectName: String,
+});
+
+const Subject = mongoose.model("Subject", subjectSchema);
+
+const courseSchema = new mongoose.Schema({
+  courseCode: String,
+  courseName: String,
+  duration: String,
+  subjects: [{ subjectCode: String, subjectName: String }],
+  fee: Number,
+  installment: Number,
+});
+
+const Course = mongoose.model("Course", courseSchema);
+
+const batchSchema = new mongoose.Schema({
+  branchId:String,
+  batchId: String,
+  batchName: String,
+  course: String,
+  studentCount: Number,
+  startDate: String,
+  status: String,
+  day: String, // Example: "Monday"
+  timeSlot: String, // Example: "9-10"
+  subject: { type: mongoose.Schema.Types.ObjectId, ref: "Subject" },
+  faculty: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty" },
+});
+
+const Batch = mongoose.model("Batch", batchSchema);
+const PaymentPlanSchema = new mongoose.Schema({ 
+  dueDate: String, 
+  amount: Number, 
+  status: { type: String, default: "Pending" }, 
+  paidDate: String, 
+  paidAmount: Number, 
+  transactionId: String,
+  receivedBy: String,
+  receiptPath: String 
+});
+const RegistrationSchema = new mongoose.Schema({
+  regid: { type: String, unique: true, required: true },
+  fName: String,
+  lName: String,
+  fatherName: String,
+  contactAddress: String,
+  email: String,
+  city: String,
+  state: String,
+  branchId: String,
+  qualification: String,
+  collegeName: String,
+  phone: String,
+  courseName: String,
+  courseFee: String,
+  joiningDate: String,
+  aadhar: String,
+  resume: String,
+  role: { type: [String], default: ["Student"] },
+  password: { type: String, required: true },
+  feeType: { type: String, default: "Single" },
+  installmentCount: { type: Number, default: 0 },
+  formStatus: { type: String, default: "Pending" },
+  regStatus: { type: String, default: "Pending" },
+  paymentsPlan: [PaymentPlanSchema]
+});
+
+// Auto-generate `regid`
+RegistrationSchema.pre("save", async function (next) {
+  if (!this.regid) {
+    const count = await Registration.countDocuments();
+    this.regid = `cad${String(count + 1).padStart(2, "0")}`; // Example: cad01, cad02, cad03...
+  }
+  next();
+});
+
+const Registration = mongoose.model("Registration", RegistrationSchema);
+// Create Batch
+app.post("/api/batches", async (req, res) => {
+  const { batchId,branchId, batchName, course, studentCount, startDate, status } = req.body;
+  const batch = new Batch({ batchId,branchId, batchName, course, studentCount, startDate, status });
+  await batch.save();
+  res.json(batch);
+});
+const facultySchema = new mongoose.Schema({
+
+  firstName: String,
+  lastName: String,
+  email: String,
+  phone: String,
+  role: [],
+  department: String,
+  qualification: String,
+  experience: Number,
+  dob: String,
+  joinDate: String,
+  address: String,
+  gender: String,
+  employmentType: String,
+  status: String,
+  salary: String,
+  employeeId: String,
+  subjects: [{ subjectCode: String, subjectName: String }],
+  password:String,
+  branchId:String,
+  assignedEnquiries: [{ type: mongoose.Schema.Types.ObjectId, ref: "Enquiry" }], 
+  followUps: [
+      {
+          enquiryId: { type: mongoose.Schema.Types.ObjectId, ref: "Enquiry" },
+          status: String, // Dropdown values
+          followUpDate: String // Dynamic follow-up date
+      }
+  ]
+});
+
+const Faculty = mongoose.model("Faculty", facultySchema);
+
+
+const timetableSchema = new mongoose.Schema({
+  batchId: { type: String, required: true },
+  courseId: { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
+  schedule: [{
+      day: { type: String, required: true }, // Monday, Tuesday, etc.
+      timeSlot: { type: String, required: true } // "08:00-09:00", etc.
+  }],
+  subject: { 
+      subjectCode: String, 
+      subjectName: String 
+  },
+  faculty: { 
+      employeeId: String, 
+      firstName: String, 
+      lastName: String 
+  }
+});
+
+const Timetable = mongoose.model("Timetable", timetableSchema);
+
+const SalarySchema = new mongoose.Schema({
+  facultyId: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty", required: true },
+  date: { type: String, required: true },
+  basicPay: { type: Number, required: true },
+  salary: { type: Number, required: true },
+  travelAllowance: { type: Number, default: 0 },
+  medicalAllowance: { type: Number, default: 0 },
+  washingAllowance: { type: Number, default: 0 },
+  da: { type: Number, default: 0 }, // % of salary
+  hr: { type: Number, default: 0 }, // % of salary
+});
+
+const Salary = mongoose.model("Salary", SalarySchema);
+
+
 app.get('/api/branches', async (req, res) => {
     try {
         const branches = await Branch.find();
@@ -548,253 +288,7 @@ app.delete('/api/branches/:id', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
-// Student Schema
-const studentSchema = new mongoose.Schema({
-    studentName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    mobileNumber: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        required: true,
-        trim: true,
-        lowercase: true
-    },
-    location: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    qualification: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    otherQualification: {
-        type: String,
-        trim: true
-    },
-    yearOfPassing: {
-        type: Number,
-        required: true
-    },
-    occupation: {
-        type: String,
-        required: true,
-        enum: ['student', 'fresher', 'professional', 'other']
-    },
-    instituteName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    selectedCourse: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    otherCourse: {
-        type: String,
-        trim: true
-    },
-    learningMode: {
-        type: String,
-        required: true,
-        enum: ['online', 'offline']
-    },
-    startDate: {
-        type: Date,
-        required: true
-    },
-    reference: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    friendName: {
-        type: String,
-        trim: true
-    },
-    submissionDate: {
-        type: Date,
-        default: Date.now
-    },
-    status: {
-        type: String,
-        default: 'pending',
-        enum: ['pending', 'approved', 'rejected']
-    }
-});
-
-const Student = mongoose.model('Studentwalkin', studentSchema);
-
-// Validation Middleware
-const validateStudent = (req, res, next) => {
-    const { 
-        email, 
-        mobileNumber, 
-        qualification, 
-        selectedCourse, 
-        reference 
-    } = req.body;
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        return res.status(400).json({ error: 'Invalid email format' });
-    }
-
-    // Mobile number validation (assuming Indian format)
-    const mobileRegex = /^[6-9]\d{9}$/;
-    if (!mobileRegex.test(mobileNumber)) {
-        return res.status(400).json({ error: 'Invalid mobile number format' });
-    }
-
-    // Other qualification validation
-    if (qualification === 'other' && !req.body.otherQualification) {
-        return res.status(400).json({ error: 'Other qualification is required' });
-    }
-
-    // Other course validation
-    if (selectedCourse === 'other' && !req.body.otherCourse) {
-        return res.status(400).json({ error: 'Other course is required' });
-    }
-
-    // Friend name validation
-    if (reference === 'friends' && !req.body.friendName) {
-        return res.status(400).json({ error: 'Friend name is required for referral' });
-    }
-
-    next();
-};
-
-// Routes
-// POST - Create new student registration
-app.post('/api/submit-form', validateStudent, async (req, res) => {
-    try {
-        const student = new Student(req.body);
-        await student.save();
-        res.status(201).json({
-            message: 'Registration successful',
-            studentId: student._id
-        });
-    } catch (error) {
-        res.status(400).json({
-            error: 'Registration failed',
-            details: error.message
-        });
-    }
-});
-
-// GET - Fetch all students (with pagination)
-app.get('/api/students', async (req, res) => {
-    try {
-        const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 10;
-        const skip = (page - 1) * limit;
-
-        const students = await Student.find()
-            .sort({ submissionDate: -1 })
-            .skip(skip)
-            .limit(limit);
-
-        const total = await Student.countDocuments();
-
-        res.json({
-            students,
-            currentPage: page,
-            totalPages: Math.ceil(total / limit),
-            totalStudents: total
-        });
-    } catch (error) {
-        res.status(500).json({
-            error: 'Error fetching students',
-            details: error.message
-        });
-    }
-});
-
-// GET - Fetch specific student by ID
-app.get('/api/students/:id', async (req, res) => {
-    try {
-        const student = await Student.findById(req.params.id);
-        if (!student) {
-            return res.status(404).json({ error: 'Student not found' });
-        }
-        res.json(student);
-    } catch (error) {
-        res.status(500).json({
-            error: 'Error fetching student',
-            details: error.message
-        });
-    }
-});
-
-// PUT - Update student status
-app.put('/api/students/:id/status', async (req, res) => {
-    try {
-        const { status } = req.body;
-        if (!['pending', 'approved', 'rejected'].includes(status)) {
-            return res.status(400).json({ error: 'Invalid status' });
-        }
-
-        const student = await Student.findByIdAndUpdate(
-            req.params.id,
-            { status },
-            { new: true }
-        );
-
-        if (!student) {
-            return res.status(404).json({ error: 'Student not found' });
-        }
-
-        res.json({
-            message: 'Status updated successfully',
-            student
-        });
-    } catch (error) {
-        res.status(500).json({
-            error: 'Error updating status',
-            details: error.message
-        });
-    }
-});
-
-// Search endpoint
-app.get('/api/students/search', async (req, res) => {
-    try {
-        const { query } = req.query;
-        const students = await Student.find({
-            $or: [
-                { studentName: new RegExp(query, 'i') },
-                { email: new RegExp(query, 'i') },
-                { mobileNumber: new RegExp(query, 'i') },
-                { instituteName: new RegExp(query, 'i') }
-            ]
-        }).limit(10);
-
-        res.json(students);
-    } catch (error) {
-        res.status(500).json({
-            error: 'Error searching students',
-            details: error.message
-        });
-    }
-});
-
-const subjectSchema = new mongoose.Schema({
-    subjectCode: String,
-    subjectName: String,
-  });
-  
-  const Subject = mongoose.model("Subject", subjectSchema);
-  
+ 
   // Create Subject
   app.post("/api/subjects", async (req, res) => {
     const { subjectCode, subjectName } = req.body;
@@ -825,18 +319,7 @@ const subjectSchema = new mongoose.Schema({
     await Subject.findByIdAndDelete(req.params.id);
     res.json({ message: "Subject deleted" });
   });
-  
-  const courseSchema = new mongoose.Schema({
-    courseCode: String,
-    courseName: String,
-    duration: String,
-    subjects: [{ subjectCode: String, subjectName: String }],
-    fee: Number,
-    installment: Number,
-  });
-  
-  const Course = mongoose.model("Course", courseSchema);
-  
+
   // Create Course
   app.post("/api/courses", async (req, res) => {
     const { courseCode, courseName, duration, subjects, fee, installment } = req.body;
@@ -868,28 +351,10 @@ const subjectSchema = new mongoose.Schema({
     res.json({ message: "Course deleted" });
   });
   
-  const batchSchema = new mongoose.Schema({
-    batchId: String,
-    batchName: String,
-    course: String,
-    studentCount: Number,
-    startDate: String,
-    status: String,
-    day: String, // Example: "Monday"
-    timeSlot: String, // Example: "9-10"
-    subject: { type: mongoose.Schema.Types.ObjectId, ref: "Subject" },
-    faculty: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty" },
-  });
-  
-  const Batch = mongoose.model("Batch", batchSchema);
+
   
   // Create Batch
-  app.post("/api/batches", async (req, res) => {
-    const { batchId, batchName, course, studentCount, startDate, status } = req.body;
-    const batch = new Batch({ batchId, batchName, course, studentCount, startDate, status });
-    await batch.save();
-    res.json(batch);
-  });
+  
   
   // Get all Batches
   app.get("/api/batches", async (req, res) => {
@@ -913,33 +378,7 @@ const subjectSchema = new mongoose.Schema({
     await Batch.findByIdAndDelete(req.params.id);
     res.json({ message: "Batch deleted" });
   });
-  const facultySchema = new mongoose.Schema({
-    firstName: String,
-    lastName: String,
-    email: String,
-    phone: String,
-    role: [],
-    department: String,
-    qualification: String,
-    experience: Number,
-    dob: String,
-    joinDate: String,
-    address: String,
-    gender: String,
-    employmentType: String,
-    status: String,
-    salary: String,
-    employeeId: String,
-    subjects: [{ subjectCode: String, subjectName: String }],
-    password:String,
-    branchId:String
-  });
-  
-  const Faculty = mongoose.model("Faculty", facultySchema);
 
-
-
-  
   app.post("/api/faculties", async (req, res) => {
     try {
       console.log("Received Faculty Data:", req.body);
@@ -1030,27 +469,6 @@ app.post("/api/assign-faculty", async (req, res) => {
       res.status(500).json({ message: "Server error", error });
     }
   });
-const timetableSchema = new mongoose.Schema({
-    batchId: { type: String, required: true },
-    courseId: { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
-    schedule: [{
-        day: { type: String, required: true }, // Monday, Tuesday, etc.
-        timeSlot: { type: String, required: true } // "08:00-09:00", etc.
-    }],
-    subject: { 
-        subjectCode: String, 
-        subjectName: String 
-    },
-    faculty: { 
-        employeeId: String, 
-        firstName: String, 
-        lastName: String 
-    }
-});
-
-const Timetable = mongoose.model("Timetable", timetableSchema);
-
-
 /**
  * API: Fetch all batches
  */
@@ -1299,27 +717,6 @@ app.get("/getTimetable/:batchId", async (req, res) => {
 
 const DROPBOX_ACCESS_TOKEN = process.env.DROPBOX_ACCESS_TOKEN;
 
-// app.post("/get-video-link", async (req, res) => {
-//   const { videoPath } = req.body;
-
-//   try {
-//     const response = await axios.post(
-//       "https://api.dropboxapi.com/2/files/get_temporary_link",
-//       { path: videoPath },
-//       {
-//         headers: {
-//           Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
-//           "Content-Type": "application/json",
-//         },
-//       }
-//     );
-
-//     res.json({ videoUrl: response.data.link });
-//   } catch (error) {
-//     console.error("Error fetching video:", error);
-//     res.status(500).json({ error: "Failed to fetch video link" });
-//   }
-// });
 app.post("/get-video-link", async (req, res) => {
   const { videoPath } = req.body;
 
@@ -1358,19 +755,7 @@ app.post("/get-video-link", async (req, res) => {
   }
 });
 
-const SalarySchema = new mongoose.Schema({
-    facultyId: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty", required: true },
-    date: { type: String, required: true },
-    basicPay: { type: Number, required: true },
-    salary: { type: Number, required: true },
-    travelAllowance: { type: Number, default: 0 },
-    medicalAllowance: { type: Number, default: 0 },
-    washingAllowance: { type: Number, default: 0 },
-    da: { type: Number, default: 0 }, // % of salary
-    hr: { type: Number, default: 0 }, // % of salary
-  });
-  
-const Salary = mongoose.model("Salary", SalarySchema);
+
 app.post("/api/save-salary", async (req, res) => {
     try {
       const { facultyId, date } = req.body;
@@ -1419,63 +804,6 @@ const User = mongoose.model("User", UserSchema);
 
 // app.post("/login", async (req, res) => {
 //   const { email, password } = req.body;
-//   console.log("Login Request:", req.body);
-
-//   try {
-//     let user = await User.findOne({ email });
-
-//     if (!user) {
-//       user = await Faculty.findOne({ email }); // Check in Faculty collection
-//     }
-
-//     console.log("User Found:", user); // Debugging
-
-//     if (!user) {
-//       return res.status(400).json({ msg: "Invalid Credentials (User Not Found)" });
-//     }
-
-//     if (!user.password) {
-//       return res.status(400).json({ msg: "Invalid Credentials (No Password)" });
-//     }
-
-//     // const isMatch = await bcrypt.compare(password, user.password);
-//     // console.log("Password Match:", isMatch);  
-//     // if (!isMatch) {
-//     //   return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
-//     // }
-//     try {
-//       console.log("Checking Password...");
-//       console.log("Entered Password:", password);
-//       console.log("Stored Hashed Password:", user.password);
-    
-//       const isMatch = await bcrypt.compare(password, user.password);
-//       console.log("Password Match Result:", isMatch);  // This should print true or false
-      
-//       if (!isMatch) {
-//         console.log("Invalid Password!");
-//         return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
-//       }
-//     } catch (err) {
-//       console.error("bcrypt.compare() Error:", err);
-//       return res.status(500).json({ msg: "Error during password verification" });
-//     }
-    
-    
-//     // Ensure role is always an array
-//     const roles = Array.isArray(user.role) ? user.role : [user.role];
-
-//     const token = jwt.sign({ id: user._id, roles }, "your_jwt_secret", { expiresIn: "1h" });
-
-//     res.json({ token, roles });
-//   } catch (err) {
-//     console.error("Login Error:", err);
-//     res.status(500).json({ msg: "Internal Server Error" });
-//   }
-// });
-
-
-// app.post("/login", async (req, res) => {
-//   const { email, password } = req.body;
 
 //   console.log("🔹 Received Login Request:", { email, password });
 
@@ -1506,24 +834,40 @@ const User = mongoose.model("User", UserSchema);
 //       return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
 //     }
 
-//     // Assign role
+//     // Assign roles
 //     const roles = Array.isArray(user.role) ? user.role : [user.role] || [];
 
+//     // Prepare payload with user information
+//     const payload = {
+//       id: user._id,
+//       firstName: user.firstName,
+//       lastName: user.lastName,
+//       email: user.email,
+//       phone: user.phone,
+//       roles,
+//       department: user.department,
+//       qualification: user.qualification,
+//       experience: user.experience,
+//       gender: user.gender,
+//       employmentType: user.employmentType,
+//       status: user.status,
+//       employeeId: user.employeeId,
+//     };
+
 //     // Generate JWT
-//     const token = jwt.sign(
-//       { id: user._id, roles },
-//       process.env.JWT_SECRET || "your_jwt_secret",
-//       { expiresIn: "1h" }
-//     );
+//     const token = jwt.sign(payload, process.env.JWT_SECRET || "your_jwt_secret", { expiresIn: "1h" });
 
 //     console.log("✅ Login Successful for:", email);
-//     res.json({ token, roles });
+    
+//     // Send token and full user data
+//     res.json({ token, user: payload });
 
 //   } catch (err) {
 //     console.error("❌ Login Error:", err);
 //     res.status(500).json({ msg: "Internal Server Error" });
 //   }
 // });
+
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -1533,6 +877,15 @@ app.post("/login", async (req, res) => {
     let user = await User.findOne({ email }).lean();
     if (!user) {
       user = await Faculty.findOne({ email }).lean();
+    }
+    if (!user) {
+      user = await Registration.findOne({ email }).lean();
+
+      // If user is from Registration schema, check regStatus
+      if (user && user.regStatus !== "Approved") {
+        console.log("❌ Registration Not Approved for:", email);
+        return res.status(400).json({ msg: "Your registration is not approved yet." });
+      }
     }
 
     if (!user) {
@@ -1556,15 +909,17 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ msg: "Invalid Credentials (Wrong Password)" });
     }
 
-    // Assign role
-    const roles = Array.isArray(user.role) ? user.role : [user.role] || [];
+    // Ensure role is always an array
+    const roles = user.role ? (Array.isArray(user.role) ? user.role : [user.role]) : [];
+
+    // Prepare payload with user information
     const payload = {
-      id: user._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
+      _id: user._id, 
+      firstName: user.firstName || user.fName,  // Check both fields
+      lastName: user.lastName || user.lName,  
+      email: user.email.toLowerCase(), // Convert email to lowercase
       phone: user.phone,
-      roles,
+      roles, // Ensure roles is always an array
       department: user.department,
       qualification: user.qualification,
       experience: user.experience,
@@ -1572,19 +927,21 @@ app.post("/login", async (req, res) => {
       employmentType: user.employmentType,
       status: user.status,
       employeeId: user.employeeId,
-  };
+    };
+
     // Generate JWT
     const token = jwt.sign(payload, process.env.JWT_SECRET || "your_jwt_secret", { expiresIn: "1h" });
 
     console.log("✅ Login Successful for:", email);
-    res.json({ token, user: payload  });
+    
+    // Send token and full user data
+    res.json({ token, user: payload });
 
   } catch (err) {
     console.error("❌ Login Error:", err);
     res.status(500).json({ msg: "Internal Server Error" });
   }
 });
-
 
 const RoleSchema = new mongoose.Schema({
   roleId: String,
@@ -1653,9 +1010,37 @@ app.get('/api/permissions/:roleName', async (req, res) => {
 
 // Enquiry Form For Student Create Karthik Schema//
 
+// const enquirySchema = new mongoose.Schema({
+//   email: { type: String, required: true },
+//   name: { type: String, required: true },
+//   mobileNumber: { type: String, required: true },
+//   location: { type: String, required: true },
+//   qualification: { type: String, required: true },
+//   courseType: { type: String, required: true },
+//   yearOfPassout: { type: Number, required: true },
+//   interestedCourses: { type: String, required: true },
+//   CollegeName: { type: String, required: true },
+//   HowDidYouCameToKnowAboutCADDESK: { type: String, required: true },
+//   IfReferenceMentionTheName: { type: String },
+//   Whenyouareplanningtojoincourses: { type: String, required: true },
+// }, { timestamps: true });
+
+// const Enquiry = mongoose.model("Enquiry", enquirySchema);
+// app.post("/api/enquiry", async (req, res) => {
+//   try {
+//     const enquiry = new Enquiry(req.body);
+//     await enquiry.save();
+//     res.status(201).json({ message: "Enquiry data saved successfully" });
+//   } catch (error) {
+//     res.status(500).json({ error: "Error saving Enquiry data" });
+//   }
+// });
+
 const enquirySchema = new mongoose.Schema({
+  branchId:String,
   email: { type: String, required: true },
-  name: { type: String, required: true },
+  firstname: { type: String, required: true },
+  lastname: { type: String, required: true },
   mobileNumber: { type: String, required: true },
   location: { type: String, required: true },
   qualification: { type: String, required: true },
@@ -1663,12 +1048,14 @@ const enquirySchema = new mongoose.Schema({
   yearOfPassout: { type: Number, required: true },
   interestedCourses: { type: String, required: true },
   CollegeName: { type: String, required: true },
-  HowDidYouCameToKnowAboutCADDESK: { type: String, required: true },
-  IfReferenceMentionTheName: { type: String },
-  Whenyouareplanningtojoincourses: { type: String, required: true },
+  referralSource: { type: String, required: true },
+  ReferenceneName: { type: String },
+  joiningPlan: { type: String, required: true },
+  status:{ type: String, default:'unassigned' },
+  assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: "Faculty" },
 }, { timestamps: true });
-
 const Enquiry = mongoose.model("Enquiry", enquirySchema);
+
 app.post("/api/enquiry", async (req, res) => {
   try {
     const enquiry = new Enquiry(req.body);
@@ -1678,6 +1065,132 @@ app.post("/api/enquiry", async (req, res) => {
     res.status(500).json({ error: "Error saving Enquiry data" });
   }
 });
+
+
+//   app.get("/api/enquiries", async (req, res) => {
+//     try {
+//       const enquiries = await Enquiry.find({ status: "unassigned" });
+//       res.json(enquiries);
+//     } catch (err) {
+//       res.status(500).json({ error: "Server error fetching enquiries" });
+//     }
+//   });
+app.get("/api/enquiries", async (req, res) => {
+  try {
+    const enquiries = await Enquiry.find(); // Ensure this returns an array
+    res.json(enquiries);
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+
+app.get("/api/telecallers/:branchId", async (req, res) => {
+  try {
+    const { branchId } = req.params;
+    const telecallers = await Faculty.find({
+      branchId,
+      role: { $in: ["Telecaller"] },
+    });
+    res.json(telecallers);
+  } catch (err) {
+    res.status(500).json({ error: "Server error fetching telecallers" });
+  }
+});
+
+app.post("/api/assign-enquiry", async (req, res) => {
+  try {
+    const { enquiryId, telecallerId } = req.body;
+
+    // Update Enquiry
+    const enquiry = await Enquiry.findByIdAndUpdate(enquiryId, {
+      status: "assigned",
+      assignedTo: telecallerId,
+    });
+
+    // Update Faculty (Optional: Add assigned enquiries to telecaller's record)
+    await Faculty.findByIdAndUpdate(telecallerId, {
+      $push: { assignedEnquiries: enquiryId },
+    });
+
+    res.json({ message: "Enquiry assigned successfully" });
+  } catch (err) {
+    res.status(500).json({ error: "Error assigning enquiry" });
+  }
+});
+
+app.get("/api/assigned-enquiries/:telecallerId", async (req, res) => {
+  try {
+    const { telecallerId } = req.params;
+    const enquiries = await Enquiry.find({ assignedTo: telecallerId });
+    res.json(enquiries);
+  } catch (err) {
+    res.status(500).json({ error: "Error fetching assigned enquiries" });
+  }
+});
+app.post("/api/save-followup", async (req, res) => {
+  const { enquiryId, userId, status, followUpDates } = req.body;
+
+  try {
+    const faculty = await Faculty.findById(userId);
+    if (!faculty) return res.status(404).json({ message: "Faculty not found" });
+
+    // Save follow-up details in the faculty schema
+    faculty.followUps.push({
+      enquiryId,
+      status,
+      followUpDate: followUpDates[followUpDates.length - 1], // Latest follow-up date
+    });
+
+    await faculty.save();
+    res.status(200).json({ message: "Follow-up saved successfully" });
+
+  } catch (error) {
+    console.error("Error saving follow-up:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+app.get("/api/followups/:enquiryId", async (req, res) => {
+  try {
+      const { enquiryId } = req.params;
+
+      const faculty = await Faculty.findOne(
+          { "followUps.enquiryId": enquiryId },
+          { "followUps": 1, _id: 0 } // Fetch all follow-ups for this enquiryId
+      );
+
+      res.json({ followUps: faculty ? faculty.followUps : [] });
+  } catch (error) {
+      console.error("Error fetching follow-ups:", error);
+      res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+app.get("/api/followups", async (req, res) => {
+  try {
+      const { branchId } = req.query; // Get branchId filter from request
+
+      let filter = {}; // Default filter (fetch all)
+      if (branchId) {
+          filter = { branchId }; // Apply branch filter if provided
+      }
+
+      const followUps = await Faculty.find(filter)
+          .populate({
+              path: "followUps.enquiryId", 
+              select: "firstname lastname mobileNumber interestedCourses branchId"
+          })
+          .select("followUps branchId"); // Fetch only required fields
+
+      res.json({ followUps });
+  } catch (error) {
+      console.error("Error fetching follow-ups:", error);
+      res.status(500).json({ message: "Server error" });
+  }
+});
+
 // // Schema & Model
 // const RegistrationSchema = new mongoose.Schema({
 //   name: String,
@@ -1711,33 +1224,7 @@ app.post("/api/enquiry", async (req, res) => {
 
 
 
-const RegistrationSchema = new mongoose.Schema({
-  regid: { type: String, unique: true, required: true },
-  name: String,
-  fatherName: String,
-  contactAddress: String,
-  email: String,
-  qualification: String,
-  collegeName: String,
-  phone: String,
-  courseName: String,
-  courseFee: String,
-  joiningDate: String,
-  aadhar: String,
-  resume: String,
-});
 
-// Auto-generate `regid`
-RegistrationSchema.pre("save", async function (next) {
-  if (!this.regid) {
-    const count = await Registration.countDocuments();
-    this.regid = `cad${String(count + 1).padStart(2, "0")}`; // Example: cad01, cad02, cad03...
-  }
-  next();
-});
-
-const Registration = mongoose.model("Registration", RegistrationSchema);
-module.exports = Registration;
 
 
 // // Create (POST)
@@ -1754,30 +1241,45 @@ module.exports = Registration;
 //       res.status(500).json({ message: "Error saving registration", error });
 //   }
 // });
-app.post("/api/newregistration", upload.fields([{ name: "aadhar" }, { name: "resume" }]), async (req, res) => {
-    try {
-        console.log("Received Data:", req.body);
-        console.log("Received Files:", req.files);
+app.post("/api/newregistration",
+  upload.fields([{ name: "aadhar" }, { name: "resume" }]),
+  async (req, res) => {
+      try {
+          console.log("Received Data:", req.body);
+          console.log("Received Files:", req.files);
 
-        // Generate new regid using atomic increment
-        const count = await Registration.countDocuments();
-        const newRegId = `cad${String(count + 1).padStart(2, "0")}`;
+          // Hash the password before saving
+          const salt = await bcrypt.genSalt(10);
+          const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-        // Create new registration entry
-        const newRegistration = new Registration({
+          // Generate new regid using atomic increment
+          const count = await Registration.countDocuments();
+          const newRegId = `cad${String(count + 1).padStart(2, "0")}`;
+
+          // Store full file paths (uploads\filename.png)
+          const aadharPath = req.files?.["aadhar"]?.[0] ? `uploads\\${req.files["aadhar"][0].filename}` : "";
+          const resumePath = req.files?.["resume"]?.[0] ? `uploads\\${req.files["resume"][0].filename}` : "";
+
+           // Create new registration entry with formStatus & regStatus
+           const newRegistration = new Registration({
             ...req.body,
             regid: newRegId,
-            aadhar: req.files?.["aadhar"]?.[0]?.filename || "", // Store only filename
-            resume: req.files?.["resume"]?.[0]?.filename || "",
+            password: hashedPassword, // ✅ Store hashed password
+            aadhar: aadharPath, // ✅ Store full file path
+            resume: resumePath, // ✅ Store full file path
+            formStatus: "Success", // ✅ Automatically set "Success" after form submission
+            regStatus: "Pending"   // ✅ Default value "Pending"
         });
 
-        await newRegistration.save();
-        res.json({ message: "Registration successful!", regid: newRegId });
-    } catch (error) {
-        console.error("Error in /api/newregistration:", error);
-        res.status(500).json({ message: "Internal Server Error", error: error.message });
-    }
-});
+          await newRegistration.save();
+          res.json({ message: "Registration successful!", regid: newRegId });
+      } catch (error) {
+          console.error("Error in /api/newregistration:", error);
+          res.status(500).json({ message: "Internal Server Error", error: error.message });
+      }
+  }
+);
+
 
 
 
@@ -1791,12 +1293,26 @@ app.get("/api/registrations", async (req, res) => {
   }
 });
 
-// Update (PUT)
-app.put("/api/registration/:id", upload.fields([{ name: "aadhar" }, { name: "resume" }]), async (req, res) => {
+// Get individual registration by ID
+app.get("/api/registration/:id", async (req, res) => {
   try {
-      let updateData = { ...req.body };
-      if (req.files["aadhar"]) updateData.aadhar = req.files["aadhar"][0].path;
-      if (req.files["resume"]) updateData.resume = req.files["resume"][0].path;
+    const registration = await Registration.findById(req.params.id);
+    if (!registration) {
+      return res.status(404).json({ message: "Registration not found" });
+    }
+    res.json(registration);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching registration", error });
+  }
+});
+
+
+// Update (PUT)
+app.put("/api/registration/:id", async (req, res) => {
+  console.log("userdata",req.body)
+  try {
+      let updateData = req.body ;
+     
       
       await Registration.findByIdAndUpdate(req.params.id, updateData);
       res.json({ message: "Registration updated successfully!" });
@@ -1805,19 +1321,448 @@ app.put("/api/registration/:id", upload.fields([{ name: "aadhar" }, { name: "res
   }
 });
 
-// Delete (DELETE)
 app.delete("/api/registration/:id", async (req, res) => {
   try {
+      console.log("Request to delete registration with ID:", req.params.id);
+
+      // Validate if ID is a valid MongoDB ObjectId
+      if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+          console.log("Invalid ID format");
+          return res.status(400).json({ message: "Invalid ID format" });
+      }
+
       const registration = await Registration.findById(req.params.id);
-      if (!registration) return res.status(404).json({ message: "Registration not found" });
-      
-      if (registration.aadhar) fs.unlinkSync(path.resolve(registration.aadhar));
-      if (registration.resume) fs.unlinkSync(path.resolve(registration.resume));
+      if (!registration) {
+          console.log("Registration not found!");
+          return res.status(404).json({ message: "Registration not found" });
+      }
+
+      // Check if files exist before trying to delete
+      if (registration.aadhar) {
+          const aadharPath = path.resolve(registration.aadhar);
+          if (fs.existsSync(aadharPath)) {
+              fs.unlinkSync(aadharPath);
+              console.log("Deleted Aadhar file:", aadharPath);
+          } else {
+              console.log("Aadhar file not found, skipping:", aadharPath);
+          }
+      }
+
+      if (registration.resume) {
+          const resumePath = path.resolve(registration.resume);
+          if (fs.existsSync(resumePath)) {
+              fs.unlinkSync(resumePath);
+              console.log("Deleted Resume file:", resumePath);
+          } else {
+              console.log("Resume file not found, skipping:", resumePath);
+          }
+      }
 
       await Registration.findByIdAndDelete(req.params.id);
+      console.log("Successfully deleted registration!");
       res.json({ message: "Registration deleted successfully!" });
+
   } catch (error) {
+      console.error("Error deleting registration:", error);
       res.status(500).json({ message: "Error deleting registration", error });
+  }
+});
+
+
+// Read (GET)
+
+app.get("/api/course-fee/:courseName", async (req, res) => {
+  try {
+      const { courseName } = req.params;
+     
+      const course = await Course.findOne({ courseName });
+
+      if (!course) {
+          return res.status(404).json({ error: "Course not found" });
+      }
+        
+      res.json({ fee: course.fee ,Ifee: course.installment});
+  } catch (error) {
+      console.error("Error fetching course fee:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+app.get("/timetable/:facultyId", async (req, res) => {
+  try {
+      const { facultyId } = req.params;
+
+      if (!facultyId) {
+          return res.status(400).json({ msg: "Faculty ID is required" });
+      }
+
+      // Get today's day (e.g., "Monday")
+      const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+
+      // Fetch timetable entries where facultyId matches
+      const timetable = await Timetable.find({ "faculty.employeeId": facultyId });
+
+      // Filter schedules for today only
+      const todayTimetable = timetable
+          .map(entry => ({
+              ...entry.toObject(),
+              schedule: entry.schedule.filter(scheduleItem => scheduleItem.day === today)
+          }))
+          .filter(entry => entry.schedule.length > 0); // Remove empty schedules
+
+      if (!todayTimetable.length) {
+          return res.status(404).json({ msg: `No timetable found for today (${today})` });
+      }
+
+      res.json(todayTimetable);
+  } catch (err) {
+      console.error("Error fetching timetable:", err);
+      res.status(500).json({ msg: "Internal Server Error" });
+  }
+});
+
+
+app.get("/timetable/full/:facultyId", async (req, res) => {
+  try {
+      const { facultyId } = req.params;
+
+      if (!facultyId) {
+          return res.status(400).json({ msg: "Faculty ID is required" });
+      }
+
+      // Fetch timetable for the faculty
+      const timetable = await Timetable.find({ "faculty.employeeId": facultyId });
+
+      if (!timetable.length) {
+          return res.status(404).json({ msg: "No timetable found for this faculty" });
+      }
+
+      // Fetch batch names based on batchId
+      const batchIds = timetable.map(entry => entry.batchId);
+      const batches = await Batch.find({ batchId: { $in: batchIds } }).select("batchId batchName");
+
+      // Map batchId to batchName
+      const batchMap = {};
+      batches.forEach(batch => {
+          batchMap[batch.batchId] = batch.batchName;
+      });
+
+      // Attach batch names to the timetable response
+      const updatedTimetable = timetable.map(entry => ({
+          ...entry.toObject(),
+          batchName: batchMap[entry.batchId] || "Unknown Batch"
+      }));
+
+      res.json(updatedTimetable);
+  } catch (err) {
+      console.error("Error fetching full timetable:", err);
+      res.status(500).json({ msg: "Internal Server Error" });
+  }
+});
+
+const leaveSchema = new mongoose.Schema({
+  employeeName: String,
+  employeeId: String,
+  leaveType: String,
+  fromDate: Date,
+  toDate: Date,
+  reason: String,
+  status: { type: String, default: "Pending" }, // Default status
+},{ timestamps: true });
+
+const Leave = mongoose.model("Leave", leaveSchema);
+
+// API to Submit Leave Request
+app.post("/api/leave", async (req, res) => {
+  try {
+    const newLeave = new Leave(req.body);
+    await newLeave.save();
+    res.status(201).json({ message: "Leave request submitted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to submit leave request" });
+  }
+});
+app.get("/api/leave", async (req, res) => {
+  try {
+    const { employeeId } = req.query;
+    const leaveRequests = await Leave.find({ employeeId }); // Fetch only for the logged-in user
+    res.status(200).json(leaveRequests);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch leave requests" });
+  }
+});
+app.put("/api/leave/:id", async (req, res) => {
+  try {
+    const { status } = req.body;
+    await Leave.findByIdAndUpdate(req.params.id, { status });
+    res.json({ message: "Leave status updated successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update leave status" });
+  }
+});
+app.get("/api/leave/all", async (req, res) => {
+  try {
+    const leaves = await Leave.find();
+    res.json(leaves);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch leave requests" });
+  }
+});
+
+
+
+const InvoiceSchema = new mongoose.Schema({
+  invoiceNo: String,  // Ensure invoiceNo is included
+  invoiceDate: String,
+  // dueDate: String,
+  amount: Number,
+  // status: String,
+  paymentDate: String,
+  paymentMode: String,
+  item:String,
+  transactionId: String,
+  remarks: String
+});
+
+const Invoice = mongoose.model('Invoice', InvoiceSchema);
+
+// Generate a unique invoice number
+const generateInvoiceNo = async () => {
+  const lastInvoice = await Invoice.findOne().sort({ _id: -1 }); // Get the last invoice
+  let newInvoiceNo = "CAD01"; // Default if no previous invoices
+
+  if (lastInvoice && lastInvoice.invoiceNo) {
+      const lastNumber = parseInt(lastInvoice.invoiceNo.replace("CAD", ""), 10);
+      newInvoiceNo = `CAD${String(lastNumber + 1).padStart(2, '0')}`; // Increment and format
+  }
+
+  return newInvoiceNo;
+};
+
+// Fetch all invoices
+app.get('/invoices', async (req, res) => {
+  const invoices = await Invoice.find();
+  res.json(invoices);
+});
+
+// Add a new invoice with auto-generated invoiceNo
+app.post('/invoices', async (req, res) => {
+  try {
+      const invoiceNo = await generateInvoiceNo(); // Generate new invoice number
+      const newInvoice = new Invoice({ ...req.body, invoiceNo }); // Assign it
+      await newInvoice.save();
+      res.json({ message: 'Invoice added', invoiceNo });
+  } catch (error) {
+      res.status(500).json({ message: 'Error adding invoice', error });
+  }
+});
+app.get('/generate-invoice-no', async (req, res) => {
+try {
+    const lastInvoice = await Invoice.findOne().sort({ _id: -1 }); // Get last invoice
+    let newNumber = "CAD01"; // Default for first invoice
+
+    if (lastInvoice) {
+        const lastNo = lastInvoice.invoiceNo.match(/\d+/g); // Extract the number part
+        const nextNo = parseInt(lastNo) + 1; // Increment number
+        newNumber = `CAD${String(nextNo).padStart(2, '0')}`; // Format like CAD01, CAD02...
+    }
+
+    res.json({ invoiceNo: newNumber }); // Send the new invoice number
+} catch (error) {
+    console.error("Error generating invoice number:", error);
+    res.status(500).json({ error: "Server error" });
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/getFacultiesBySubjectAndBranch/:subjectCode/:branchId', async (req, res) => {
+  const { subjectCode, branchId } = req.params;
+
+  try {
+      // Log incoming request parameters
+      console.log('Received Request Parameters:', { subjectCode, branchId });
+
+      // Validate input
+      if (!subjectCode || !branchId) {
+          return res.status(400).json({ 
+              message: 'Subject Code and Branch ID are required' 
+          });
+      }
+
+      // Detailed query with multiple checks
+      const faculties = await Faculty.find({
+          $and: [
+              { 'branchId': branchId },  // Match branch
+              { 'subjects': { $elemMatch: { subjectCode: subjectCode } } } // Match subject
+          ]
+      })
+      .populate('branchId', 'branchName')  // Optional: populate branch details
+      .populate('subjects', 'subjectName'); // Optional: populate subject details
+
+      // Log found faculties
+      console.log('Found Faculties:', faculties.length);
+
+      // Check if any faculties found
+      if (faculties.length === 0) {
+          return res.status(404).json({ 
+              message: 'No faculties found for this subject and branch',
+              details: {
+                  subjectCode,
+                  branchId
+              }
+          });
+      }
+
+      // Transform faculty data if needed
+      const facultyResponse = faculties.map(faculty => ({
+          employeeId: faculty.employeeId,
+          firstName: faculty.firstName,
+          lastName: faculty.lastName,
+          email: faculty.email,
+          branch: faculty.branch?.branchName,
+          subjects: faculty.subjects.map(s => s.subjectName)
+      }));
+
+      res.status(200).json(facultyResponse);
+
+  } catch (error) {
+      // Comprehensive error logging
+      console.error('Faculty Retrieval Error:', {
+          message: error.message,
+          stack: error.stack,
+          name: error.name
+      });
+
+      // Differentiate between different types of errors
+      if (error.name === 'ValidationError') {
+          return res.status(400).json({ 
+              message: 'Validation Error', 
+              errors: error.errors 
+          });
+      }
+
+      // Database connection or query error
+      res.status(500).json({ 
+          message: 'Internal Server Error',
+          error: 'Unable to retrieve faculties'
+      });
+  }
+});
+
+const storage1 = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, "uploads/");
+  },
+  filename: (req, file, cb) => {
+      cb(null, Date.now() + "-" + file.originalname);
+  },
+});
+const upload1 = multer({ storage: storage1 });
+
+app.post('/api/record-payment/:id', upload1.single('receiptDocument'), async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { installmentIndex, paidAmount, paidDate, receivedBy, transactionId } = req.body;
+    
+    // Find the registration
+    const registration = await Registration.findById(id);
+    if (!registration) {
+      return res.status(404).json({ message: 'Registration not found' });
+    }
+    
+    // Ensure paymentsPlan array exists
+    if (!registration.paymentsPlan) {
+      registration.paymentsPlan = [];
+    }
+    
+    // Get the payment plan for the specified index
+    if (!registration.paymentsPlan[installmentIndex]) {
+      return res.status(400).json({ message: 'Payment plan not found for this installment' });
+    }
+    
+    // Update payment details
+    registration.paymentsPlan[installmentIndex].status = 'Paid';
+    registration.paymentsPlan[installmentIndex].paidDate = paidDate;
+    registration.paymentsPlan[installmentIndex].paidAmount = paidAmount;
+    registration.paymentsPlan[installmentIndex].receivedBy = receivedBy;
+    registration.paymentsPlan[installmentIndex].transactionId = transactionId;
+    
+    // If receipt file was uploaded
+    if (req.file) {
+      registration.paymentsPlan[installmentIndex].receiptPath = req.file.path;
+    }
+    
+    // Save the updated registration
+    await registration.save();
+    
+    res.status(200).json(registration);
+  } catch (error) {
+    console.error('Error recording payment:', error);
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+app.get("/api/registration/:id", async (req, res) => {
+  try {
+    const registration = await Registration.findById(req.params.id);
+    if (!registration) {
+      return res.status(404).json({ message: "Registration not found" });
+    }
+    res.json(registration);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching registration", error });
+  }
+});
+app.get("/api/registrations/:userId", async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const registrations = await Registration.find({ _id: userId }); // Assuming `_id` is the user ID
+    res.json(registrations);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching registrations", error });
+  }
+});
+
+app.put("/api/update-installment/:registrationId/:installmentId", async (req, res) => {
+  try {
+    const { registrationId, installmentId } = req.params;
+    
+    const updatedRegistration = await Registration.findOneAndUpdate(
+      { _id: registrationId, "paymentsPlan._id": installmentId },
+      {
+        $set: {
+          "paymentsPlan.$.status": "Paid",
+          "paymentsPlan.$.paidDate": new Date().toISOString(),
+          "paymentsPlan.$.transactionId": req.body.transactionId || "TXN" + Date.now(),
+          "paymentsPlan.$.paidAmount": req.body.amount,
+        },
+      },
+      { new: true }
+    );
+
+    if (!updatedRegistration) {
+      return res.status(404).json({ error: "Registration or Installment not found" });
+    }
+
+    res.json({ message: "Installment updated to Paid", updatedRegistration });
+  } catch (error) {
+    console.error("Error updating installment:", error);
+    res.status(500).json({ error: "Server error" });
   }
 });
 
